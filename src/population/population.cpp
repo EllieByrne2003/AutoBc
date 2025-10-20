@@ -28,36 +28,68 @@ const Individual & Population::getRandomIndividual(const int sampleSize) {
     return indivduals[dist(gen)];
 }
 
-void runIndividuals(std::vector<Individual> &indivduals, Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk, const int start, const int end) {
-    for(int i = start; i < end; i++) {
+// void runIndividuals(std::vector<Individual> &indivduals, Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk, const int start, const int end) {
+//     for(int i = start; i < end; i++) {
+//         // Create a copy of the network given
+//         Abc_FrameSetCurrentNetwork(pAbc, Abc_NtkDup(pNtk));
+
+//         indivduals[i].calculateFitness(pAbc);
+
+//         // Delete the network and free the memory
+//         Abc_FrameDeleteAllNetworks(pAbc);
+//     }
+// }
+
+void runIndividuals(std::vector<Individual> &indivduals, std::atomic_int &nextIndex, Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk) {
+    while(true) {
+        const int currentIndex = nextIndex.fetch_add(1, std::memory_order_relaxed);
+
+        if(currentIndex >= indivduals.size()) {
+            break;
+        }
+
         // Create a copy of the network given
         Abc_FrameSetCurrentNetwork(pAbc, Abc_NtkDup(pNtk));
 
-        indivduals[i].calculateFitness(pAbc);
+        // Calculate the fitness
+        indivduals[currentIndex].calculateFitness(pAbc);
 
-        // Delete the network and free the memory
+        // Delete the network to free its memory
         Abc_FrameDeleteAllNetworks(pAbc);
     }
+
+    // for(int i = start; i < end; i++) {
+    //     // Create a copy of the network given
+    //     Abc_FrameSetCurrentNetwork(pAbc, Abc_NtkDup(pNtk));
+
+    //     indivduals[i].calculateFitness(pAbc);
+
+    //     // Delete the network and free the memory
+    //     Abc_FrameDeleteAllNetworks(pAbc);
+    // }
 }
 
 void Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int nThreads) {
     std::vector<std::thread> threads;
-    std::atomic_int currentIndividual = 0;
+    std::atomic_int nextIndividual = 0;
 
     int n = indivduals.size() / nThreads;
     for(int i = 0; i < nThreads - 1; i++) {
-        threads.emplace_back(runIndividuals, std::ref(indivduals), pAbc[i], pNtks[i], i * n, (i + 1) * n);
+        // threads.emplace_back(runIndividuals, std::ref(indivduals), pAbc[i], pNtks[i], i * n, (i + 1) * n);
+        threads.emplace_back(runIndividuals, std::ref(indivduals), std::ref(nextIndividual), pAbc[i], pNtks[i]);
     }
 
-    // TODO fix this, have threads pull from the vector until the end instead of predefined splits
-    for(int i = n * (nThreads - 1); i < indivduals.size(); i++) {
-        Abc_FrameSetCurrentNetwork(pAbc[nThreads - 1], Abc_NtkDup(pNtks[nThreads - 1]));
+    runIndividuals(indivduals, nextIndividual, pAbc[nThreads - 1], pNtks[nThreads - 1]);
+
+    // // TODO fix this, have threads pull from the vector until the end instead of predefined splits
+    // for(int i = n * (nThreads - 1); i < indivduals.size(); i++) {
+    //     Abc_FrameSetCurrentNetwork(pAbc[nThreads - 1], Abc_NtkDup(pNtks[nThreads - 1]));
         
-        indivduals[i].calculateFitness(pAbc[nThreads - 1]);
+    //     indivduals[i].calculateFitness(pAbc[nThreads - 1]);
 
-        // Duplicate network and set it
-        Abc_FrameDeleteAllNetworks(pAbc[nThreads - 1]);
-    }
+    //     // Duplicate network and set it
+    //     Abc_FrameDeleteAllNetworks(pAbc[nThreads - 1]);
+    // }
 
     for(std::thread &thread : threads) {
         thread.join();
