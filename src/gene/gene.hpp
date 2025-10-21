@@ -14,6 +14,8 @@ private:
 public:
     Gene(const std::string &command);
     Gene(const std::string &command, const std::string &prefix, const std::string &postfix);
+    
+    Gene & operator=(const Gene &other);
 
     int execute(Abc_Frame_t *pAbc) const;
 

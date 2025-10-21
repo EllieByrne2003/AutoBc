@@ -11,6 +11,12 @@ Gene::Gene(const std::string &command, const std::string &prefix, const std::str
     command(command), prefix(prefix), postfix(postfix) {
 }
 
+
+Gene & Gene::operator=(const Gene &other) {
+    Gene *gene = new Gene(other.command, other.prefix, other.postfix);
+    return *gene;
+}
+
 int Gene::execute(Abc_Frame_t *pAbc) const {
     int retValue = 0;
 
