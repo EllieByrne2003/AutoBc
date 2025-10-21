@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# TODO this was a Python generic gitignore, add C/C++ specifics
+# Project specifics
+abc.history
+obj/*
+lib/*
+bin/*
