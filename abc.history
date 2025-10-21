@@ -1,994 +1,3 @@
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-renode -K 9
-strash
-refactor -N 15 -M 7
-balance
-rewrite
-refactor -N 15 -M 8
-refactor -N 12 -M 8
-refactor -N 5 -M 4
-refactor -N 9 -M 9
-refactor -N 12 -M 14
-refactor -N 12 -M 2
-refactor -N 11 -M 8
-resub -K 8
-renode -K 9
-refactor -N 3 -M 6
-refactor -N 13 -M 11
-refactor -N 8 -M 10
-refactor -N 10 -M 16
-refactor -N 4 -M 8
-refactor -N 10 -M 1
-refactor -N 13 -M 13
-resub -K 13
-renode -K 10
-refactor -N 10 -M 5
-refactor -N 11 -M 9
-refactor -N 3 -M 13
-renode -K 12
-balance
-rewrite
-refactor -N 15 -M 8
-refactor -N 12 -M 8
-renode -K 14
-renode -K 8
-refactor -N 6 -M 1
-renode -K 6
-refactor -N 13 -M 3
-refactor -N 8 -M 9
-refactor -N 9 -M 6
-renode -K 7
-refactor -N 4 -M 8
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-strash
-refactor -N 15 -M 7
-balance
-rewrite
-refactor -N 9 -M 8
-refactor -N 11 -M 15
-refactor -N 2 -M 15
-refactor -N 11 -M 12
-refactor -N 9 -M 9
-refactor -N 12 -M 14
-refactor -N 8 -M 7
-refactor -N 12 -M 2
-refactor -N 11 -M 6
-refactor -N 11 -M 8
-renode -K 9
-refactor -N 3 -M 6
-refactor -N 15 -M 11
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 10 -M 5
-refactor -N 11 -M 9
-refactor -N 3 -M 13
-renode -K 12
-resub -K 12
-rewrite
-refactor -N 6 -M 8
-balance
-renode -K 13
-refactor -N 4 -M 8
-renode -K 8
-refactor -N 9 -M 2
-refactor -N 4 -M 15
-refactor -N 10 -M 12
-renode -K 12
-refactor -N 5 -M 11
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-refactor -N 15 -M 7
-balance
-refactor -N 12 -M 8
-resub -K 12
-renode -K 13
-refactor -N 8 -M 3
-fraig
-renode -K 14
-resub -K 14
-refactor -N 9 -M 13
-refactor -N 10 -M 1
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-refactor -N 11 -M 4
-refactor -N 15 -M 7
-refactor -N 2 -M 5
-balance
-rewrite
-refactor -N 15 -M 8
-renode -K 14
-fraig
-refactor -N 12 -M 8
-refactor -N 9 -M 9
-refactor -N 12 -M 2
-refactor -N 4 -M 16
-renode -K 4
-refactor -N 10 -M 12
-renode -K 12
-refactor -N 5 -M 11
-renode -K 10
-refactor -N 12 -M 15
-renode -K 9
-refactor -N 15 -M 7
-balance
-rewrite
-refactor -N 12 -M 8
-renode -K 15
-refactor -N 12 -M 11
-renode -K 5
-refactor -N 15 -M 4
-refactor -N 14 -M 4
-refactor -N 5 -M 7
-fraig
-renode -K 14
-resub -K 14
-rewrite
-refactor -N 8 -M 12
-balance
-renode -K 4
-refactor -N 10 -M 1
-refactor -N 12 -M 12
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-renode -K 9
-refactor -N 15 -M 7
-balance
-rewrite
-refactor -N 12 -M 8
-renode -K 15
-refactor -N 12 -M 11
-renode -K 5
-refactor -N 15 -M 4
-resub -K 12
-refactor -N 8 -M 13
-refactor -N 6 -M 4
-refactor -N 10 -M 6
-refactor -N 11 -M 9
-refactor -N 7 -M 6
-renode -K 8
-renode -K 12
-refactor -N 7 -M 15
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-refactor -N 15 -M 7
-rewrite
-renode -K 13
-refactor -N 13 -M 11
-renode -K 8
-refactor -N 5 -M 7
-renode -K 14
-resub -K 14
-refactor -N 5 -M 15
-balance
-resub -K 11
-refactor -N 4 -M 8
-refactor -N 10 -M 1
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-refactor -N 10 -M 8
-renode -K 9
-renode -K 12
-balance
-rewrite
-refactor -N 12 -M 8
-refactor -N 5 -M 4
-refactor -N 9 -M 9
-refactor -N 12 -M 14
-resub -K 12
-refactor -N 13 -M 3
-renode -K 9
-renode -K 12
-refactor -N 9 -M 13
-refactor -N 10 -M 1
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-refactor -N 11 -M 9
-refactor -N 3 -M 13
-renode -K 12
-refactor -N 15 -M 6
-refactor -N 10 -M 4
-resub -K 12
-rewrite
-refactor -N 6 -M 8
-refactor -N 2 -M 10
-renode -K 13
-renode -K 6
-refactor -N 13 -M 3
-refactor -N 5 -M 3
-refactor -N 10 -M 1
-refactor -N 12 -M 12
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-renode -K 9
-refactor -N 15 -M 7
-balance
-resub -K 12
-rewrite
-refactor -N 6 -M 8
-refactor -N 8 -M 8
-renode -K 8
-refactor -N 14 -M 13
-refactor -N 8 -M 3
-refactor -N 5 -M 3
-renode -K 12
-refactor -N 13 -M 3
-refactor -N 2 -M 5
-refactor -N 12 -M 7
-renode -K 14
-refactor -N 4 -M 10
-renode -K 9
-resub -K 12
-refactor -N 15 -M 7
-refactor -N 2 -M 2
-refactor -N 2 -M 5
-balance
-rewrite
-refactor -N 15 -M 8
-renode -K 14
-fraig
-refactor -N 12 -M 8
-refactor -N 9 -M 9
-refactor -N 4 -M 6
-refactor -N 12 -M 2
-refactor -N 4 -M 16
-renode -K 9
-refactor -N 6 -M 10
-renode -K 8
-refactor -N 4 -M 13
-refactor -N 10 -M 1
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-strash
-refactor -N 11 -M 4
-refactor -N 5 -M 4
-refactor -N 15 -M 7
-refactor -N 8 -M 6
-balance
-rewrite
-refactor -N 12 -M 8
-refactor -N 9 -M 15
-renode -K 6
-refactor -N 8 -M 3
-refactor -N 5 -M 3
-renode -K 9
-renode -K 12
-renode -K 13
-refactor -N 13 -M 3
-refactor -N 4 -M 13
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-refactor -N 11 -M 4
-refactor -N 15 -M 7
-refactor -N 10 -M 2
-rewrite
-refactor -N 6 -M 8
-balance
-renode -K 13
-refactor -N 5 -M 3
-renode -K 14
-refactor -N 4 -M 12
-resub -K 14
-refactor -N 7 -M 6
-renode -K 8
-renode -K 12
-refactor -N 4 -M 13
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-strash
-refactor -N 15 -M 7
-balance
-rewrite
-refactor -N 12 -M 8
-refactor -N 5 -M 4
-refactor -N 8 -M 3
-refactor -N 13 -M 3
-refactor -N 2 -M 12
-refactor -N 5 -M 3
-refactor -N 12 -M 1
-refactor -N 5 -M 6
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-strash
-balance
-resub -K 12
-rewrite
-refactor -N 6 -M 8
-refactor -N 5 -M 3
-refactor -N 8 -M 8
-refactor -N 8 -M 13
-refactor -N 6 -M 4
-refactor -N 15 -M 7
-renode -K 12
-refactor -N 10 -M 6
-refactor -N 11 -M 9
-resub -K 11
-refactor -N 12 -M 13
-renode -K 11
-refactor -N 4 -M 13
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-renode -K 9
-refactor -N 15 -M 7
-balance
-rewrite
-refactor -N 12 -M 8
-renode -K 15
-refactor -N 12 -M 11
-renode -K 5
-refactor -N 14 -M 4
-refactor -N 5 -M 7
-fraig
-refactor -N 14 -M 13
-resub -K 5
-refactor -N 9 -M 2
-refactor -N 4 -M 15
-refactor -N 15 -M 4
-refactor -N 13 -M 16
-refactor -N 10 -M 12
-renode -K 12
-refactor -N 5 -M 11
-balance
-rewrite
-refactor -N 6 -M 6
-resub -K 6
-refactor -N 7 -M 2
-renode -K 11
-refactor -N 5 -M 9
-resub -K 13
-resub -K 4
-refactor -N 14 -M 11
-refactor -N 9 -M 7
-renode -K 14
-refactor -N 8 -M 3
-refactor -N 13 -M 3
-renode -K 8
-refactor -N 14 -M 13
-refactor -N 9 -M 2
-resub -K 13
-refactor -N 7 -M 8
-refactor -N 10 -M 3
-refactor -N 6 -M 9
-renode -K 12
-refactor -N 5 -M 11
-rewrite
-renode -K 11
-strash
-resub -K 6
-refactor -N 7 -M 2
-refactor -N 5 -M 9
-resub -K 13
-refactor -N 5 -M 5
-refactor -N 3 -M 8
-resub -K 4
-refactor -N 10 -M 9
-refactor -N 14 -M 11
-refactor -N 4 -M 2
-refactor -N 6 -M 10
-refactor -N 15 -M 1
-refactor -N 15 -M 7
-rewrite
-balance
-renode -K 13
-refactor -N 8 -M 12
-renode -K 8
-refactor -N 14 -M 13
-refactor -N 9 -M 2
-refactor -N 13 -M 14
-resub -K 16
-renode -K 5
-refactor -N 4 -M 8
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 15 -M 4
-renode -K 9
-refactor -N 15 -M 7
-resub -K 12
-refactor -N 6 -M 16
-refactor -N 12 -M 8
-balance
-renode -K 14
-refactor -N 10 -M 5
-rewrite
-refactor -N 7 -M 13
-resub -K 13
-renode -K 13
-refactor -N 14 -M 13
-renode -K 10
-strash
-refactor -N 10 -M 16
-refactor -N 12 -M 15
-refactor -N 4 -M 8
-refactor -N 13 -M 10
-refactor -N 10 -M 1
-refactor -N 13 -M 13
-refactor -N 7 -M 10
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 6 -M 7
-refactor -N 10 -M 5
-refactor -N 15 -M 7
-balance
-renode -K 8
-refactor -N 14 -M 13
-refactor -N 6 -M 4
-renode -K 12
-refactor -N 10 -M 6
-refactor -N 11 -M 9
-renode -K 9
-refactor -N 3 -M 6
-resub -K 9
-refactor -N 9 -M 13
-refactor -N 10 -M 1
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-strash
-refactor -N 11 -M 4
-refactor -N 15 -M 7
-refactor -N 2 -M 5
-rewrite
-refactor -N 7 -M 1
-refactor -N 15 -M 8
-refactor -N 12 -M 8
-balance
-refactor -N 9 -M 9
-refactor -N 7 -M 15
-refactor -N 12 -M 2
-refactor -N 4 -M 16
-renode -K 9
-refactor -N 6 -M 10
-renode -K 8
-refactor -N 5 -M 4
-resub -K 9
-refactor -N 10 -M 1
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-refactor -N 11 -M 4
-refactor -N 15 -M 7
-balance
-refactor -N 6 -M 8
-refactor -N 5 -M 3
-renode -K 14
-refactor -N 4 -M 12
-resub -K 14
-refactor -N 14 -M 13
-resub -K 5
-refactor -N 9 -M 2
-refactor -N 4 -M 15
-renode -K 11
-refactor -N 15 -M 4
-refactor -N 2 -M 5
-refactor -N 12 -M 7
-renode -K 14
-refactor -N 4 -M 10
-renode -K 9
-balance
-resub -K 12
-rewrite
-refactor -N 5 -M 3
-refactor -N 8 -M 8
-refactor -N 9 -M 16
-renode -K 8
-refactor -N 12 -M 11
-renode -K 5
-refactor -N 15 -M 4
-refactor -N 14 -M 4
-refactor -N 5 -M 7
-renode -K 14
-resub -K 14
-refactor -N 8 -M 12
-renode -K 4
-refactor -N 11 -M 15
-refactor -N 8 -M 14
-refactor -N 4 -M 13
-refactor -N 14 -M 10
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 11 -M 16
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-strash
-refactor -N 15 -M 7
-rewrite
-refactor -N 5 -M 4
-resub -K 12
-refactor -N 12 -M 16
-fraig
-refactor -N 12 -M 8
-refactor -N 11 -M 4
-balance
-refactor -N 13 -M 5
-refactor -N 15 -M 14
-refactor -N 6 -M 9
-refactor -N 7 -M 12
-refactor -N 2 -M 5
-refactor -N 12 -M 7
-renode -K 14
-refactor -N 4 -M 10
-renode -K 9
-balance
-resub -K 12
-rewrite
-refactor -N 5 -M 3
-refactor -N 8 -M 8
-refactor -N 6 -M 4
-refactor -N 6 -M 8
-refactor -N 8 -M 13
-renode -K 13
-renode -K 8
-refactor -N 14 -M 13
-refactor -N 15 -M 14
-resub -K 16
-renode -K 5
-refactor -N 10 -M 16
-refactor -N 4 -M 8
-refactor -N 10 -M 1
-refactor -N 13 -M 13
-resub -K 13
-renode -K 10
-refactor -N 10 -M 5
-refactor -N 11 -M 9
-renode -K 12
-balance
-refactor -N 10 -M 12
-rewrite
-refactor -N 4 -M 16
-renode -K 15
-refactor -N 12 -M 11
-renode -K 5
-refactor -N 15 -M 4
-refactor -N 14 -M 4
-fraig
-renode -K 6
-refactor -N 5 -M 3
-renode -K 9
-renode -K 12
-refactor -N 13 -M 3
-refactor -N 5 -M 8
-refactor -N 15 -M 8
-refactor -N 5 -M 7
-resub -K 8
-refactor -N 11 -M 9
-renode -K 4
-refactor -N 8 -M 3
-refactor -N 9 -M 13
-refactor -N 15 -M 4
-refactor -N 11 -M 4
-refactor -N 15 -M 7
-refactor -N 2 -M 5
-balance
-rewrite
-refactor -N 7 -M 1
-refactor -N 6 -M 4
-renode -K 12
-refactor -N 10 -M 6
-refactor -N 11 -M 9
-refactor -N 8 -M 13
-renode -K 13
-refactor -N 15 -M 14
-resub -K 16
-renode -K 5
-refactor -N 15 -M 8
-refactor -N 4 -M 13
-refactor -N 10 -M 1
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-refactor -N 9 -M 14
-renode -K 9
-refactor -N 15 -M 7
-balance
-resub -K 12
-rewrite
-refactor -N 12 -M 1
-refactor -N 6 -M 8
-refactor -N 5 -M 3
-renode -K 13
-refactor -N 14 -M 13
-refactor -N 9 -M 2
-refactor -N 4 -M 16
-renode -K 9
-refactor -N 6 -M 10
-renode -K 8
-refactor -N 10 -M 12
-renode -K 12
-refactor -N 5 -M 11
-balance
-resub -K 6
-refactor -N 7 -M 2
-renode -K 11
-refactor -N 5 -M 15
-resub -K 12
-rewrite
-resub -K 5
-refactor -N 6 -M 8
-refactor -N 12 -M 8
-renode -K 13
-refactor -N 4 -M 8
-refactor -N 13 -M 11
-renode -K 8
-refactor -N 14 -M 13
-refactor -N 13 -M 3
-refactor -N 8 -M 9
-balance
-renode -K 4
-refactor -N 13 -M 12
-refactor -N 10 -M 1
-refactor -N 14 -M 12
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-refactor -N 12 -M 2
-renode -K 9
-strash
-balance
-rewrite
-refactor -N 9 -M 8
-refactor -N 11 -M 15
-refactor -N 12 -M 8
-refactor -N 5 -M 4
-refactor -N 9 -M 9
-refactor -N 14 -M 16
-refactor -N 12 -M 14
-refactor -N 12 -M 2
-refactor -N 11 -M 8
-refactor -N 3 -M 6
-refactor -N 7 -M 15
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-strash
-refactor -N 15 -M 7
-balance
-rewrite
-refactor -N 9 -M 5
-refactor -N 12 -M 8
-refactor -N 5 -M 4
-resub -K 12
-refactor -N 4 -M 9
-refactor -N 8 -M 15
-refactor -N 4 -M 11
-refactor -N 5 -M 15
-renode -K 8
-renode -K 14
-refactor -N 7 -M 2
-resub -K 13
-refactor -N 14 -M 12
-refactor -N 5 -M 13
-renode -K 4
-strash
-refactor -N 15 -M 6
-resub -K 12
-refactor -N 15 -M 12
-rewrite
-refactor -N 6 -M 8
-fraig
-balance
-refactor -N 13 -M 10
-refactor -N 12 -M 16
-refactor -N 3 -M 16
-refactor -N 8 -M 3
-refactor -N 13 -M 3
-refactor -N 5 -M 3
-refactor -N 14 -M 15
-renode -K 9
-refactor -N 11 -M 15
-refactor -N 5 -M 8
-refactor -N 4 -M 13
-refactor -N 10 -M 1
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-refactor -N 9 -M 14
-renode -K 9
-strash
-rewrite
-refactor -N 12 -M 8
-resub -K 13
-refactor -N 5 -M 4
-resub -K 12
-refactor -N 8 -M 3
-refactor -N 13 -M 3
-refactor -N 2 -M 12
-refactor -N 3 -M 3
-renode -K 11
-refactor -N 10 -M 1
-refactor -N 8 -M 9
-renode -K 10
-refactor -N 10 -M 9
-refactor -N 14 -M 8
-refactor -N 15 -M 16
-refactor -N 10 -M 12
-renode -K 12
-refactor -N 5 -M 11
-balance
-rewrite
-resub -K 6
-refactor -N 7 -M 2
-renode -K 11
-refactor -N 5 -M 9
-resub -K 13
-refactor -N 3 -M 8
-refactor -N 5 -M 4
-refactor -N 9 -M 16
-refactor -N 9 -M 9
-refactor -N 12 -M 14
-balance
-renode -K 13
-refactor -N 4 -M 8
-resub -K 12
-refactor -N 7 -M 6
-renode -K 8
-refactor -N 8 -M 9
-renode -K 12
-refactor -N 4 -M 13
-refactor -N 10 -M 1
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-refactor -N 14 -M 5
-renode -K 9
-strash
-refactor -N 15 -M 7
-cleanup
-balance
-refactor -N 5 -M 7
-rewrite
-refactor -N 12 -M 8
-refactor -N 5 -M 4
-resub -K 12
-refactor -N 8 -M 3
-refactor -N 13 -M 3
-refactor -N 2 -M 12
-renode -K 11
-renode -K 10
-refactor -N 14 -M 8
-refactor -N 15 -M 16
-refactor -N 7 -M 10
-refactor -N 4 -M 13
-refactor -N 10 -M 1
-refactor -N 4 -M 10
-renode -K 9
-refactor -N 15 -M 7
-resub -K 12
-rewrite
-balance
-refactor -N 5 -M 9
-resub -K 4
-refactor -N 14 -M 11
-renode -K 14
-renode -K 15
-refactor -N 8 -M 14
-renode -K 13
-refactor -N 4 -M 8
-refactor -N 14 -M 13
-refactor -N 6 -M 13
-refactor -N 4 -M 13
-resub -K 13
-renode -K 10
-refactor -N 10 -M 5
-refactor -N 11 -M 9
-refactor -N 3 -M 13
-balance
-rewrite
-refactor -N 6 -M 8
-refactor -N 5 -M 3
-refactor -N 8 -M 8
-refactor -N 8 -M 13
-refactor -N 6 -M 4
-refactor -N 15 -M 7
-renode -K 12
-refactor -N 10 -M 6
-refactor -N 11 -M 9
-resub -K 12
-refactor -N 6 -M 9
-refactor -N 9 -M 10
-resub -K 16
-renode -K 5
-refactor -N 9 -M 13
-refactor -N 10 -M 1
-refactor -N 3 -M 7
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-refactor -N 11 -M 4
-refactor -N 15 -M 7
-refactor -N 2 -M 5
-balance
-refactor -N 10 -M 12
-rewrite
-refactor -N 4 -M 16
-renode -K 15
-renode -K 8
-strash
-refactor -N 14 -M 13
-refactor -N 4 -M 11
-refactor -N 9 -M 2
-resub -K 11
-refactor -N 4 -M 15
-refactor -N 9 -M 12
-refactor -N 15 -M 4
-resub -K 12
-refactor -N 3 -M 9
-renode -K 14
-strash
-refactor -N 11 -M 2
-refactor -N 2 -M 6
-refactor -N 8 -M 14
-refactor -N 10 -M 13
-refactor -N 12 -M 7
-refactor -N 2 -M 10
-refactor -N 13 -M 2
-resub -K 7
-refactor -N 5 -M 13
-renode -K 4
-refactor -N 14 -M 6
-refactor -N 9 -M 13
-rewrite
-refactor -N 15 -M 4
-refactor -N 12 -M 16
-refactor -N 10 -M 1
-balance
-refactor -N 12 -M 5
-renode -K 13
-refactor -N 4 -M 8
-renode -K 14
-refactor -N 4 -M 16
-renode -K 9
-refactor -N 6 -M 10
-renode -K 8
-refactor -N 4 -M 5
-refactor -N 15 -M 11
-refactor -N 13 -M 12
-refactor -N 10 -M 1
-refactor -N 14 -M 12
-rewrite
-resub -K 13
-renode -K 10
-refactor -N 14 -M 2
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-refactor -N 12 -M 2
-refactor -N 8 -M 14
-refactor -N 11 -M 9
-refactor -N 3 -M 13
-renode -K 12
-balance
-renode -K 10
-resub -K 12
-rewrite
-refactor -N 6 -M 8
-refactor -N 5 -M 3
-refactor -N 13 -M 10
-refactor -N 9 -M 15
-fraig
-renode -K 14
-renode -K 5
-renode -K 9
-refactor -N 3 -M 6
-refactor -N 15 -M 4
-resub -K 12
-refactor -N 4 -M 8
-refactor -N 10 -M 1
-resub -K 13
-renode -K 10
-refactor -N 10 -M 5
-refactor -N 11 -M 9
-refactor -N 3 -M 13
-renode -K 12
-resub -K 12
-rewrite
-refactor -N 6 -M 8
-balance
-renode -K 13
-refactor -N 4 -M 8
-renode -K 8
-refactor -N 14 -M 13
-refactor -N 5 -M 6
-refactor -N 9 -M 2
-refactor -N 8 -M 3
-refactor -N 4 -M 15
-refactor -N 2 -M 5
-refactor -N 12 -M 7
-renode -K 14
-refactor -N 4 -M 10
-refactor -N 12 -M 15
-refactor -N 15 -M 4
-renode -K 9
-refactor -N 15 -M 7
-balance
-rewrite
-refactor -N 12 -M 8
-refactor -N 5 -M 4
-refactor -N 9 -M 9
-refactor -N 9 -M 16
-renode -K 8
-refactor -N 14 -M 13
-refactor -N 4 -M 11
-refactor -N 11 -M 6
-refactor -N 11 -M 8
-renode -K 9
-refactor -N 3 -M 6
-refactor -N 10 -M 1
-renode -K 10
-refactor -N 10 -M 15
-renode -K 14
-refactor -N 7 -M 2
-resub -K 13
-refactor -N 14 -M 12
-refactor -N 5 -M 13
-renode -K 4
-refactor -N 15 -M 6
-resub -K 12
-refactor -N 15 -M 12
-balance
-refactor -N 6 -M 5
-refactor -N 12 -M 8
 refactor -N 5 -M 4
 renode -K 14
 refactor -N 10 -M 5
@@ -9199,802 +8208,1793 @@ renode -K 5 -C 13
 renode -K 10 -C 8
 renode -K 15 -C 11
 renode -K 9 -C 11
-refactor -N 9 -M 14
-refactor -N 15 -M 5
-renode -K 12 -C 9
-renode -K 15 -C 7
-refactor -N 14 -M 12
-refactor -N 12 -M 16
-refactor -N 15 -M 16
-refactor -N 6 -M 4
-renode -K 15 -C 6
-refactor -N 4 -M 11
-renode -K 6 -C 3
-renode -K 13 -C 4
-refactor -N 8 -M 2
-renode -K 9 -C 3
-renode -K 10 -C 15
-renode -K 8 -C 7
-refactor -N 13 -M 2
-refactor -N 10 -M 8
-refactor -N 9 -M 3
-refactor -N 2 -M 8
-refactor -N 15 -M 13
-renode -K 15 -C 6
-refactor -N 15 -M 2
-renode -K 8 -C 10
-renode -K 6 -C 8
-refactor -N 8 -M 14
-renode -K 15 -C 16
-refactor -N 4 -M 16
-renode -K 13 -C 1
-resub -K 16
-renode -K 7 -C 14
-renode -K 4 -C 3
-refactor -N 3 -M 12
-refactor -N 6 -M 5
-resub -K 11
-refactor -N 5 -M 15
-renode -K 5 -C 7
-refactor -N 10 -M 12
-refactor -N 9 -M 15
-refactor -N 7 -M 14
-renode -K 14 -C 4
-renode -K 10 -C 3
-renode -K 6 -C 10
-refactor -N 11 -M 2
-renode -K 4 -C 3
-renode -K 10 -C 16
-refactor -N 8 -M 3
-refactor -N 3 -M 11
-refactor -N 5 -M 16
-renode -K 8 -C 7
-refactor -N 10 -M 14
-refactor -N 15 -M 14
-refactor -N 2 -M 4
-refactor -N 11 -M 10
-refactor -N 7 -M 1
-refactor -N 4 -M 15
-resub -K 11
-renode -K 8 -C 11
-renode -K 6 -C 16
-refactor -N 14 -M 14
-refactor -N 2 -M 15
-refactor -N 12 -M 8
-renode -K 6 -C 10
-renode -K 11 -C 6
-renode -K 14 -C 16
-refactor -N 2 -M 9
-refactor -N 15 -M 2
-refactor -N 7 -M 5
-renode -K 9 -C 14
-renode -K 11 -C 16
-renode -K 5 -C 6
-refactor -N 12 -M 16
-refactor -N 2 -M 5
-renode -K 8 -C 2
-refactor -N 13 -M 7
-renode -K 6 -C 9
-renode -K 5 -C 8
-refactor -N 5 -M 15
-refactor -N 2 -M 1
-refactor -N 12 -M 3
-refactor -N 11 -M 15
-refactor -N 9 -M 6
-renode -K 15 -C 2
-renode -K 7 -C 14
-refactor -N 15 -M 7
-renode -K 15 -C 15
-refactor -N 2 -M 11
-renode -K 9 -C 10
-renode -K 13 -C 5
-renode -K 5 -C 5
-renode -K 12 -C 6
-renode -K 9 -C 9
-renode -K 8 -C 12
-renode -K 14 -C 11
-rewrite
-renode -K 7 -C 15
-renode -K 5 -C 6
-refactor -N 15 -M 11
-renode -K 13 -C 12
-renode -K 6 -C 8
-renode -K 7 -C 8
-renode -K 9 -C 6
-renode -K 9 -C 13
-renode -K 4 -C 4
-renode -K 10 -C 9
-refactor -N 4 -M 15
-renode -K 11 -C 14
-renode -K 4 -C 16
-renode -K 10 -C 3
-renode -K 14 -C 7
-renode -K 15 -C 15
-refactor -N 8 -M 12
-refactor -N 15 -M 5
-renode -K 6 -C 10
-renode -K 4 -C 8
-refactor -N 13 -M 13
-refactor -N 12 -M 6
-refactor -N 9 -M 6
-renode -K 9 -C 10
-renode -K 7 -C 7
-refactor -N 5 -M 3
-refactor -N 14 -M 15
-renode -K 4 -C 11
-renode -K 11 -C 14
-renode -K 9 -C 12
-renode -K 8 -C 12
-renode -K 14 -C 11
-renode -K 9 -C 13
-renode -K 13 -C 2
-renode -K 4 -C 4
-renode -K 14 -C 7
-refactor -N 12 -M 4
-refactor -N 15 -M 3
-renode -K 15 -C 8
-renode -K 8 -C 15
-refactor -N 3 -M 6
-renode -K 7 -C 14
-renode -K 9 -C 1
-refactor -N 11 -M 9
-renode -K 7 -C 8
-renode -K 9 -C 9
-refactor -N 4 -M 4
-renode -K 13 -C 15
-renode -K 15 -C 9
-rewrite
-refactor -N 7 -M 8
-renode -K 7 -C 15
-renode -K 9 -C 12
-renode -K 8 -C 12
-renode -K 14 -C 11
-renode -K 4 -C 11
-renode -K 9 -C 13
-renode -K 13 -C 2
-renode -K 4 -C 4
-renode -K 6 -C 16
-refactor -N 6 -M 12
-renode -K 11 -C 6
-resub -K 14
-renode -K 15 -C 8
-refactor -N 5 -M 7
-refactor -N 8 -M 1
-refactor -N 12 -M 1
-refactor -N 6 -M 15
-renode -K 7 -C 4
-refactor -N 3 -M 12
-renode -K 10 -C 2
-renode -K 14 -C 7
-renode -K 9 -C 13
-refactor -N 5 -M 5
-renode -K 14 -C 2
-refactor -N 12 -M 15
-renode -K 4 -C 16
-refactor -N 8 -M 2
-renode -K 9 -C 3
-renode -K 4 -C 13
-renode -K 10 -C 2
-renode -K 9 -C 14
-renode -K 9 -C 5
-renode -K 7 -C 15
-renode -K 9 -C 16
-renode -K 8 -C 14
-refactor -N 13 -M 4
-renode -K 15 -C 15
-renode -K 13 -C 11
-renode -K 5 -C 6
-refactor -N 15 -M 7
-renode -K 12 -C 9
-renode -K 4 -C 6
-refactor -N 14 -M 14
-renode -K 9 -C 12
-renode -K 8 -C 12
-renode -K 14 -C 11
-refactor -N 5 -M 13
-renode -K 9 -C 13
-renode -K 13 -C 2
-renode -K 4 -C 4
-renode -K 6 -C 16
-renode -K 15 -C 8
-refactor -N 13 -M 6
-resub -K 14
-refactor -N 15 -M 5
-renode -K 4 -C 1
-renode -K 6 -C 10
-renode -K 5 -C 8
-renode -K 11 -C 15
-refactor -N 14 -M 12
-renode -K 9 -C 5
-renode -K 7 -C 9
-renode -K 15 -C 10
-renode -K 14 -C 7
-renode -K 12 -C 3
-refactor -N 4 -M 4
-renode -K 4 -C 5
-refactor -N 14 -M 16
-renode -K 12 -C 11
-renode -K 6 -C 12
-refactor -N 14 -M 11
-renode -K 4 -C 13
-renode -K 10 -C 2
-renode -K 9 -C 14
-renode -K 6 -C 11
-refactor -N 2 -M 1
-renode -K 9 -C 5
-renode -K 7 -C 15
-renode -K 9 -C 16
-renode -K 8 -C 14
-renode -K 13 -C 11
-renode -K 5 -C 6
-renode -K 5 -C 8
-renode -K 5 -C 4
-refactor -N 13 -M 2
-renode -K 11 -C 11
-renode -K 13 -C 16
-renode -K 4 -C 6
-renode -K 6 -C 16
-refactor -N 11 -M 13
-renode -K 15 -C 8
-refactor -N 13 -M 6
-resub -K 14
-refactor -N 15 -M 5
-renode -K 6 -C 10
-renode -K 5 -C 8
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-renode -K 10 -C 3
-resub -K 13
-renode -K 14 -C 7
-renode -K 15 -C 15
-renode -K 9 -C 13
-renode -K 4 -C 4
-refactor -N 13 -M 5
-renode -K 11 -C 16
-renode -K 10 -C 16
-refactor -N 12 -M 11
-refactor -N 12 -M 16
-renode -K 13 -C 10
-refactor -N 4 -M 6
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-renode -K 5 -C 8
-refactor -N 13 -M 2
-renode -K 11 -C 11
-renode -K 13 -C 16
-refactor -N 14 -M 15
-renode -K 4 -C 6
-renode -K 6 -C 16
-refactor -N 13 -M 6
-refactor -N 5 -M 4
-resub -K 14
-refactor -N 11 -M 13
-renode -K 12 -C 13
-renode -K 15 -C 8
-refactor -N 7 -M 6
-renode -K 10 -C 3
-resub -K 13
-renode -K 8 -C 12
-renode -K 11 -C 5
-renode -K 14 -C 11
-rewrite
-renode -K 7 -C 15
-refactor -N 7 -M 13
-refactor -N 12 -M 11
-renode -K 9 -C 14
-refactor -N 9 -M 10
-resub -K 14
-renode -K 4 -C 3
-renode -K 14 -C 3
-renode -K 6 -C 5
-renode -K 8 -C 9
-renode -K 9 -C 1
-refactor -N 6 -M 12
-refactor -N 7 -M 6
-refactor -N 4 -M 1
-refactor -N 12 -M 7
-refactor -N 11 -M 6
-renode -K 9 -C 3
-refactor -N 9 -M 6
-refactor -N 8 -M 13
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 13 -C 13
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 10 -M 10
-renode -K 5 -C 8
-refactor -N 2 -M 5
-refactor -N 13 -M 2
-renode -K 11 -C 11
-renode -K 13 -C 16
-refactor -N 14 -M 15
-renode -K 4 -C 6
-renode -K 10 -C 3
-resub -K 13
-renode -K 7 -C 16
-renode -K 7 -C 15
-renode -K 6 -C 16
-refactor -N 9 -M 6
-refactor -N 6 -M 3
-renode -K 8 -C 1
-renode -K 14 -C 13
-renode -K 11 -C 16
-resub -K 7
-refactor -N 2 -M 7
-renode -K 15 -C 7
-refactor -N 13 -M 4
-refactor -N 10 -M 1
-renode -K 11 -C 14
-refactor -N 10 -M 11
-renode -K 10 -C 1
-renode -K 12 -C 3
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 12 -M 1
-refactor -N 4 -M 1
-renode -K 5 -C 12
-renode -K 6 -C 6
-refactor -N 11 -M 7
-refactor -N 13 -M 3
-renode -K 5 -C 3
-refactor -N 8 -M 14
-renode -K 7 -C 14
-fraig
-refactor -N 6 -M 4
-refactor -N 4 -M 2
-renode -K 15 -C 7
-renode -K 10 -C 11
-refactor -N 12 -M 5
-renode -K 10 -C 3
-resub -K 13
-renode -K 7 -C 16
-renode -K 7 -C 15
-renode -K 6 -C 16
-refactor -N 3 -M 7
-renode -K 11 -C 9
-refactor -N 9 -M 2
-refactor -N 9 -M 9
-refactor -N 3 -M 10
-renode -K 15 -C 1
-refactor -N 11 -M 5
-refactor -N 11 -M 2
-refactor -N 13 -M 14
-refactor -N 15 -M 12
-refactor -N 4 -M 13
-refactor -N 14 -M 3
-refactor -N 10 -M 2
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 14 -C 13
-renode -K 11 -C 8
-refactor -N 12 -M 1
-refactor -N 12 -M 12
-renode -K 13 -C 16
-refactor -N 4 -M 10
-renode -K 7 -C 5
-renode -K 12 -C 1
-renode -K 13 -C 13
-renode -K 14 -C 13
-renode -K 4 -C 8
-rewrite
-refactor -N 11 -M 4
-refactor -N 11 -M 5
-renode -K 12 -C 3
-renode -K 8 -C 7
-refactor -N 3 -M 4
-refactor -N 6 -M 5
-renode -K 10 -C 3
-renode -K 7 -C 16
-renode -K 6 -C 16
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 13 -C 13
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 13 -M 12
-refactor -N 7 -M 4
-renode -K 14 -C 10
-refactor -N 7 -M 11
-renode -K 10 -C 9
-refactor -N 12 -M 1
-refactor -N 4 -M 3
-refactor -N 6 -M 5
-refactor -N 6 -M 13
-renode -K 9 -C 1
-resub -K 13
-resub -K 5
-renode -K 4 -C 12
-renode -K 13 -C 6
-refactor -N 6 -M 14
-renode -K 14 -C 11
-renode -K 6 -C 13
-renode -K 7 -C 15
-renode -K 7 -C 6
-renode -K 8 -C 3
-renode -K 14 -C 13
-renode -K 4 -C 7
-refactor -N 11 -M 11
-renode -K 11 -C 1
-refactor -N 4 -M 8
-refactor -N 5 -M 1
-refactor -N 3 -M 11
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-refactor -N 5 -M 5
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 12 -M 1
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-renode -K 5 -C 3
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 12 -M 1
-refactor -N 12 -M 12
-refactor -N 8 -M 14
-refactor -N 3 -M 2
-refactor -N 12 -M 8
-refactor -N 14 -M 4
-renode -K 6 -C 6
-balance
-refactor -N 4 -M 5
-rewrite
-renode -K 11 -C 8
-refactor -N 14 -M 1
-renode -K 7 -C 15
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 11 -C 6
-refactor -N 9 -M 5
-resub -K 14
-renode -K 15 -C 8
-refactor -N 14 -M 1
-renode -K 7 -C 15
-refactor -N 5 -M 11
-refactor -N 13 -M 15
-renode -K 11 -C 8
-renode -K 11 -C 15
-renode -K 5 -C 8
-renode -K 13 -C 13
-renode -K 14 -C 13
-renode -K 4 -C 8
-rewrite
-refactor -N 11 -M 4
-renode -K 14 -C 7
-renode -K 7 -C 6
-renode -K 7 -C 15
-refactor -N 9 -M 13
-renode -K 4 -C 16
-refactor -N 10 -M 3
-renode -K 14 -C 6
-strash
-refactor -N 7 -M 5
-refactor -N 2 -M 3
-refactor -N 6 -M 13
-refactor -N 6 -M 3
-refactor -N 4 -M 8
-refactor -N 9 -M 12
-refactor -N 14 -M 11
-refactor -N 5 -M 13
-refactor -N 11 -M 14
-renode -K 13 -C 1
-renode -K 15 -C 3
-renode -K 8 -C 8
-refactor -N 8 -M 13
-refactor -N 6 -M 10
-renode -K 10 -C 14
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-refactor -N 2 -M 6
-renode -K 11 -C 6
-refactor -N 9 -M 5
-resub -K 14
-renode -K 15 -C 8
-refactor -N 8 -M 1
-renode -K 6 -C 10
-refactor -N 9 -M 14
-renode -K 10 -C 10
-refactor -N 12 -M 1
-renode -K 6 -C 13
-renode -K 14 -C 3
-renode -K 9 -C 8
-renode -K 5 -C 13
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 14 -C 13
-renode -K 11 -C 8
-refactor -N 14 -M 1
-renode -K 7 -C 15
-renode -K 7 -C 10
-refactor -N 13 -M 10
-renode -K 13 -C 13
-renode -K 6 -C 10
-renode -K 5 -C 10
-renode -K 15 -C 4
-refactor -N 15 -M 6
-renode -K 6 -C 15
-renode -K 10 -C 3
-resub -K 10
-renode -K 13 -C 15
-resub -K 13
-renode -K 8 -C 12
-rewrite
-renode -K 7 -C 15
-refactor -N 10 -M 11
-renode -K 10 -C 10
-renode -K 6 -C 3
-renode -K 4 -C 1
-renode -K 7 -C 14
-renode -K 14 -C 11
-refactor -N 13 -M 12
-refactor -N 2 -M 4
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-renode -K 11 -C 6
-refactor -N 9 -M 5
-resub -K 14
-renode -K 15 -C 8
-renode -K 7 -C 15
-renode -K 5 -C 8
-renode -K 4 -C 2
-renode -K 11 -C 6
-refactor -N 9 -M 5
-resub -K 14
-renode -K 15 -C 8
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-refactor -N 2 -M 6
-refactor -N 6 -M 12
-renode -K 11 -C 6
-refactor -N 9 -M 5
-resub -K 14
-renode -K 15 -C 8
-renode -K 8 -C 15
-renode -K 10 -C 3
-resub -K 13
-resub -K 10
-renode -K 13 -C 15
-renode -K 8 -C 12
-renode -K 14 -C 11
-rewrite
-renode -K 7 -C 15
-renode -K 14 -C 1
+read resources/circuits/i10.aig
+renode -K 11 -C 12
 refactor -N 4 -M 7
-renode -K 14 -C 3
-refactor -N 2 -M 1
-refactor -N 12 -M 2
-renode -K 10 -C 13
-refactor -N 13 -M 2
-refactor -N 7 -M 7
-renode -K 13 -C 10
-fraig
-renode -K 13 -C 11
-renode -K 4 -C 4
-refactor -N 4 -M 11
-renode -K 12 -C 1
-renode -K 12 -C 14
-renode -K 12 -C 6
-renode -K 10 -C 3
-resub -K 13
-renode -K 7 -C 16
-resub -K 9
-renode -K 14 -C 13
-rewrite
-renode -K 11 -C 8
-refactor -N 12 -M 1
-renode -K 6 -C 5
-refactor -N 13 -M 7
-refactor -N 8 -M 1
-refactor -N 10 -M 12
-renode -K 11 -C 6
-renode -K 12 -C 12
-refactor -N 13 -M 4
-renode -K 10 -C 3
-resub -K 10
-renode -K 13 -C 15
-resub -K 13
-renode -K 8 -C 12
-renode -K 14 -C 11
-refactor -N 3 -M 14
-rewrite
-renode -K 7 -C 15
-renode -K 10 -C 7
-renode -K 6 -C 10
-renode -K 15 -C 10
-refactor -N 13 -M 12
-refactor -N 12 -M 14
-refactor -N 9 -M 10
-refactor -N 7 -M 12
-renode -K 12 -C 11
-refactor -N 14 -M 8
-renode -K 10 -C 2
-refactor -N 9 -M 11
-refactor -N 12 -M 2
-renode -K 12 -C 14
-refactor -N 7 -M 3
-renode -K 5 -C 11
-refactor -N 4 -M 10
-renode -K 10 -C 3
-resub -K 13
-renode -K 7 -C 16
-resub -K 9
-refactor -N 12 -M 1
-renode -K 5 -C 8
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 9 -M 5
-resub -K 14
-renode -K 13 -C 2
-renode -K 5 -C 8
-refactor -N 13 -M 15
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 11 -C 8
-renode -K 7 -C 15
-renode -K 11 -C 6
-resub -K 14
-renode -K 15 -C 8
-refactor -N 13 -M 4
-renode -K 10 -C 3
-resub -K 10
-renode -K 13 -C 15
-resub -K 13
-renode -K 8 -C 12
-renode -K 14 -C 11
-renode -K 11 -C 10
-renode -K 7 -C 15
-refactor -N 11 -M 6
-renode -K 8 -C 6
-renode -K 12 -C 8
-renode -K 6 -C 4
-refactor -N 15 -M 5
-renode -K 10 -C 16
-rewrite
-renode -K 7 -C 13
-renode -K 13 -C 8
-renode -K 14 -C 15
-renode -K 7 -C 9
-refactor -N 6 -M 15
-renode -K 7 -C 5
-refactor -N 14 -M 2
-refactor -N 13 -M 4
-renode -K 12 -C 10
-rewrite
-renode -K 4 -C 11
-refactor -N 10 -M 3
-balance
-renode -K 11 -C 3
-refactor -N 10 -M 10
-refactor -N 8 -M 13
-refactor -N 12 -M 7
-renode -K 6 -C 5
-refactor -N 11 -M 10
-refactor -N 3 -M 9
-refactor -N 15 -M 6
-renode -K 15 -C 8
-renode -K 14 -C 11
-renode -K 5 -C 8
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 9 -M 5
-resub -K 14
-renode -K 15 -C 8
-renode -K 5 -C 8
-renode -K 14 -C 10
-renode -K 13 -C 13
-renode -K 14 -C 13
-rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 9 -M 5
-resub -K 14
-renode -K 13 -C 2
-renode -K 11 -C 15
-renode -K 15 -C 8
-renode -K 10 -C 3
-renode -K 6 -C 11
-renode -K 7 -C 15
-renode -K 10 -C 3
-resub -K 13
-renode -K 7 -C 16
-resub -K 9
-renode -K 14 -C 13
-rewrite
-renode -K 11 -C 8
-refactor -N 12 -M 1
-renode -K 7 -C 12
-refactor -N 9 -M 3
-refactor -N 15 -M 10
-refactor -N 10 -M 9
-renode -K 13 -C 3
+refactor -N 5 -M 7
 refactor -N 11 -M 12
-refactor -N 6 -M 14
-refactor -N 11 -M 16
+refactor -N 7 -M 10
+renode -K 4 -C 6
+refactor -N 7 -M 11
+renode -K 12 -C 1
+refactor -N 10 -M 16
+renode -K 11 -C 16
+refactor -N 5 -M 11
+refactor -N 3 -M 16
+refactor -N 12 -M 1
+refactor -N 8 -M 2
+refactor -N 14 -M 16
+renode -K 12 -C 5
+renode -K 9 -C 15
+resub -K 11
+renode -K 4 -C 14
+renode -K 6 -C 1
+refactor -N 7 -M 10
+refactor -N 8 -M 3
+refactor -N 7 -M 11
+refactor -N 14 -M 12
+renode -K 9 -C 12
+refactor -N 9 -M 16
+renode -K 13 -C 4
+renode -K 6 -C 2
+refactor -N 15 -M 6
+refactor -N 14 -M 3
+renode -K 11 -C 12
+renode -K 5 -C 4
+renode -K 15 -C 15
+refactor -N 2 -M 8
+refactor -N 7 -M 5
+refactor -N 5 -M 3
+refactor -N 10 -M 12
+renode -K 13 -C 1
+renode -K 13 -C 15
+refactor -N 15 -M 14
+refactor -N 5 -M 15
+resub -K 14
+renode -K 8 -C 6
+renode -K 12 -C 13
+refactor -N 15 -M 4
+refactor -N 11 -M 12
+refactor -N 8 -M 2
+refactor -N 6 -M 5
+renode -K 13 -C 4
+renode -K 11 -C 16
+refactor -N 3 -M 1
+refactor -N 2 -M 12
+renode -K 12 -C 2
+renode -K 11 -C 9
+renode -K 5 -C 6
+refactor -N 15 -M 1
+renode -K 14 -C 3
+refactor -N 7 -M 14
+renode -K 15 -C 4
+refactor -N 4 -M 13
+renode -K 13 -C 1
+refactor -N 9 -M 9
+refactor -N 5 -M 9
+renode -K 8 -C 15
+refactor -N 9 -M 4
+refactor -N 10 -M 14
+refactor -N 5 -M 2
+renode -K 12 -C 3
+renode -K 8 -C 16
+refactor -N 7 -M 7
+refactor -N 10 -M 13
+refactor -N 5 -M 16
+renode -K 15 -C 16
+renode -K 6 -C 9
+renode -K 8 -C 8
+renode -K 12 -C 6
+renode -K 9 -C 1
+refactor -N 14 -M 2
+renode -K 12 -C 10
+renode -K 7 -C 3
+refactor -N 15 -M 10
+renode -K 11 -C 15
+renode -K 14 -C 15
+renode -K 10 -C 16
+renode -K 7 -C 13
+refactor -N 12 -M 1
+rewrite
+renode -K 11 -C 13
+renode -K 7 -C 15
+refactor -N 8 -M 1
+renode -K 5 -C 8
+renode -K 8 -C 9
+refactor -N 15 -M 13
+renode -K 8 -C 8
+renode -K 13 -C 3
+refactor -N 2 -M 8
+renode -K 6 -C 14
+renode -K 12 -C 9
+refactor -N 14 -M 4
+renode -K 13 -C 11
+refactor -N 7 -M 2
+refactor -N 8 -M 6
+renode -K 14 -C 15
+renode -K 10 -C 16
+renode -K 7 -C 13
+renode -K 11 -C 7
+refactor -N 12 -M 1
+rewrite
+refactor -N 15 -M 16
+renode -K 5 -C 5
+refactor -N 7 -M 13
+renode -K 13 -C 16
+refactor -N 14 -M 7
+refactor -N 12 -M 4
+renode -K 4 -C 13
+refactor -N 3 -M 8
+renode -K 9 -C 2
+renode -K 11 -C 12
+renode -K 6 -C 11
+refactor -N 5 -M 11
+refactor -N 3 -M 1
+resub -K 4
+refactor -N 11 -M 14
+renode -K 5 -C 3
+renode -K 15 -C 15
+renode -K 9 -C 6
+refactor -N 2 -M 12
+refactor -N 11 -M 11
+refactor -N 10 -M 12
+renode -K 8 -C 5
+refactor -N 2 -M 16
+refactor -N 10 -M 13
+renode -K 15 -C 7
+renode -K 12 -C 10
+renode -K 10 -C 12
+renode -K 14 -C 14
+resub -K 7
+renode -K 12 -C 4
+renode -K 8 -C 8
+renode -K 13 -C 3
+refactor -N 2 -M 8
+renode -K 6 -C 14
+renode -K 7 -C 2
+refactor -N 14 -M 10
+renode -K 9 -C 10
+renode -K 12 -C 6
+renode -K 9 -C 1
+renode -K 11 -C 9
+renode -K 5 -C 6
+renode -K 7 -C 11
+refactor -N 10 -M 7
+renode -K 15 -C 11
+renode -K 4 -C 8
+renode -K 10 -C 16
+renode -K 14 -C 13
+renode -K 15 -C 6
+refactor -N 2 -M 3
+renode -K 7 -C 14
+renode -K 10 -C 9
+renode -K 11 -C 5
+renode -K 7 -C 16
+refactor -N 8 -M 15
+refactor -N 15 -M 11
+refactor -N 11 -M 2
+renode -K 11 -C 7
+renode -K 6 -C 11
+read resources/circuits/i10.aig
+refactor -N 15 -M 12
+renode -K 15 -C 6
+renode -K 10 -C 8
+renode -K 6 -C 15
+renode -K 15 -C 3
+renode -K 11 -C 5
+renode -K 12 -C 1
+refactor -N 9 -M 16
+renode -K 4 -C 7
+renode -K 14 -C 9
+renode -K 8 -C 5
+refactor -N 3 -M 11
+renode -K 15 -C 11
+renode -K 14 -C 8
 renode -K 11 -C 6
+renode -K 8 -C 16
+renode -K 10 -C 15
+refactor -N 5 -M 4
+refactor -N 4 -M 12
+refactor -N 7 -M 6
+refactor -N 13 -M 4
+refactor -N 7 -M 12
+refactor -N 13 -M 11
+refactor -N 6 -M 14
+refactor -N 5 -M 14
+renode -K 11 -C 11
+refactor -N 4 -M 8
+refactor -N 12 -M 14
+renode -K 10 -C 13
+refactor -N 8 -M 11
+renode -K 9 -C 13
+refactor -N 14 -M 14
+refactor -N 12 -M 1
+resub -K 14
+refactor -N 5 -M 2
+refactor -N 11 -M 1
+renode -K 7 -C 15
+renode -K 6 -C 3
+renode -K 12 -C 13
+renode -K 12 -C 14
+renode -K 5 -C 1
+refactor -N 11 -M 14
+refactor -N 15 -M 15
+refactor -N 7 -M 2
+refactor -N 2 -M 16
+refactor -N 7 -M 10
+renode -K 14 -C 3
+renode -K 13 -C 5
+renode -K 10 -C 3
+renode -K 6 -C 7
+renode -K 5 -C 5
+refactor -N 7 -M 3
+refactor -N 3 -M 9
+renode -K 4 -C 10
+refactor -N 9 -M 16
+renode -K 5 -C 14
+renode -K 10 -C 8
+renode -K 10 -C 7
+resub -K 12
+renode -K 9 -C 8
+renode -K 11 -C 3
+renode -K 7 -C 4
+refactor -N 6 -M 6
+renode -K 5 -C 3
+refactor -N 10 -M 13
+renode -K 11 -C 16
+renode -K 7 -C 13
+renode -K 13 -C 6
+refactor -N 3 -M 5
+refactor -N 8 -M 15
+renode -K 6 -C 11
+renode -K 6 -C 1
+refactor -N 4 -M 12
+refactor -N 3 -M 10
+refactor -N 9 -M 12
+refactor -N 11 -M 15
+renode -K 13 -C 9
+refactor -N 15 -M 15
+renode -K 9 -C 7
+rewrite
+renode -K 14 -C 15
+renode -K 9 -C 8
+refactor -N 10 -M 12
+refactor -N 7 -M 12
+refactor -N 15 -M 3
+refactor -N 6 -M 8
+renode -K 10 -C 1
+refactor -N 14 -M 1
+renode -K 13 -C 15
+renode -K 7 -C 7
+renode -K 12 -C 5
+refactor -N 11 -M 10
+renode -K 8 -C 6
+refactor -N 8 -M 10
+renode -K 14 -C 2
+renode -K 12 -C 12
+renode -K 13 -C 11
+refactor -N 9 -M 13
+renode -K 8 -C 7
+renode -K 14 -C 8
+refactor -N 13 -M 9
+renode -K 8 -C 14
+renode -K 5 -C 10
+refactor -N 10 -M 11
+refactor -N 6 -M 6
+renode -K 6 -C 10
+refactor -N 11 -M 16
+resub -K 7
+renode -K 9 -C 4
+renode -K 13 -C 5
+refactor -N 15 -M 1
+refactor -N 4 -M 12
+renode -K 14 -C 8
+resub -K 14
+renode -K 8 -C 1
+renode -K 12 -C 7
+renode -K 8 -C 11
+renode -K 7 -C 14
+renode -K 9 -C 15
+refactor -N 5 -M 3
+renode -K 7 -C 7
+refactor -N 4 -M 14
+renode -K 12 -C 8
+refactor -N 15 -M 5
+renode -K 12 -C 2
+refactor -N 9 -M 11
+refactor -N 11 -M 4
+refactor -N 7 -M 12
+renode -K 13 -C 8
+renode -K 12 -C 1
+renode -K 12 -C 4
+renode -K 10 -C 9
+refactor -N 8 -M 6
+renode -K 14 -C 1
+renode -K 15 -C 2
+refactor -N 13 -M 10
+refactor -N 13 -M 12
+renode -K 9 -C 5
+renode -K 9 -C 4
+renode -K 13 -C 5
+refactor -N 15 -M 1
+refactor -N 11 -M 10
+renode -K 8 -C 6
+refactor -N 8 -M 10
+refactor -N 4 -M 8
+renode -K 14 -C 4
+renode -K 5 -C 14
+renode -K 10 -C 8
+renode -K 10 -C 7
+resub -K 12
+renode -K 9 -C 8
+refactor -N 6 -M 14
+renode -K 14 -C 16
+refactor -N 8 -M 7
+renode -K 14 -C 13
+refactor -N 7 -M 16
+renode -K 11 -C 7
+renode -K 4 -C 13
+refactor -N 6 -M 9
+refactor -N 4 -M 3
+refactor -N 4 -M 13
+renode -K 10 -C 9
+refactor -N 8 -M 6
+renode -K 11 -C 8
+refactor -N 2 -M 1
+refactor -N 11 -M 14
+refactor -N 10 -M 13
+renode -K 11 -C 16
+renode -K 7 -C 13
+renode -K 13 -C 6
+refactor -N 3 -M 5
+renode -K 5 -C 14
+renode -K 10 -C 8
+renode -K 10 -C 7
+renode -K 15 -C 5
+resub -K 12
+renode -K 9 -C 8
+refactor -N 10 -M 3
+resub -K 13
+renode -K 11 -C 6
+renode -K 12 -C 16
+refactor -N 2 -M 11
+renode -K 12 -C 3
+renode -K 9 -C 16
+refactor -N 12 -M 7
+resub -K 6
+renode -K 14 -C 6
+renode -K 12 -C 2
+renode -K 11 -C 3
+renode -K 9 -C 7
+renode -K 13 -C 9
+renode -K 5 -C 4
+renode -K 15 -C 7
+strash
+refactor -N 2 -M 6
+renode -K 7 -C 9
+read resources/circuits/i10.aig
+resub -K 4
+refactor -N 2 -M 2
+resub -K 12
+renode -K 8 -C 12
+resub -K 14
+balance
+cleanup
+renode -K 5 -C 16
+strash
+resub -K 5
+refactor -N 6 -M 4
+resub -K 13
+refactor -N 11 -M 15
+resub -K 4
+fraig
+refactor -N 13 -M 9
+rewrite
+refactor -N 14 -M 2
+refactor -N 2 -M 1
+refactor -N 13 -M 15
+renode -K 7 -C 4
+renode -K 13 -C 9
+renode -K 6 -C 3
+resub -K 13
+refactor -N 8 -M 7
+resub -K 6
+renode -K 7 -C 9
+resub -K 8
+renode -K 7 -C 11
+resub -K 10
+cleanup
+renode -K 12 -C 16
+renode -K 7 -C 2
+renode -K 14 -C 1
+renode -K 7 -C 1
+balance
+fraig
+rewrite
+renode -K 9 -C 4
+refactor -N 9 -M 8
+refactor -N 5 -M 9
+refactor -N 11 -M 10
+refactor -N 8 -M 4
+resub -K 12
+renode -K 4 -C 7
+strash
+resub -K 4
+refactor -N 12 -M 12
+refactor -N 13 -M 4
+refactor -N 2 -M 12
+resub -K 6
+renode -K 4 -C 11
+refactor -N 11 -M 3
+resub -K 11
+rewrite
+refactor -N 13 -M 2
+renode -K 5 -C 3
+renode -K 10 -C 7
+refactor -N 10 -M 3
+renode -K 10 -C 5
+resub -K 14
+balance
+resub -K 16
+refactor -N 4 -M 7
+resub -K 9
+rewrite
+renode -K 10 -C 8
+strash
+refactor -N 9 -M 5
+refactor -N 8 -M 10
+resub -K 14
+resub -K 16
+resub -K 13
+resub -K 15
+renode -K 9 -C 12
+cleanup
+resub -K 14
+resub -K 5
+renode -K 10 -C 15
+refactor -N 3 -M 10
+resub -K 8
+renode -K 15 -C 8
+resub -K 16
+renode -K 10 -C 16
+refactor -N 10 -M 10
+refactor -N 10 -M 4
+renode -K 8 -C 4
+renode -K 10 -C 8
+refactor -N 8 -M 5
+renode -K 11 -C 10
+strash
+resub -K 9
+resub -K 12
+cleanup
+refactor -N 2 -M 9
+resub -K 6
+refactor -N 7 -M 3
+renode -K 7 -C 2
+strash
+refactor -N 7 -M 5
+resub -K 15
+rewrite
+refactor -N 6 -M 9
+refactor -N 12 -M 2
+resub -K 11
+refactor -N 14 -M 13
+renode -K 14 -C 1
+renode -K 7 -C 1
+renode -K 8 -C 5
+strash
+resub -K 6
+fraig
+refactor -N 11 -M 3
+resub -K 11
+cleanup
+refactor -N 2 -M 9
+balance
+refactor -N 2 -M 7
+rewrite
+renode -K 15 -C 8
+strash
+refactor -N 15 -M 8
+refactor -N 11 -M 6
+fraig
+refactor -N 11 -M 10
+refactor -N 8 -M 4
+resub -K 12
+refactor -N 15 -M 6
+resub -K 8
+refactor -N 11 -M 15
+refactor -N 6 -M 8
+resub -K 6
+renode -K 7 -C 4
+renode -K 13 -C 9
+fraig
+renode -K 6 -C 3
+cleanup
+rewrite
+refactor -N 8 -M 9
+renode -K 9 -C 14
+refactor -N 3 -M 4
+refactor -N 3 -M 10
+resub -K 8
+renode -K 15 -C 8
+resub -K 16
+refactor -N 11 -M 13
+renode -K 7 -C 10
+fraig
+renode -K 10 -C 16
+balance
+refactor -N 10 -M 10
+refactor -N 13 -M 8
+renode -K 15 -C 9
+resub -K 10
+cleanup
+rewrite
+refactor -N 9 -M 2
+renode -K 12 -C 5
+renode -K 4 -C 7
+refactor -N 11 -M 8
+refactor -N 10 -M 14
+resub -K 13
+refactor -N 3 -M 11
+renode -K 10 -C 3
+resub -K 10
+renode -K 15 -C 5
+refactor -N 9 -M 16
+refactor -N 8 -M 6
+renode -K 15 -C 8
+refactor -N 4 -M 8
+resub -K 4
+refactor -N 6 -M 14
+refactor -N 2 -M 15
+renode -K 11 -C 5
+strash
+refactor -N 2 -M 2
+rewrite
+refactor -N 13 -M 2
+refactor -N 13 -M 10
+refactor -N 4 -M 2
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+fraig
+resub -K 13
+resub -K 15
+resub -K 5
+refactor -N 10 -M 6
+renode -K 8 -C 5
+renode -K 10 -C 2
+resub -K 9
+renode -K 8 -C 15
+renode -K 12 -C 13
+renode -K 7 -C 2
+resub -K 6
+renode -K 13 -C 7
+cleanup
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+resub -K 13
+resub -K 15
+renode -K 13 -C 13
+renode -K 15 -C 1
+renode -K 7 -C 10
+fraig
+renode -K 15 -C 8
+resub -K 14
+rewrite
+cleanup
+renode -K 10 -C 3
+renode -K 12 -C 4
+renode -K 8 -C 5
+refactor -N 8 -M 5
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+fraig
+refactor -N 4 -M 8
+resub -K 4
+refactor -N 6 -M 14
+balance
+renode -K 11 -C 16
+cleanup
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+renode -K 11 -C 8
+resub -K 14
+renode -K 15 -C 11
+resub -K 10
+renode -K 13 -C 15
+renode -K 14 -C 11
+resub -K 15
+balance
+renode -K 6 -C 8
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 5 -C 10
+rewrite
+renode -K 15 -C 2
+renode -K 5 -C 14
+fraig
+refactor -N 9 -M 4
+resub -K 15
+balance
+renode -K 6 -C 13
+resub -K 13
+renode -K 7 -C 16
+resub -K 9
+renode -K 9 -C 16
+renode -K 11 -C 14
+refactor -N 2 -M 9
+rewrite
+resub -K 8
+renode -K 15 -C 16
+resub -K 5
+fraig
+refactor -N 2 -M 10
+renode -K 15 -C 2
+renode -K 11 -C 10
+resub -K 9
+resub -K 12
+renode -K 14 -C 13
+renode -K 6 -C 13
+fraig
+renode -K 14 -C 1
+renode -K 7 -C 1
+cleanup
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+refactor -N 15 -M 9
+renode -K 11 -C 2
+fraig
+balance
+renode -K 13 -C 13
+renode -K 8 -C 6
+renode -K 9 -C 16
+renode -K 15 -C 8
+resub -K 5
+resub -K 4
+refactor -N 5 -M 11
+renode -K 11 -C 14
+balance
+fraig
+cleanup
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+resub -K 14
+fraig
+renode -K 10 -C 3
+resub -K 13
+resub -K 15
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+cleanup
+renode -K 15 -C 8
+renode -K 13 -C 10
+resub -K 12
+renode -K 9 -C 16
+refactor -N 8 -M 13
+renode -K 11 -C 14
+rewrite
+fraig
+resub -K 13
+balance
+renode -K 14 -C 11
+resub -K 15
+resub -K 11
+resub -K 8
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+renode -K 14 -C 13
+renode -K 6 -C 13
+renode -K 13 -C 10
+resub -K 13
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+fraig
+cleanup
+resub -K 9
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 11 -C 15
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+renode -K 5 -C 10
+renode -K 15 -C 2
+resub -K 9
+renode -K 13 -C 10
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+renode -K 13 -C 12
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
 resub -K 14
 renode -K 15 -C 8
-renode -K 5 -C 8
-renode -K 13 -C 13
+renode -K 6 -C 8
+resub -K 12
+renode -K 11 -C 14
+balance
+renode -K 13 -C 12
+rewrite
+cleanup
+resub -K 8
+resub -K 9
+resub -K 16
+fraig
+renode -K 15 -C 12
+renode -K 11 -C 14
+balance
+renode -K 11 -C 15
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 11 -C 15
+renode -K 7 -C 3
+resub -K 9
+fraig
+renode -K 15 -C 3
+balance
+renode -K 6 -C 13
+refactor -N 8 -M 3
+renode -K 7 -C 8
+rewrite
+renode -K 9 -C 16
+fraig
+renode -K 9 -C 5
+resub -K 14
+resub -K 11
+refactor -N 3 -M 9
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+cleanup
+renode -K 14 -C 13
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 8
+resub -K 14
+fraig
+renode -K 9 -C 4
+refactor -N 12 -M 9
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+renode -K 11 -C 14
+renode -K 13 -C 10
+balance
+rewrite
+fraig
+cleanup
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+rewrite
+resub -K 13
+renode -K 6 -C 8
+resub -K 9
+fraig
+renode -K 12 -C 12
+renode -K 9 -C 7
+resub -K 5
+renode -K 15 -C 12
+refactor -N 2 -M 9
+renode -K 15 -C 4
+renode -K 13 -C 9
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+rewrite
+fraig
+resub -K 13
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+cleanup
+fraig
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+renode -K 14 -C 13
 rewrite
 renode -K 11 -C 8
-renode -K 7 -C 15
-renode -K 9 -C 13
-renode -K 4 -C 4
-renode -K 4 -C 12
+resub -K 14
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+resub -K 14
+fraig
+renode -K 15 -C 8
+renode -K 10 -C 10
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+cleanup
+renode -K 11 -C 16
+renode -K 11 -C 14
+balance
+renode -K 5 -C 10
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+renode -K 12 -C 11
+fraig
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+renode -K 6 -C 8
+resub -K 13
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+resub -K 14
+cleanup
+renode -K 11 -C 11
+renode -K 15 -C 11
 resub -K 10
-refactor -N 12 -M 1
+renode -K 14 -C 13
+renode -K 12 -C 6
+renode -K 15 -C 12
+resub -K 12
+renode -K 11 -C 16
+renode -K 9 -C 4
+refactor -N 12 -M 9
+rewrite
+balance
+renode -K 9 -C 16
+renode -K 11 -C 14
+cleanup
+renode -K 15 -C 8
+resub -K 9
 renode -K 10 -C 3
 resub -K 13
+resub -K 15
+renode -K 7 -C 16
+fraig
+renode -K 13 -C 16
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+rewrite
+fraig
+renode -K 6 -C 8
+resub -K 9
+refactor -N 8 -M 5
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+renode -K 6 -C 8
+fraig
+cleanup
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+renode -K 11 -C 8
+balance
+refactor -N 12 -M 11
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
 renode -K 7 -C 16
 resub -K 9
 renode -K 14 -C 13
-refactor -N 10 -M 14
+fraig
 rewrite
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 12 -M 1
-renode -K 10 -C 3
-resub -K 13
-renode -K 7 -C 16
-resub -K 9
-refactor -N 12 -M 4
-renode -K 11 -C 8
-renode -K 7 -C 15
-refactor -N 12 -M 1
-renode -K 5 -C 8
-renode -K 13 -C 13
-renode -K 14 -C 13
-renode -K 4 -C 8
-renode -K 8 -C 15
-rewrite
-renode -K 9 -C 13
+renode -K 6 -C 8
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 10 -C 10
+refactor -N 5 -M 3
+renode -K 12 -C 6
+cleanup
+renode -K 15 -C 11
+resub -K 10
 renode -K 13 -C 15
-renode -K 4 -C 4
+balance
+renode -K 14 -C 11
+resub -K 15
+rewrite
+renode -K 11 -C 8
+renode -K 12 -C 11
+fraig
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 10 -C 10
+balance
+renode -K 13 -C 12
+renode -K 7 -C 16
+cleanup
+resub -K 14
+fraig
+renode -K 10 -C 3
+resub -K 13
+resub -K 15
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+renode -K 11 -C 8
+rewrite
+renode -K 9 -C 12
+resub -K 14
+balance
+refactor -N 6 -M 5
+fraig
+renode -K 6 -C 8
+cleanup
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+rewrite
+resub -K 13
+cleanup
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+fraig
+rewrite
+renode -K 15 -C 11
 resub -K 10
-refactor -N 14 -M 16
-renode -K 5 -C 7
+renode -K 13 -C 15
+renode -K 14 -C 11
+resub -K 15
+resub -K 11
+resub -K 8
+fraig
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+rewrite
+fraig
+renode -K 6 -C 8
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 10 -C 10
+renode -K 15 -C 8
+renode -K 7 -C 16
+cleanup
+renode -K 11 -C 8
+renode -K 10 -C 3
+resub -K 13
+resub -K 15
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 11 -C 14
+fraig
+refactor -N 7 -M 15
+renode -K 6 -C 8
+balance
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 5 -C 10
+renode -K 15 -C 2
+renode -K 6 -C 8
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 4 -C 7
+rewrite
+renode -K 12 -C 6
+fraig
+renode -K 15 -C 11
+resub -K 10
+renode -K 13 -C 15
+renode -K 14 -C 11
+resub -K 15
+renode -K 13 -C 10
+resub -K 12
+renode -K 9 -C 16
+refactor -N 8 -M 13
+renode -K 11 -C 14
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+cleanup
+renode -K 13 -C 10
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+fraig
+renode -K 10 -C 3
+resub -K 13
+resub -K 15
+renode -K 7 -C 16
+renode -K 11 -C 15
+renode -K 6 -C 8
+cleanup
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 11 -C 14
+balance
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 5 -C 10
+cleanup
+renode -K 8 -C 12
+resub -K 15
+refactor -N 7 -M 11
+balance
+fraig
+renode -K 15 -C 10
+resub -K 10
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 11 -C 8
+refactor -N 5 -M 9
+balance
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+fraig
+renode -K 11 -C 14
+resub -K 7
+balance
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 12 -C 11
+resub -K 14
+fraig
+renode -K 5 -C 13
+renode -K 10 -C 3
+resub -K 13
+resub -K 15
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+rewrite
+resub -K 4
+renode -K 11 -C 8
+balance
+fraig
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 5 -C 10
+renode -K 13 -C 10
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+fraig
+renode -K 11 -C 16
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+renode -K 13 -C 15
+renode -K 14 -C 11
+resub -K 15
+balance
+resub -K 4
+renode -K 6 -C 8
+cleanup
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+fraig
+renode -K 12 -C 6
+renode -K 15 -C 11
+resub -K 10
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 12 -C 11
+resub -K 14
+renode -K 6 -C 8
+resub -K 13
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 11 -C 8
+cleanup
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+fraig
+renode -K 10 -C 3
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+resub -K 14
+resub -K 13
+renode -K 15 -C 12
 strash
-renode -K 12 -C 14
+refactor -N 11 -M 5
+refactor -N 14 -M 4
+refactor -N 11 -M 16
+cleanup
+resub -K 7
+refactor -N 11 -M 12
+fraig
+renode -K 4 -C 1
+cleanup
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+rewrite
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+refactor -N 3 -M 13
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+fraig
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 5 -C 10
+balance
+refactor -N 13 -M 1
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+renode -K 11 -C 14
+balance
+renode -K 6 -C 8
+resub -K 9
+fraig
+renode -K 15 -C 12
+refactor -N 3 -M 13
+resub -K 12
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+renode -K 12 -C 11
+resub -K 14
+renode -K 6 -C 8
+fraig
+renode -K 15 -C 12
+resub -K 12
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+renode -K 12 -C 11
+resub -K 14
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+refactor -N 7 -M 15
+fraig
+cleanup
+renode -K 10 -C 3
+renode -K 7 -C 16
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 11 -C 8
+fraig
+resub -K 13
+renode -K 11 -C 2
+renode -K 6 -C 8
+renode -K 7 -C 16
+cleanup
+resub -K 9
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+resub -K 14
+resub -K 12
+fraig
+resub -K 13
+resub -K 15
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+renode -K 11 -C 8
+resub -K 5
+cleanup
+fraig
+renode -K 12 -C 11
+renode -K 10 -C 3
+resub -K 13
+resub -K 15
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 11 -C 14
+renode -K 7 -C 3
+resub -K 9
+cleanup
+rewrite
+renode -K 15 -C 3
+balance
+renode -K 6 -C 13
+resub -K 13
+resub -K 4
+resub -K 16
+renode -K 7 -C 16
+resub -K 7
+renode -K 4 -C 14
+fraig
+resub -K 15
+refactor -N 2 -M 15
+cleanup
+refactor -N 4 -M 3
+renode -K 13 -C 14
+refactor -N 4 -M 2
+refactor -N 8 -M 5
+rewrite
+resub -K 9
+balance
+renode -K 15 -C 12
+resub -K 15
+resub -K 16
+cleanup
+resub -K 12
+renode -K 9 -C 16
+refactor -N 8 -M 13
+renode -K 11 -C 14
+rewrite
+resub -K 13
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+fraig
+cleanup
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+renode -K 11 -C 8
+renode -K 12 -C 11
+resub -K 14
+fraig
+renode -K 12 -C 6
+resub -K 15
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 11 -C 8
+balance
+resub -K 13
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+renode -K 11 -C 8
+refactor -N 5 -M 9
+refactor -N 7 -M 15
+resub -K 13
+renode -K 12 -C 6
+renode -K 15 -C 11
+resub -K 10
+renode -K 9 -C 16
+refactor -N 8 -M 13
+renode -K 11 -C 14
+balance
+renode -K 7 -C 16
+cleanup
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+resub -K 14
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+refactor -N 3 -M 13
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+refactor -N 9 -M 12
+renode -K 10 -C 3
+resub -K 5
+resub -K 15
+cleanup
+renode -K 12 -C 11
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+rewrite
+fraig
+renode -K 6 -C 8
+resub -K 9
+refactor -N 8 -M 5
+rewrite
+renode -K 9 -C 16
+fraig
+balance
+renode -K 6 -C 8
+cleanup
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 11 -C 14
+refactor -N 5 -M 3
+renode -K 11 -C 8
+refactor -N 5 -M 9
+balance
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+fraig
+refactor -N 7 -M 15
+cleanup
+fraig
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+renode -K 11 -C 8
+resub -K 14
+renode -K 12 -C 11
+fraig
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 11 -C 8
+refactor -N 5 -M 9
+rewrite
+resub -K 13
+resub -K 6
+resub -K 12
+renode -K 9 -C 16
+refactor -N 12 -M 8
+balance
+renode -K 6 -C 8
+fraig
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+resub -K 13
+refactor -N 8 -M 2
+cleanup
+renode -K 11 -C 14
+balance
+renode -K 6 -C 5
+fraig
+refactor -N 7 -M 15
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+rewrite
+fraig
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 10 -C 10
+cleanup
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 11 -C 8
+balance
+rewrite
+resub -K 16
+cleanup
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+refactor -N 3 -M 13
+resub -K 12
+fraig
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 5 -C 10
+fraig
+resub -K 14
+renode -K 6 -C 8
+balance
+resub -K 12
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 5 -C 10
+resub -K 13
+renode -K 6 -C 8
+renode -K 15 -C 12
+resub -K 12
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+fraig
+balance
+renode -K 6 -C 8
+cleanup
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+renode -K 11 -C 8
+fraig
+renode -K 11 -C 2
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 10 -C 10
+renode -K 15 -C 8
+balance
+cleanup
+resub -K 9
+renode -K 11 -C 14
+renode -K 14 -C 11
+resub -K 15
+fraig
+resub -K 13
+renode -K 6 -C 8
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+resub -K 13
+renode -K 11 -C 2
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 7 -C 16
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+rewrite
+refactor -N 7 -M 15
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+refactor -N 3 -M 13
+resub -K 12
+fraig
+renode -K 9 -C 16
+renode -K 11 -C 14
+rewrite
+cleanup
+balance
+refactor -N 9 -M 3
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 11 -C 8
+refactor -N 5 -M 9
+resub -K 13
+renode -K 13 -C 11
+refactor -N 15 -M 15
+refactor -N 3 -M 13
+cleanup
+renode -K 15 -C 13
+renode -K 9 -C 1
+rewrite
+fraig
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+resub -K 10
+renode -K 11 -C 14
+balance
+rewrite
+fraig
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+cleanup
+renode -K 14 -C 13
+renode -K 10 -C 10
+balance
+rewrite
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+renode -K 9 -C 16
+renode -K 6 -C 15
+fraig
+renode -K 11 -C 14
+balance
+resub -K 12
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+renode -K 14 -C 13
+renode -K 11 -C 8
+renode -K 12 -C 11
+resub -K 14
+rewrite
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 6 -C 15
+renode -K 11 -C 14
+fraig
+balance
+refactor -N 9 -M 12
+renode -K 10 -C 3
+resub -K 13
+resub -K 7
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+resub -K 14
+renode -K 12 -C 11
+fraig
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 11 -C 8
+resub -K 14
+renode -K 12 -C 11
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+balance
+fraig
+renode -K 9 -C 9
+renode -K 10 -C 3
+resub -K 13
+renode -K 7 -C 16
+renode -K 14 -C 13
+rewrite
+renode -K 11 -C 8
+balance
+cleanup
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+refactor -N 3 -M 13
+resub -K 12
+fraig
+renode -K 11 -C 14
+renode -K 12 -C 11
+resub -K 14
+renode -K 11 -C 8
+renode -K 6 -C 8
+cleanup
+resub -K 13
+resub -K 12
+renode -K 9 -C 16
+balance
+resub -K 8
+refactor -N 15 -M 7
+fraig
+refactor -N 8 -M 9
+renode -K 7 -C 16
+cleanup
+renode -K 11 -C 8
+renode -K 10 -C 3
+fraig
+resub -K 15
+renode -K 7 -C 16
+resub -K 9
+renode -K 14 -C 13
+resub -K 4
+renode -K 11 -C 8
+resub -K 13
+renode -K 4 -C 1
+resub -K 14
+resub -K 10
+rewrite
+balance
+cleanup
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 7 -C 16
+balance
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+refactor -N 10 -M 8
+fraig
+balance
+rewrite
+refactor -N 9 -M 12
+renode -K 6 -C 8
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+resub -K 16
+renode -K 11 -C 14
+balance
+rewrite
+refactor -N 9 -M 12
+resub -K 13
+renode -K 6 -C 8
+cleanup
+resub -K 9
+renode -K 15 -C 12
+resub -K 12
+renode -K 9 -C 16
+renode -K 11 -C 14
+renode -K 4 -C 16
+renode -K 11 -C 8
+strash
+balance
+refactor -N 15 -M 10
+rewrite
+resub -K 13
+renode -K 6 -C 8
