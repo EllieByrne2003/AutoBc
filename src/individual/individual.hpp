@@ -10,7 +10,7 @@ typedef struct Abc_Frame_t_ Abc_Frame_t;
 class Individual
 {
 private:
-    std::vector<const Gene *> chromosone;
+    std::vector<Gene> chromosone;
 
     // Fitness information
     bool calculated = false;
@@ -21,7 +21,7 @@ private:
 public:
     // Initiaisation, create random chromosone of this length
     Individual();
-    Individual(const std::vector<const Gene *> chromosone);
+    Individual(const std::vector<Gene> chromosone);
     Individual(const int chromosoneLength);
 
     // mutating and mating for working with chromosones

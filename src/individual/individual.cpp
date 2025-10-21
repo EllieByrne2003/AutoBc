@@ -18,7 +18,7 @@
 Individual::Individual() {}
 
 
-Individual::Individual(const std::vector<const Gene *> chromosone) : chromosone(chromosone) {}
+Individual::Individual(const std::vector<Gene> chromosone) : chromosone(chromosone) {}
 
 Individual::Individual(const int chromosoneLength) {
     for(int i = 0; i < chromosoneLength; i++) {
@@ -115,9 +115,9 @@ void Individual::calculateFitness(Abc_Frame_t *pAbc) {
     }
 
     // Step 1: Run through all commands in chromosone
-    for(const Gene *gene : chromosone) {
+    for(const Gene &gene : chromosone) {
         // std::cout << gene.getCommand() << std::endl;
-        if(gene->execute(pAbc)) {
+        if(gene.execute(pAbc)) {
             error = true;
             return;
         }
@@ -273,8 +273,8 @@ std::ostream& operator<<(std::ostream& out, const Individual& indivdual) {
     out << indivdual.chromosone.size() << std::endl;
 
     out << "\tChromosone: ";
-    for(const Gene *gene : indivdual.chromosone) {
-        out << *gene << "; ";
+    for(const Gene &gene : indivdual.chromosone) {
+        out << gene << "; ";
     }
     out << std::endl;
     

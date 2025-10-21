@@ -47,10 +47,10 @@ struct GenePrototype {
     GenePrototype(const std::string &name, const std::string &prefix, const std::string &postfix, const std::vector<Argument> &arguements) :
         name(name), prefix(prefix), postfix(postfix), arguments(arguements) {}
 
-    Gene * createGene() const {
+    Gene createGene() const {
         std::string nameWithArgs = name + makeArgs(0);
 
-        return new Gene(nameWithArgs, prefix, postfix);
+        return Gene(nameWithArgs, prefix, postfix);
     }
 
     std::string makeArgs(const int i) const {
@@ -90,5 +90,5 @@ public:
     void addGene(const std::string &name, const std::string &prefix, const std::string &postfix);
     void addGene(const std::string &name, std::vector<std::tuple<const std::string, const int, const int>> &arguements);
 
-    const Gene * getRandomGene();
+    const Gene getRandomGene();
 };
