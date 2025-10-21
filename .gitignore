@@ -212,3 +212,4 @@ abc.history
 obj/*
 lib/*
 bin/*
+.o
