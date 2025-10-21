@@ -1,5 +1,6 @@
 #include "individual.hpp"
 
+#include <chrono>
 #include <iomanip>
 #include <iostream>
 
@@ -114,6 +115,8 @@ void Individual::calculateFitness(Abc_Frame_t *pAbc) {
         return;
     }
 
+    const auto start = std::chrono::system_clock::now();
+
     // Step 1: Run through all commands in chromosone
     for(const Gene &gene : chromosone) {
         // std::cout << gene.getCommand() << std::endl;
@@ -123,6 +126,8 @@ void Individual::calculateFitness(Abc_Frame_t *pAbc) {
         }
     }
 
+    const auto end = std::chrono::system_clock::now();
+    timeElapsed = (end - start);
 
 
     // TODO segfault causes by this command
@@ -227,10 +232,15 @@ bool operator<(const Individual &left, const Individual &right) {
         return false;
     }
 
-    // Prefer smaller chromosones
-    if(left.chromosone.size() > right.chromosone.size()) {
+    // Prefer shorter execution times
+    if(left.timeElapsed > right.timeElapsed) {
         return true;
     }
+
+    // // Prefer smaller chromosones
+    // if(left.chromosone.size() > right.chromosone.size()) {
+    //     return true;
+    // }
 
     return false;
 }
@@ -260,17 +270,23 @@ bool operator>(const Individual &left, const Individual &right) {
         return false;
     }
 
-    // Prefer smaller chromosones
-    if(left.chromosone.size() < right.chromosone.size()) {
+
+    // Prefer shorter execution times
+    if(left.timeElapsed < right.timeElapsed) {
         return true;
     }
+
+    // // Prefer smaller chromosones
+    // if(left.chromosone.size() < right.chromosone.size()) {
+    //     return true;
+    // }
 
     return false;        
 }
 
 std::ostream& operator<<(std::ostream& out, const Individual& indivdual) {
     out << "Individual: " << std::endl; // TODO have some id number
-    out << indivdual.chromosone.size() << std::endl;
+    out << "\tLength: " << indivdual.chromosone.size() << std::endl;
 
     out << "\tChromosone: ";
     for(const Gene &gene : indivdual.chromosone) {
@@ -287,7 +303,8 @@ std::ostream& operator<<(std::ostream& out, const Individual& indivdual) {
     }
 
     out << "\tLevels: " << std::setfill('0') << std::setw(3) << indivdual.nLevels;
-    out << "\tGates: " << std::setfill('0') << std::setw(6) << indivdual.nGates;
+    out << "\tGates: " << std::setfill('0') << std::setw(6) << indivdual.nGates << std::endl;
+    out << "\tTime:  " << indivdual.timeElapsed.count() << "s";
 
     return out;
 }
