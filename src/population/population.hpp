@@ -18,6 +18,7 @@ private:
     // void runIndividuals(Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk, const int start, const int end);
 public:
     Population(const int size, const int startingChromosoneLength);
+    Population(std::vector<Individual> &seedExamples, const int size, const int startingChromosoneLength);
 
     // TODO should have it's own frames and just take the network
     void runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int nThreads);

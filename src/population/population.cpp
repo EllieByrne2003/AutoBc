@@ -15,9 +15,20 @@
 #define REMOVE_CHANCE (1.0 / 3.0)
 #define ADD_CHANCE    (1.0 / 3.0)
 
-Population::Population(const int size, const int chromosoneLength) : size(size) {
+Population::Population(const int size, const int startingChromosoneLength) : size(size) {
     for(int i = 0; i < size; i++) {
-        indivduals.push_back(Individual(chromosoneLength));
+        indivduals.push_back(Individual(startingChromosoneLength));
+    }
+}
+
+Population::Population(std::vector<Individual> &seedExamples, const int size, const int startingChromosoneLength) :
+    size(size) {
+    for(const Individual &seedExample : seedExamples) {
+        indivduals.push_back(seedExample);
+    }
+
+    while(indivduals.size() < size) {
+        indivduals.push_back(Individual(startingChromosoneLength));
     }
 }
 
