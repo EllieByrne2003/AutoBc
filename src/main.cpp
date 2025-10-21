@@ -68,8 +68,51 @@ int main() {
     genome.addPrototype("renode", "",  "strash", std::vector<Argument>{Argument("K", 4, 15), Argument("C", 1, 16)});
     genome.addPrototype("resub", std::vector<Argument>{Argument("K", 4, 16)});
 
+    // Create seed examples
+    std::vector<Individual> seedExamples;
+    seedExamples.push_back(Individual(std::vector<Gene>{
+        Gene("renode -K 10 -C 3", "", "strash"),
+        Gene("resub -K 13", "", ""),
+        Gene("renode -K 7 -C 16", "", "strash"),
+        Gene("renode -K 7 -C 16", "", "strash"),
+        Gene("resub -K 9", "", ""),
+        Gene("renode -K 14 -C 13", "", "strash"),
+        Gene("rewrite", "", ""),
+        Gene("renode -K 11 -C 8", "", "strash"),
+        Gene("resub -K 14", "", ""),
+        Gene("renode -K 15 -C 8", "", "strash")
+    }));
+
+    seedExamples.push_back(Individual(std::vector<Gene>{
+        Gene("renode -K 12 -C 6", "", "strash"),
+        Gene("renode -K 15 -C 11", "", "strash"),
+        Gene("resub -K 10", "", ""),
+        Gene("renode -K 13 -C 15", "", "strash"),
+        Gene("balance", "", ""),
+        Gene("renode -K 14 -C 11", "", "strash"),
+        Gene("resub -K 15", "", ""),
+        Gene("renode -K 6 -C 8", "", "strash"),
+        Gene("balance", "", ""),
+        Gene("fraig", "", "")
+    }));
+
+    seedExamples.push_back(Individual(std::vector<Gene>{
+        Gene("renode -K 6 -C 8", "", "strash"),
+        Gene("resub -K 9", "", ""),
+        Gene("renode -K 15 -C 12", "", "strash"),
+        Gene("resub -K 12", "", ""),
+        Gene("renode -K 9 -C 16", "", "strash"),
+        Gene("renode -K 11 -C 14", "", "strash"),
+        Gene("renode -K 11 -C 14", "", "strash"),
+        Gene("balance", "", ""),
+        Gene("rewrite", "", ""),
+        Gene("fraig", "", ""),
+        Gene("resub -K 13", "", ""),
+    }));
+
     // Create population
-    Population population(256, 5);
+    // Population population(256, 5);
+    Population population(seedExamples, 256, 5);
 
     // Run x number of generations
     for(int i = 0; i < 25; i++) {
