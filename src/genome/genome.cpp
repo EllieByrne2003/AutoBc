@@ -73,18 +73,20 @@ void Genome::addGene(const std::string &name, std::vector<std::tuple<const std::
     }
 }
 
-const Gene * Genome::getRandomGene() {
-    const int n = randomInt(0, totalGenes);
+const Gene Genome::getRandomGene() {
+    // const int n = randomInt(0, totalGenes);
     
-    int currentGene = 0;
-    for(const auto &prototype : prototypes) {
-        if(n > currentGene + prototype.first) {
-            currentGene += prototype.first;
-            continue;
-        }
+    // int currentGene = 0;
+    // for(const auto &prototype : prototypes) {
+    //     if(n > currentGene + prototype.first) {
+    //         currentGene += prototype.first;
+    //         continue;
+    //     }
 
-        return prototype.second.createGene();
-    }
+    //     return prototype.second.createGene();
+    // }
+
+    return prototypes[randomInt(0, prototypes.size() - 1)].second.createGene();
 
     assert(false);
 
