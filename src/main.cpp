@@ -1,5 +1,8 @@
+#include <cstring>
 #include <vector>
+#include <iostream>
 
+#include "constants.hpp"
 #include "abc.hpp"
 
 #include "genome/genome.hpp"
@@ -7,9 +10,33 @@
 #include "population/population.hpp"
 
 
-int main() {
-    // std::cout << "Hello world" << std::endl;
-    const int nThreads = 16;
+int main(int argc, char** rawArgv ) {
+    int nThreads = 16;
+
+    int size = DEFAULT_STARTING_SIZE;
+    int length = DEFAULT_STARTING_LENGTH;
+    int generationLimit = DEFAULT_GENERATION_LIMIT;
+
+    // Get arguments
+    std::vector<std::string> argv(rawArgv + 1, rawArgv + argc);
+    int i = 0;
+    while(i < argv.size()) {
+        std::string arg = argv[i++];
+
+        if(arg == "-t" || arg == "-threads") {
+            if(i + 1 >= argv.size()) {
+                std::cout << "Arguement needed after: " << arg << std::endl;
+                return -1;
+            }
+
+            nThreads = std::atoi(argv[++i].c_str());
+            if(nThreads <= 0) {
+                std::cout << "Number of threads must be at least 1." << std::endl;
+            }
+        }
+
+        // TODO implement input file, seed file, command file
+    }
 
     // Initialise abc
     Abc_Start();
@@ -29,7 +56,7 @@ int main() {
 
     // Load file into aig format and keep copy for easy use later
     Abc_Ntk_t * originalNtk; // TODO may need to delete ntk and/or backup
-    Cmd_CommandExecute(pAbc, "read resources/circuits/i10.aig");
+    Cmd_CommandExecute(pAbc, "read resources/circuits/sqrt.aig");
     originalNtk = Abc_NtkDup(Abc_FrameReadNtk(pAbc));
 
 
@@ -70,52 +97,52 @@ int main() {
 
     // Create seed examples
     std::vector<Individual> seedExamples;
-    seedExamples.push_back(Individual(std::vector<Gene>{
-        Gene("renode -K 10 -C 3", "", "strash"),
-        Gene("resub -K 13", "", ""),
-        Gene("renode -K 7 -C 16", "", "strash"),
-        Gene("renode -K 7 -C 16", "", "strash"),
-        Gene("resub -K 9", "", ""),
-        Gene("renode -K 14 -C 13", "", "strash"),
-        Gene("rewrite", "", ""),
-        Gene("renode -K 11 -C 8", "", "strash"),
-        Gene("resub -K 14", "", ""),
-        Gene("renode -K 15 -C 8", "", "strash")
-    }));
+    // seedExamples.push_back(Individual(std::vector<Gene>{
+    //     Gene("renode -K 10 -C 3", "", "strash"),
+    //     Gene("resub -K 13", "", ""),
+    //     Gene("renode -K 7 -C 16", "", "strash"),
+    //     Gene("renode -K 7 -C 16", "", "strash"),
+    //     Gene("resub -K 9", "", ""),
+    //     Gene("renode -K 14 -C 13", "", "strash"),
+    //     Gene("rewrite", "", ""),
+    //     Gene("renode -K 11 -C 8", "", "strash"),
+    //     Gene("resub -K 14", "", ""),
+    //     Gene("renode -K 15 -C 8", "", "strash")
+    // }));
 
-    seedExamples.push_back(Individual(std::vector<Gene>{
-        Gene("renode -K 12 -C 6", "", "strash"),
-        Gene("renode -K 15 -C 11", "", "strash"),
-        Gene("resub -K 10", "", ""),
-        Gene("renode -K 13 -C 15", "", "strash"),
-        Gene("balance", "", ""),
-        Gene("renode -K 14 -C 11", "", "strash"),
-        Gene("resub -K 15", "", ""),
-        Gene("renode -K 6 -C 8", "", "strash"),
-        Gene("balance", "", ""),
-        Gene("fraig", "", "")
-    }));
+    // seedExamples.push_back(Individual(std::vector<Gene>{
+    //     Gene("renode -K 12 -C 6", "", "strash"),
+    //     Gene("renode -K 15 -C 11", "", "strash"),
+    //     Gene("resub -K 10", "", ""),
+    //     Gene("renode -K 13 -C 15", "", "strash"),
+    //     Gene("balance", "", ""),
+    //     Gene("renode -K 14 -C 11", "", "strash"),
+    //     Gene("resub -K 15", "", ""),
+    //     Gene("renode -K 6 -C 8", "", "strash"),
+    //     Gene("balance", "", ""),
+    //     Gene("fraig", "", "")
+    // }));
 
-    seedExamples.push_back(Individual(std::vector<Gene>{
-        Gene("renode -K 6 -C 8", "", "strash"),
-        Gene("resub -K 9", "", ""),
-        Gene("renode -K 15 -C 12", "", "strash"),
-        Gene("resub -K 12", "", ""),
-        Gene("renode -K 9 -C 16", "", "strash"),
-        Gene("renode -K 11 -C 14", "", "strash"),
-        Gene("renode -K 11 -C 14", "", "strash"),
-        Gene("balance", "", ""),
-        Gene("rewrite", "", ""),
-        Gene("fraig", "", ""),
-        Gene("resub -K 13", "", ""),
-    }));
+    // seedExamples.push_back(Individual(std::vector<Gene>{
+    //     Gene("renode -K 6 -C 8", "", "strash"),
+    //     Gene("resub -K 9", "", ""),
+    //     Gene("renode -K 15 -C 12", "", "strash"),
+    //     Gene("resub -K 12", "", ""),
+    //     Gene("renode -K 9 -C 16", "", "strash"),
+    //     Gene("renode -K 11 -C 14", "", "strash"),
+    //     Gene("renode -K 11 -C 14", "", "strash"),
+    //     Gene("balance", "", ""),
+    //     Gene("rewrite", "", ""),
+    //     Gene("fraig", "", ""),
+    //     Gene("resub -K 13", "", ""),
+    // }));
 
     // Create population
     // Population population(256, 5);
-    Population population(seedExamples, 256, 5);
+    Population population(seedExamples, size, length);
 
     // Run x number of generations
-    for(int i = 0; i < 25; i++) {
+    for(int i = 0; i < generationLimit; i++) {
         // Run generation
         population.runGeneration(pAbcs, pNtks, nThreads);
     }
