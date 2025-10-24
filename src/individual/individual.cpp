@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include "../abc.hpp"
+#include "../constants.hpp"
 
 #include "../genome/genome.hpp"
 #include "../utils/random.hpp"
@@ -13,8 +14,8 @@
 #define REMOVE_RATE 0.1
 #define ADD_RATE 0.1
 
-#define REMOVAL_NUM 1
-#define ADDITION_NUM 1
+// #define REMOVAL_NUM 1
+// #define ADDITION_NUM 1
 
 Individual::Individual() {}
 
@@ -162,7 +163,7 @@ Individual Individual::mutateGenes() {
 Individual Individual::removeGenes() {
     // Creates a child and removes x genes randomly
     Individual child(this->chromosone);
-    for(int i = 0; i < REMOVAL_NUM; i++) {
+    for(int i = 0; i < MIN_REMOVAL_NUM; i++) {
         const int index = randomInt(0, child.chromosone.size() - 1);
         child.chromosone.erase(child.chromosone.begin() + index);
     }
@@ -184,7 +185,7 @@ Individual Individual::addGenes() {
     // Creates child and adds x genes randomly
     Individual child(this->chromosone);
 
-    for(int i = 0; i < ADDITION_NUM; i++) {
+    for(int i = 0; i < MIN_ADDITION_NUM; i++) {
         const int index = randomInt(0, child.chromosone.size());
         child.chromosone.insert(child.chromosone.begin() + index, Genome::getInstance().getRandomGene());
     }
