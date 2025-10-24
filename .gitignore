@@ -213,3 +213,4 @@ obj/*
 lib/*
 bin/*
 .o
+resources/abc
