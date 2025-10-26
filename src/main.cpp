@@ -1,4 +1,3 @@
-#include <cstring>
 #include <vector>
 #include <iostream>
 
@@ -16,10 +15,28 @@ int main(int argc, char** rawArgv ) {
     int size = DEFAULT_STARTING_SIZE;
     int length = DEFAULT_STARTING_LENGTH;
     int generationLimit = DEFAULT_GENERATION_LIMIT;
+    std::string inputFileName;
+
+    // Get input file
+    if(argc < 2) {
+        std::cout << "Too few arguments, please use format below" << std::endl;
+        std::cout << "autobc [inputFile] [args...]" << std::endl;
+        return -1;
+    }
+
+    // Don't have to use strcmp like this
+    std::vector<std::string> argv(rawArgv + 1, rawArgv + argc);
+
+    if(argv[0] == "-h") {
+        // TODO list all args and how to use them here
+        return 0;
+    }
+
+    inputFileName = argv[0];
+    // TODO check if above is a valid file
 
     // Get arguments
-    std::vector<std::string> argv(rawArgv + 1, rawArgv + argc);
-    int i = 0;
+    int i = 1;
     while(i < argv.size()) {
         std::string arg = argv[i++];
 
@@ -33,6 +50,39 @@ int main(int argc, char** rawArgv ) {
             if(nThreads <= 0) {
                 std::cout << "Number of threads must be at least 1." << std::endl;
             }
+        } else if(arg == "-s" || arg == "-size") {
+            if(i + 1 >= argv.size()) {
+                std::cout << "Arguement needed after: " << arg << std::endl;
+                return -1;
+            }
+
+            size = std::atoi(argv[++i].c_str());
+            if(size < 16) {
+                std::cout << "Size of population must be at least 16, though higher is recommended." << std::endl;
+                return -1;
+            }
+        } else if(arg == "-l" || arg == "-length") {
+            if(i + 1 >= argv.size()) {
+                std::cout << "Arguement needed after: " << arg << std::endl;
+                return -1;
+            }
+
+            length = std::atoi(argv[++i].c_str());
+            if(length < 1) {
+                std::cout << "Starting length of chromosones must be at least 1" << std::endl;
+                return -1;
+            }
+        } else if(arg == "-g" || arg == "-generation") {
+            if(i + 1 >= argv.size()) {
+                std::cout << "Arguement needed after: " << arg << std::endl;
+                return -1;
+            }
+
+            generationLimit = std::atoi(argv[++i].c_str());
+            if(generationLimit < 1) {
+                std::cout << "The generation limit must be at least 1, though higher is recommended." << std::endl;
+                return -1;
+            }            
         }
 
         // TODO implement input file, seed file, command file
@@ -56,7 +106,7 @@ int main(int argc, char** rawArgv ) {
 
     // Load file into aig format and keep copy for easy use later
     Abc_Ntk_t * originalNtk; // TODO may need to delete ntk and/or backup
-    Cmd_CommandExecute(pAbc, "read resources/circuits/sqrt.aig");
+    Cmd_CommandExecute(pAbc, ("read " + inputFileName).c_str());
     originalNtk = Abc_NtkDup(Abc_FrameReadNtk(pAbc));
 
 
