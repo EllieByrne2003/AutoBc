@@ -40,13 +40,16 @@ int main(int argc, char** rawArgv ) {
     while(i < argv.size()) {
         std::string arg = argv[i++];
 
-        if(arg == "-t" || arg == "-threads") {
+        if(arg == "-h") {
+            // TODO list all args and how to use them here
+            return 0;
+        } else if(arg == "-t" || arg == "-threads") {
             if(i + 1 >= argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
                 return -1;
             }
 
-            nThreads = std::atoi(argv[++i].c_str());
+            nThreads = std::atoi(argv[i++].c_str());
             if(nThreads <= 0) {
                 std::cout << "Number of threads must be at least 1." << std::endl;
             }
@@ -56,7 +59,7 @@ int main(int argc, char** rawArgv ) {
                 return -1;
             }
 
-            size = std::atoi(argv[++i].c_str());
+            size = std::atoi(argv[i++].c_str());
             if(size < 16) {
                 std::cout << "Size of population must be at least 16, though higher is recommended." << std::endl;
                 return -1;
@@ -67,18 +70,18 @@ int main(int argc, char** rawArgv ) {
                 return -1;
             }
 
-            length = std::atoi(argv[++i].c_str());
+            length = std::atoi(argv[i++].c_str());
             if(length < 1) {
                 std::cout << "Starting length of chromosones must be at least 1" << std::endl;
                 return -1;
             }
         } else if(arg == "-g" || arg == "-generation") {
-            if(i + 1 >= argv.size()) {
+            if(i + 1 > argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
                 return -1;
             }
 
-            generationLimit = std::atoi(argv[++i].c_str());
+            generationLimit = std::atoi(argv[i++].c_str());
             if(generationLimit < 1) {
                 std::cout << "The generation limit must be at least 1, though higher is recommended." << std::endl;
                 return -1;
@@ -142,7 +145,7 @@ int main(int argc, char** rawArgv ) {
     genome.addPrototype("refactor", std::vector<Argument>{Argument("N", 2, 15), Argument("M", 1, 16)}); // M has no max
     genome.addPrototype("fraig");
     genome.addPrototype("cleanup"); // Exepect this gone
-    genome.addPrototype("renode", "",  "strash", std::vector<Argument>{Argument("K", 4, 15), Argument("C", 1, 16)});
+    genome.addPrototype("renode", "",  "strash", std::vector<Argument>{Argument("K", 4, 15), Argument("C", 1, 8)}); // Memory usage explodes if using -C 16 or close to it
     genome.addPrototype("resub", std::vector<Argument>{Argument("K", 4, 16)});
 
     // Create seed examples
