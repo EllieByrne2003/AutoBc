@@ -7,7 +7,7 @@
 #include "genome/genome.hpp"
 #include "individual/individual.hpp"
 #include "population/population.hpp"
-
+#include "utils/string.hpp"
 
 int main(int argc, char** rawArgv ) {
     int nThreads = 16;
@@ -33,6 +33,10 @@ int main(int argc, char** rawArgv ) {
     }
 
     inputFileName = argv[0];
+    if(!ends_with(inputFileName, ".aig")) {
+        std::cout << "File must be an aig file" << std::endl;
+        return 0;
+    }
     // TODO check if above is a valid file
 
     // Get arguments
