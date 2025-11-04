@@ -11,9 +11,9 @@
 #include "utils/config.hpp"
 
 int main(int argc, char** rawArgv ) {
-    std::vector<Individual> vec;
+    std::vector<Individual> seedExamples;
     Genome &g = Genome::getInstance();
-    if(!readConfig("resources/config.json", vec, g)) {
+    if(!readConfig("resources/config.json", seedExamples, g)) {
         return 0;
     }
 
@@ -159,8 +159,8 @@ int main(int argc, char** rawArgv ) {
     // genome.addPrototype("renode", "",  "strash", std::vector<Argument>{Argument("K", 4, 15), Argument("C", 1, 8)}); // Memory usage explodes if using -C 16 or close to it
     // genome.addPrototype("resub", std::vector<Argument>{Argument("K", 4, 16)});
 
-    // Create seed examples
-    std::vector<Individual> seedExamples;
+    // // Create seed examples
+    // std::vector<Individual> seedExamples;
     // seedExamples.push_back(Individual(std::vector<Gene>{
     //     Gene("renode -K 10 -C 3", "", "strash"),
     //     Gene("resub -K 13", "", ""),

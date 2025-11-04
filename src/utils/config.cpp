@@ -46,14 +46,14 @@ bool readConfig(const std::string &filename, std::vector<Individual> &seeds, Gen
 }
 
 bool readSeeds(json::array &jsonSeeds, std::vector<Individual> &seeds) {
-    for(int i = 0; i< jsonSeeds.size(); i++) {
+    for(int i = 0; i < jsonSeeds.size(); i++) {
         json::object jsonSeed = jsonSeeds[i].as_object();
 
         json::array jsonGenes = jsonSeed.at("genes").as_array();
 
         std::vector<Gene> genes;
 
-        for(int j = 0; j < jsonSeeds.size(); j++) {
+        for(int j = 0; j < jsonGenes.size(); j++) {
             json::object jsonGene = jsonGenes[j].as_object();
 
             std::string prefix(""), name, postfix("");
@@ -80,7 +80,7 @@ bool readSeeds(json::array &jsonSeeds, std::vector<Individual> &seeds) {
                     std::string argName;
                     argName = jsonArgument.at("name").as_string();
 
-                    if(jsonArgument.contains("min") && jsonArgument.contains("max")) {
+                    if(jsonArgument.contains("value")) {
                         int value = jsonArgument.at("value").as_int64();
 
                         arguments.push_back({argName, value});
@@ -95,7 +95,7 @@ bool readSeeds(json::array &jsonSeeds, std::vector<Individual> &seeds) {
                 name += " -" + arg.first + " " + std::to_string(arg.second);
             }
 
-            genes.push_back(Gene(prefix, name, postfix));
+            genes.push_back(Gene(name, prefix, postfix));
         }
 
         seeds.push_back(Individual(genes));
