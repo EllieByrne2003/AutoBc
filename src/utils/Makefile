@@ -1,4 +1,4 @@
-OBJS := random.o string.o
+OBJS := config.o random.o string.o
 DIRS := 
 
 include $(SUB_MAKE_INCLUDE)
