@@ -8,8 +8,15 @@
 #include "individual/individual.hpp"
 #include "population/population.hpp"
 #include "utils/string.hpp"
+#include "utils/config.hpp"
 
 int main(int argc, char** rawArgv ) {
+    std::vector<Individual> vec;
+    Genome &g = Genome::getInstance();
+    if(!readConfig("resources/config.json", vec, g)) {
+        return 0;
+    }
+
     int nThreads = 16;
 
     int size = DEFAULT_STARTING_SIZE;
@@ -134,23 +141,23 @@ int main(int argc, char** rawArgv ) {
     // Initialise genome
     Genome &genome = Genome::getInstance();
 
-    genome.addGene("balance");
-    genome.addGene("resub");
-    genome.addGene("rewrite");
-    genome.addGene("refactor");
-    genome.addGene("fraig");
-    genome.addGene("cleanup"); // Exepect this gone
-    genome.addGene("renode", "",  "strash");
-    // genome.addGene("strash");
+    // genome.addGene("balance");
+    // genome.addGene("resub");
+    // genome.addGene("rewrite");
+    // genome.addGene("refactor");
+    // genome.addGene("fraig");
+    // genome.addGene("cleanup"); // Exepect this gone
+    // genome.addGene("renode", "",  "strash");
+    // // genome.addGene("strash");
 
-    genome.addPrototype("balance", std::vector<Argument>{});
-    // genome.addPrototype("resub");
-    genome.addPrototype("rewrite", std::vector<Argument>{});
-    genome.addPrototype("refactor", std::vector<Argument>{Argument("N", 2, 15), Argument("M", 1, 16)}); // M has no max
-    genome.addPrototype("fraig");
-    genome.addPrototype("cleanup"); // Exepect this gone
-    genome.addPrototype("renode", "",  "strash", std::vector<Argument>{Argument("K", 4, 15), Argument("C", 1, 8)}); // Memory usage explodes if using -C 16 or close to it
-    genome.addPrototype("resub", std::vector<Argument>{Argument("K", 4, 16)});
+    // genome.addPrototype("balance", std::vector<Argument>{});
+    // // genome.addPrototype("resub");
+    // genome.addPrototype("rewrite", std::vector<Argument>{});
+    // genome.addPrototype("refactor", std::vector<Argument>{Argument("N", 2, 15), Argument("M", 1, 16)}); // M has no max
+    // genome.addPrototype("fraig");
+    // genome.addPrototype("cleanup"); // Exepect this gone
+    // genome.addPrototype("renode", "",  "strash", std::vector<Argument>{Argument("K", 4, 15), Argument("C", 1, 8)}); // Memory usage explodes if using -C 16 or close to it
+    // genome.addPrototype("resub", std::vector<Argument>{Argument("K", 4, 16)});
 
     // Create seed examples
     std::vector<Individual> seedExamples;

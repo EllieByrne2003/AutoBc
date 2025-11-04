@@ -1,0 +1,221 @@
+{
+    "genome": {
+        "genePrototypes": [
+            {
+                "command": {
+                    "name": "balance"
+                }
+            },
+            {
+                "command": {
+                    "name": "rewrite"
+                }
+            },
+            {
+                "command": {
+                    "name": "refactor",
+                    "arguments": [
+                        {
+                            "name": "N",
+                            "min": 2,
+                            "max": 15
+                        },
+                        {
+                            "name": "M",
+                            "min": 1,
+                            "max": 16,
+                            "TODO": "TODO M has no actual max, could be usefult to try higher"
+                        }
+                    ]
+                }
+            },
+            {
+                "command": {
+                    "name": "fraig"
+                }
+            },
+            {
+                "command": {
+                    "name": "cleanup"
+                }
+            },
+            {
+                "prefix": "strash",
+                "command": {
+                    "name": "renode",
+                    "arguments": [
+                        {
+                            "name": "K",
+                            "min": 4,
+                            "max": 15
+                        },
+                        {
+                            "name": "C",
+                            "min": 1,
+                            "max": 8
+                        }
+                    ]
+                },
+                "postfix": "strash"
+            },
+            {
+                "command": {
+                    "name": "resub",
+                    "arguments": [
+                        {
+                            "name": "K",
+                            "min": 4,
+                            "max": 16
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "seeds": [
+        {
+            "genes": [
+                {
+                    "prefix": "strash",
+                    "command": {
+                        "name": "renode",
+                        "arguments": [ 
+                            {
+                                "name": "K",
+                                "value": 10
+                            },
+                            {
+                                "name": "C",
+                                "value": 3
+                            }
+                        ]
+                    },
+                    "postfix": "strash"
+                },
+                {
+                    "command": {
+                        "name": "resub",
+                        "arguments": [
+                            {
+                                "name": "K",
+                                "value": 13
+                            }
+                        ]
+                    }
+                },
+                {
+                    "prefix": "strash",
+                    "command": {
+                        "name": "renode",
+                        "arguments": [
+                            {
+                                "name": "K",
+                                "value": 7
+                            },
+                            {
+                                "name": "C",
+                                "value": 16
+                            }
+                        ]
+                    },
+                    "postfix": "strash"
+                },
+                {
+                    "prefix": "strash",
+                    "command": {
+                        "name": "renode",
+                        "arguments": [
+                            {
+                                "name": "K",
+                                "value": 7
+                            },
+                            {
+                                "name": "C",
+                                "value": 16
+                            }
+                        ]
+                    },
+                    "postfix": "strash"
+                },
+                {
+                    "command": {
+                        "name": "resub",
+                        "arguments": [
+                            {
+                                "name": "K",
+                                "value": 9
+                            }
+                        ]
+                    }
+                },
+                {
+                    "prefix": "strash",
+                    "command": {
+                        "name": "renode",
+                        "arguments": [
+                            {
+                                "name": "K",
+                                "value": 14
+                            },
+                            {
+                                "name": "C",
+                                "value": 13
+                            }
+                        ]
+                    },
+                    "postfix": "strash"
+                },
+                {
+                    "command": {
+                        "name": "rewrite"
+                    }
+                },
+                {
+                    "prefix": "strash",
+                    "command": {
+                        "name": "renode",
+                        "arguments": [
+                            {
+                                "name": "K",
+                                "value": 11
+                            },
+                            {
+                                "name": "C",
+                                "value": 8
+                            }
+                        ]
+                    },
+                    "postfix": "strash"
+                },
+                {
+                    "command": {
+                        "name": "resub",
+                        "arguments": [
+                            {
+                                "name": "K",
+                                "value": 14
+                            }
+                        ]
+                    }
+                },
+                {
+                    "prefix": "strash",
+                    "command": {
+                        "name": "renode",
+                        "arguments": [
+                            {
+                                "name": "K",
+                                "value": 15
+                            },
+                            {
+                                "name": "C",
+                                "value": 8
+                            }
+                        ]
+                    },
+                    "postfix": "strash"
+                }
+            ]
+        }
+    ]
+}
