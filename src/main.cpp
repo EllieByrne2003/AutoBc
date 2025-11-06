@@ -1,3 +1,4 @@
+#include <thread>
 #include <vector>
 #include <iostream>
 
@@ -17,7 +18,7 @@ int main(int argc, char** rawArgv ) {
         return 0;
     }
 
-    int nThreads = 16;
+    int nThreads = std::thread::hardware_concurrency();
 
     int size = DEFAULT_STARTING_SIZE;
     int length = DEFAULT_STARTING_LENGTH;
