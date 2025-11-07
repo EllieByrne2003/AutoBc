@@ -11,6 +11,8 @@ protected:
 public:
     Argument(const std::string &name);
 
+    virtual ~Argument() = default;
+
     virtual std::string to_string() const = 0;
 };
 
@@ -20,7 +22,9 @@ private:
 public:
     BooleanArgument(const std::string &name);
 
-    std::string to_string() const;
+    ~BooleanArgument() override;
+
+    std::string to_string() const override;
 };
 
 class NumericArgument : public Argument {
@@ -31,5 +35,7 @@ private:
 public:
     NumericArgument(const std::string &name, const int min, const int max);
 
-    std::string to_string() const;
+    ~NumericArgument() override;
+
+    std::string to_string() const override;
 };

@@ -9,6 +9,10 @@ NumericArgument::NumericArgument(const std::string &name, const int min, const i
     
 }
 
+NumericArgument::~NumericArgument() {
+    
+}
+
 std::string NumericArgument::to_string() const {
     return " -" + name + std::to_string(randomInt(min, max));
 }
