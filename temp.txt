@@ -1,0 +1,29 @@
+,
+        {
+            "genes": [
+                "renode -K 10 -C 3 ; strash",
+                "resub -K 13",
+                "renode -K 7 -C 16 ; strash",
+                "renode -K 7 -C 16 ; strash",
+                "resub -K 9",
+                "renode -K 14 -C 13 ; strash",
+                "rewrite",
+                "renode -K 11 -C 8 ; strash",
+                "resub -K 14",
+                "renode -K 15 -C 8 ; strash"
+            ]
+        },
+        {
+            "genes" : [
+                "renode -K 12 -C 6 ; strash",
+                "renode -K 15 -C 11 ; strash",
+                "resub -K 10",
+                "renode -K 13 -C 15 ; strash",
+                "balance",
+                "renode -K 14 -C 11 ; strash",
+                "resub -K 15",
+                "renode -K 6 -C 8 ; strash",
+                "balance",
+                "fraig"
+            ]
+        }

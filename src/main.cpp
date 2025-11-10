@@ -1,3 +1,4 @@
+#include <string>
 #include <thread>
 #include <vector>
 #include <iostream>
@@ -10,6 +11,8 @@
 #include "population/population.hpp"
 #include "utils/string.hpp"
 #include "utils/config.hpp"
+
+void show_usage(const std::string &command);
 
 int main(int argc, char** rawArgv ) {
     std::vector<Individual> seedExamples;
@@ -28,7 +31,8 @@ int main(int argc, char** rawArgv ) {
     // Get input file
     if(argc < 2) {
         std::cout << "Too few arguments, please use format below" << std::endl;
-        std::cout << "autobc [inputFile] [args...]" << std::endl;
+        show_usage(rawArgv[0]);
+        
         return -1;
     }
 
@@ -36,13 +40,16 @@ int main(int argc, char** rawArgv ) {
     std::vector<std::string> argv(rawArgv + 1, rawArgv + argc);
 
     if(argv[0] == "-h") {
-        // TODO list all args and how to use them here
+        show_usage(rawArgv[0]);
+        
         return 0;
     }
 
     inputFileName = argv[0];
     if(!ends_with(inputFileName, ".aig")) {
         std::cout << "File must be an aig file" << std::endl;
+        show_usage(rawArgv[0]);
+        
         return 0;
     }
     // TODO check if above is a valid file
@@ -58,6 +65,8 @@ int main(int argc, char** rawArgv ) {
         } else if(arg == "-t" || arg == "-threads") {
             if(i + 1 >= argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
+                show_usage(rawArgv[0]);
+
                 return -1;
             }
 
@@ -68,6 +77,8 @@ int main(int argc, char** rawArgv ) {
         } else if(arg == "-s" || arg == "-size") {
             if(i + 1 >= argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
+                show_usage(rawArgv[0]);
+
                 return -1;
             }
 
@@ -79,23 +90,31 @@ int main(int argc, char** rawArgv ) {
         } else if(arg == "-l" || arg == "-length") {
             if(i + 1 >= argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
+                show_usage(rawArgv[0]);
+
                 return -1;
             }
 
             length = std::atoi(argv[i++].c_str());
             if(length < 1) {
                 std::cout << "Starting length of chromosones must be at least 1" << std::endl;
+                show_usage(rawArgv[0]);
+
                 return -1;
             }
         } else if(arg == "-g" || arg == "-generation") {
             if(i + 1 > argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
+                show_usage(rawArgv[0]);
+
                 return -1;
             }
 
             generationLimit = std::atoi(argv[i++].c_str());
             if(generationLimit < 1) {
                 std::cout << "The generation limit must be at least 1, though higher is recommended." << std::endl;
+                show_usage(rawArgv[0]);
+
                 return -1;
             }            
         }
@@ -130,78 +149,6 @@ int main(int argc, char** rawArgv ) {
         pNtks[i] = Abc_NtkDup(originalNtk);
     }
 
-    // Abc_FrameSetCurrentNetwork(pAbc2, ntkClone);
-
-    // Cmd_CommandExecute(pAbc, "print_stats");
-    // Cmd_CommandExecute(pAbc2, "cleanup");
-    // Cmd_CommandExecute(pAbc2, "print_stats");
-
-    // int retValue = Abc_ApiCec(pAbc2, 1, (char **) &"cec");
-    // std::cout << "retVaue: " << retValue << std::endl;
-
-    // Initialise genome
-    Genome &genome = Genome::getInstance();
-
-    // genome.addGene("balance");
-    // genome.addGene("resub");
-    // genome.addGene("rewrite");
-    // genome.addGene("refactor");
-    // genome.addGene("fraig");
-    // genome.addGene("cleanup"); // Exepect this gone
-    // genome.addGene("renode", "",  "strash");
-    // // genome.addGene("strash");
-
-    // genome.addPrototype("balance", std::vector<Argument>{});
-    // // genome.addPrototype("resub");
-    // genome.addPrototype("rewrite", std::vector<Argument>{});
-    // genome.addPrototype("refactor", std::vector<Argument>{Argument("N", 2, 15), Argument("M", 1, 16)}); // M has no max
-    // genome.addPrototype("fraig");
-    // genome.addPrototype("cleanup"); // Exepect this gone
-    // genome.addPrototype("renode", "",  "strash", std::vector<Argument>{Argument("K", 4, 15), Argument("C", 1, 8)}); // Memory usage explodes if using -C 16 or close to it
-    // genome.addPrototype("resub", std::vector<Argument>{Argument("K", 4, 16)});
-
-    // // Create seed examples
-    // std::vector<Individual> seedExamples;
-    // seedExamples.push_back(Individual(std::vector<Gene>{
-    //     Gene("renode -K 10 -C 3", "", "strash"),
-    //     Gene("resub -K 13", "", ""),
-    //     Gene("renode -K 7 -C 16", "", "strash"),
-    //     Gene("renode -K 7 -C 16", "", "strash"),
-    //     Gene("resub -K 9", "", ""),
-    //     Gene("renode -K 14 -C 13", "", "strash"),
-    //     Gene("rewrite", "", ""),
-    //     Gene("renode -K 11 -C 8", "", "strash"),
-    //     Gene("resub -K 14", "", ""),
-    //     Gene("renode -K 15 -C 8", "", "strash")
-    // }));
-
-    // seedExamples.push_back(Individual(std::vector<Gene>{
-    //     Gene("renode -K 12 -C 6", "", "strash"),
-    //     Gene("renode -K 15 -C 11", "", "strash"),
-    //     Gene("resub -K 10", "", ""),
-    //     Gene("renode -K 13 -C 15", "", "strash"),
-    //     Gene("balance", "", ""),
-    //     Gene("renode -K 14 -C 11", "", "strash"),
-    //     Gene("resub -K 15", "", ""),
-    //     Gene("renode -K 6 -C 8", "", "strash"),
-    //     Gene("balance", "", ""),
-    //     Gene("fraig", "", "")
-    // }));
-
-    // seedExamples.push_back(Individual(std::vector<Gene>{
-    //     Gene("renode -K 6 -C 8", "", "strash"),
-    //     Gene("resub -K 9", "", ""),
-    //     Gene("renode -K 15 -C 12", "", "strash"),
-    //     Gene("resub -K 12", "", ""),
-    //     Gene("renode -K 9 -C 16", "", "strash"),
-    //     Gene("renode -K 11 -C 14", "", "strash"),
-    //     Gene("renode -K 11 -C 14", "", "strash"),
-    //     Gene("balance", "", ""),
-    //     Gene("rewrite", "", ""),
-    //     Gene("fraig", "", ""),
-    //     Gene("resub -K 13", "", ""),
-    // }));
-
     // Create population
     // Population population(256, 5);
     Population population(seedExamples, size, length);
@@ -211,11 +158,6 @@ int main(int argc, char** rawArgv ) {
         // Run generation
         population.runGeneration(pAbcs, pNtks, nThreads);
     }
-    //   Run generation
-    //   Show fitest and fitness values
-
-    // Take fittest in population
-    // Run it again but after have file written out and command shown
 
     // Cleanup abc
     // TODO cleanup original ntk
@@ -225,4 +167,12 @@ int main(int argc, char** rawArgv ) {
     Abc_Stop();
 
     return 0;
+}
+
+void show_usage(const std::string &command) {
+    std::cout << "usage: " << command << " file [-  num] [-]" << std::endl;
+
+    // TODO decide on all args to use
+    // TODO flesh this out
+
 }
