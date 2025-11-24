@@ -2,10 +2,8 @@
 
 #include <string>
 
-#include "../utils/random.hpp"
-
-NumericArgument::NumericArgument(const std::string &name, const int min, const int max) :
-    Argument(name), min(min), max(max) {
+NumericArgument::NumericArgument(const std::string &name, const int value) :
+    Argument(name), value(value) {
     
 }
 
@@ -14,5 +12,5 @@ NumericArgument::~NumericArgument() {
 }
 
 std::string NumericArgument::to_string() const {
-    return " -" + name + std::to_string(randomInt(min, max));
+    return " -" + name + " " + std::to_string(value);
 }

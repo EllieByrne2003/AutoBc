@@ -18,9 +18,10 @@ public:
 
 class BooleanArgument : public Argument {
 private:
+    const bool present;
 
 public:
-    BooleanArgument(const std::string &name);
+    BooleanArgument(const std::string &name, const bool present);
 
     ~BooleanArgument() override;
 
@@ -29,11 +30,10 @@ public:
 
 class NumericArgument : public Argument {
 private:
-    const int min;
-    const int max;
+    const int value;
 
 public:
-    NumericArgument(const std::string &name, const int min, const int max);
+    NumericArgument(const std::string &name, const int value);
 
     ~NumericArgument() override;
 

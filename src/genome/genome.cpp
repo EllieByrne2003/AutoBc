@@ -13,43 +13,39 @@ Genome::~Genome() {
 
 
 void Genome::addPrototype(const std::string &name) {
-    prototypes.push_back(std::pair<int, GenePrototype>(1, GenePrototype(name)));
-
-    totalGenes++;
+    prototypes.push_back(GenePrototype(name));
 }
 
 void Genome::addPrototype(const std::string &name, const std::string &prefix, const std::string &postfix) {
-    prototypes.push_back(std::pair<int, GenePrototype>(1, GenePrototype(name, prefix, postfix)));
-
-    totalGenes++;
+    prototypes.push_back(GenePrototype(name, prefix, postfix));
 }
 
 
-void Genome::addPrototype(const std::string &name, const std::vector<Argument> &arguements) {
-    int newGenes = 1;
+void Genome::addPrototype(const std::string &name, const std::vector<std::shared_ptr<ArgumentPrototype>> &arguements) {
+    // int newGenes = 1;
     
-    for(const Argument &arg : arguements) {
-        // If min == max, theres 1 possibility
-        newGenes *= (1 + (arg.max - arg.min));
-    }
+    // for(const Argument &arg : arguements) {
+    //     // If min == max, theres 1 possibility
+    //     newGenes *= (1 + (arg.max - arg.min));
+    // }
 
-    prototypes.push_back(std::pair<int, GenePrototype>(newGenes, GenePrototype(name, arguements)));
+    prototypes.push_back(GenePrototype(name, arguements));
 
-    totalGenes += newGenes;
+    // totalGenes += newGenes;
 }
 
 
-void Genome::addPrototype(const std::string &name, const std::string &prefix, const std::string &postfix, const std::vector<Argument> &arguements) {
-    int newGenes = 1;
+void Genome::addPrototype(const std::string &name, const std::string &prefix, const std::string &postfix, const std::vector<std::shared_ptr<ArgumentPrototype>> &arguements) {
+    // int newGenes = 1;
 
-    for(const Argument &arg : arguements) {
-        // If min == max, theres 1 possibility
-        newGenes *= (1 + (arg.max - arg.min));
-    }
+    // for(const Argument &arg : arguements) {
+    //     // If min == max, theres 1 possibility
+    //     newGenes *= (1 + (arg.max - arg.min));
+    // }
 
-    prototypes.push_back(std::pair<int, GenePrototype>(newGenes, GenePrototype(name, prefix, postfix, arguements)));
+    prototypes.push_back(GenePrototype(name, prefix, postfix, arguements));
 
-    totalGenes += newGenes;
+    // totalGenes += newGenes;
 }
 
 void Genome::addGene(const std::string &name) {
@@ -86,7 +82,7 @@ const Gene Genome::getRandomGene() {
     //     return prototype.second.createGene();
     // }
 
-    return prototypes[randomInt(0, prototypes.size() - 1)].second.createGene();
+    return prototypes[randomInt(0, prototypes.size() - 1)].createGene();
 
     assert(false);
 

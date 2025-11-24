@@ -9,7 +9,10 @@
 #include <boost/json/parse.hpp>
 #include <boost/json/stream_parser.hpp>
 #include <boost/json.hpp>
+#include <memory>
 namespace json = boost::json;
+
+#include "../argumentPrototypes/argumentPrototypes.hpp"
 
 // TODO this library returns a lot of references, copying might be expensive
 
@@ -118,7 +121,7 @@ bool readGenome(json::object &jsonGenome, Genome &genome) {
         }
 
         std::string prefix(""), name, postfix("");
-        std::vector<Argument> arguments;
+        std::vector<std::shared_ptr<ArgumentPrototype>> arguments;
 
         if(prototype.contains(prefix)) {
             prefix = prototype.at("prefix").as_string();
@@ -145,9 +148,9 @@ bool readGenome(json::object &jsonGenome, Genome &genome) {
                     int min = argument.at("min").as_int64();
                     int max = argument.at("max").as_int64();
 
-                    arguments.push_back(Argument(argName, min, max));
+                    arguments.push_back(std::make_shared<NumericArgumentPrototype>(argName, min, max));
                 } else {
-                    // TODO this spot is for arguments with no variables
+                    arguments.push_back(std::make_shared<BooleanArgumentPrototype>(argName));
                 }
             }
         }

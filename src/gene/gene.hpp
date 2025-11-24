@@ -1,6 +1,10 @@
 #pragma once
 
 #include <string>
+#include <vector>
+#include <memory>
+
+class Argument;
 
 typedef struct Abc_Frame_t_ Abc_Frame_t;
 
@@ -11,10 +15,13 @@ private:
     const std::string prefix;  // Command that must be run before command
     const std::string postfix; // Command that must be run after command
 
+    std::vector<std::shared_ptr<Argument>> arguements;
+
 public:
     Gene(const std::string &command);
     Gene(const std::string &command, const std::string &prefix, const std::string &postfix);
-    
+    Gene(const std::string &command, const std::string &prefix, const std::string &postfix, const std::vector<std::shared_ptr<Argument>> &arguements);
+
     Gene & operator=(const Gene &other);
 
     int execute(Abc_Frame_t *pAbc) const;
