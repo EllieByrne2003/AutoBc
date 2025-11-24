@@ -3,7 +3,15 @@
         "genePrototypes": [
             {
                 "command": {
-                    "name": "balance"
+                    "name": "balance",
+                    "arguments": [
+                        {
+                            "name": "l"
+                        },
+                        {
+                            "name": "d"
+                        }
+                    ]
                 }
             },
             {
