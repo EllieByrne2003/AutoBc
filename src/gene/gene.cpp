@@ -54,6 +54,10 @@ const std::string Gene::getCommand() const {
 
     retValue += command;
 
+    for(auto arg : arguements) {
+        retValue += arg->to_string();
+    }
+
     if(postfix != "")
         retValue += "; " + postfix;
 
@@ -66,6 +70,10 @@ std::ostream& operator<<(std::ostream& out, const Gene &gene) {
         out << gene.prefix << "; ";
 
     out << gene.command;
+
+    for(auto arg : gene.arguements) {
+        out << *arg;
+    }
 
     if(gene.postfix != "") 
         out << "; " << gene.postfix;

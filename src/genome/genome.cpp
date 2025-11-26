@@ -34,6 +34,7 @@ void Genome::addPrototype(const std::string &name, const std::vector<std::shared
     // totalGenes += newGenes;
 }
 
+#include <iostream>
 
 void Genome::addPrototype(const std::string &name, const std::string &prefix, const std::string &postfix, const std::vector<std::shared_ptr<ArgumentPrototype>> &arguements) {
     // int newGenes = 1;
@@ -44,7 +45,10 @@ void Genome::addPrototype(const std::string &name, const std::string &prefix, co
     // }
 
     prototypes.push_back(GenePrototype(name, prefix, postfix, arguements));
-
+    std::cout << "args: " << arguements.size() << std::endl;
+    for(auto arg : arguements) {
+        std::cout << arg->createArgument()->to_string();
+    }
     // totalGenes += newGenes;
 }
 

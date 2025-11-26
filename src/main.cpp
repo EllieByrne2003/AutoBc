@@ -63,7 +63,7 @@ int main(int argc, char** rawArgv ) {
             // TODO list all args and how to use them here
             return 0;
         } else if(arg == "-t" || arg == "-threads") {
-            if(i + 1 >= argv.size()) {
+            if(i >= argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
                 show_usage(rawArgv[0]);
 
@@ -75,7 +75,7 @@ int main(int argc, char** rawArgv ) {
                 std::cout << "Number of threads must be at least 1." << std::endl;
             }
         } else if(arg == "-s" || arg == "-size") {
-            if(i + 1 >= argv.size()) {
+            if(i >= argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
                 show_usage(rawArgv[0]);
 
@@ -88,7 +88,7 @@ int main(int argc, char** rawArgv ) {
                 return -1;
             }
         } else if(arg == "-l" || arg == "-length") {
-            if(i + 1 >= argv.size()) {
+            if(i >= argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
                 show_usage(rawArgv[0]);
 
@@ -103,7 +103,7 @@ int main(int argc, char** rawArgv ) {
                 return -1;
             }
         } else if(arg == "-g" || arg == "-generation") {
-            if(i + 1 > argv.size()) {
+            if(i > argv.size()) {
                 std::cout << "Arguement needed after: " << arg << std::endl;
                 show_usage(rawArgv[0]);
 

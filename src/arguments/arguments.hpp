@@ -14,6 +14,8 @@ public:
     virtual ~Argument() = default;
 
     virtual std::string to_string() const = 0;
+
+    friend std::ostream& operator<<(std::ostream& out, const Argument& gene);
 };
 
 class BooleanArgument : public Argument {

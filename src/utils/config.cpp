@@ -41,9 +41,9 @@ bool readConfig(const std::string &filename, std::vector<Individual> &seeds, Gen
         return false;
     }
 
-    if(!readSeeds(jsonObj.at("seeds").as_array(), seeds)) {
-        return false;
-    }
+    // if(!readSeeds(jsonObj.at("seeds").as_array(), seeds)) {
+    //     return false;
+    // }
 
     return true;
 }

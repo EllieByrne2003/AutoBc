@@ -26,6 +26,5 @@ Gene GenePrototype::createGene() const {
         args.push_back(std::shared_ptr<Argument>(argPrototype->createArgument()));
     }
 
-    return Gene(name, prefix, suffix);
-    // return Gene(name, prefix, suffix, args);
+    return Gene(name, prefix, suffix, args);
 }
