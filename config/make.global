@@ -15,7 +15,7 @@ CXX:= g++
 
 # tool macros
 CFLAGS :=
-CXXFLAGS := -g -O3 -Wunused -lboost_json #lib/libabc.a -lm -ldl -lreadline -lpthread # -lglfw -lGL -lGLEW -O1  # FILL: compile flags
+CXXFLAGS := -fsanitize=thread -g -O3 -Wunused -lboost_json #lib/libabc.a -lm -ldl -lreadline -lpthread # -lglfw -lGL -lGLEW -O1  # FILL: compile flags
 DBGFLAGS := -g -O3
 COBJFLAGS := $(CFLAGS) -c
 
