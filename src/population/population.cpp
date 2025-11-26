@@ -84,7 +84,7 @@ void Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int 
     std::vector<std::thread> threads;
     std::atomic_int nextIndividual = 0;
 
-    int n = indivduals.size() / nThreads;
+    // int n = indivduals.size() / nThreads;
     for(int i = 0; i < nThreads - 1; i++) {
         // threads.emplace_back(runIndividuals, std::ref(indivduals), pAbc[i], pNtks[i], i * n, (i + 1) * n);
         threads.emplace_back(runIndividuals, std::ref(indivduals), std::ref(nextIndividual), pAbc[i], pNtks[i]);
