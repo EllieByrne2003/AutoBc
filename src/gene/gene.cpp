@@ -1,5 +1,6 @@
 #include "gene.hpp"
 
+#include <boost/json/array.hpp>
 #include <iostream>
 
 #include "../abc.hpp"
@@ -79,4 +80,28 @@ std::ostream& operator<<(std::ostream& out, const Gene &gene) {
         out << "; " << gene.postfix;
 
     return out;
+}
+
+
+json::object Gene::toJson() const {
+    json::object gene;
+
+    gene["command"] = json::object();
+    gene["command"].as_object()["name"] = command;
+    
+    if(!arguements.empty()) {
+        gene["command"].as_object()["arguments"] = json::array();
+        
+        for(std::shared_ptr<Argument> arg : arguements) {
+            gene["command"].as_object()["arguments"].as_array().push_back(arg->to_json());
+        }
+    }
+
+    if(prefix != "")
+        gene["prefix"] = prefix;
+
+    if(postfix != "")
+        gene["postfix"] = postfix;
+
+    return gene;
 }

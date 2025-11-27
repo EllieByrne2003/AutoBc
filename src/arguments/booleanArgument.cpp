@@ -13,3 +13,10 @@ BooleanArgument::~BooleanArgument() {
 std::string BooleanArgument::to_string() const {
     return present ? " -" + name : "";
 }
+
+json::object BooleanArgument::to_json() const {
+    return json::object({
+        {"name", name},
+        {"present", present}
+    });
+}

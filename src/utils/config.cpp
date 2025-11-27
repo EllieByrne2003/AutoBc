@@ -2,6 +2,9 @@
 
 #include <boost/json/array.hpp>
 #include <boost/json/object.hpp>
+#include <boost/json/serialize.hpp>
+#include <boost/json/serialize_options.hpp>
+#include <boost/json/value.hpp>
 #include <fstream>
 #include <iterator>
 #include <iostream>
@@ -12,6 +15,7 @@
 #include <memory>
 namespace json = boost::json;
 
+#include "../arguments/arguments.hpp"
 #include "../argumentPrototypes/argumentPrototypes.hpp"
 
 // TODO this library returns a lot of references, copying might be expensive
@@ -48,6 +52,32 @@ bool readConfig(const std::string &filename, std::vector<Individual> &seeds, Gen
     return true;
 }
 
+bool writeSeed(const std::string &filename, const Individual &seed) {
+    std::ifstream ifs(filename);
+    if(!ifs.is_open()) {
+        std::cout << "Failed to open: " << filename << std::endl;
+        return false;
+    }
+
+    std::string input(std::istreambuf_iterator<char>(ifs), {});
+
+    json::value val= json::parse(input);
+
+    // Write seed
+    if(!val.as_object().contains("seeds") || !val.as_object()["seeds"].is_array()) {
+        val.as_object()["seeds"] = json::array();
+    }
+
+    json::array &seeds = val.as_object()["seeds"].as_array();
+
+    seeds.push_back(seed.to_json());
+
+    std::ofstream ofs(filename);
+    ofs << json::serialize(val);
+
+    return true;
+}
+
 bool readSeeds(json::array &jsonSeeds, std::vector<Individual> &seeds) {
     for(int i = 0; i < jsonSeeds.size(); i++) {
         json::object jsonSeed = jsonSeeds[i].as_object();
@@ -60,7 +90,7 @@ bool readSeeds(json::array &jsonSeeds, std::vector<Individual> &seeds) {
             json::object jsonGene = jsonGenes[j].as_object();
 
             std::string prefix(""), name, postfix("");
-            std::vector<std::pair<std::string, int>> arguments;
+            std::vector<std::shared_ptr<Argument>> arguments;
 
             if(jsonGene.contains(prefix)) {
                 prefix = jsonGene.at("prefix").as_string();
@@ -86,19 +116,21 @@ bool readSeeds(json::array &jsonSeeds, std::vector<Individual> &seeds) {
                     if(jsonArgument.contains("value")) {
                         int value = jsonArgument.at("value").as_int64();
 
-                        arguments.push_back({argName, value});
+                        arguments.push_back(std::make_shared<NumericArgument>(argName, value));
                     } else {
-                        // TODO this spot is for arguments with no variables
+                        bool present = jsonArgument.contains("present") && jsonArgument.at("present").as_bool();
+
+                        arguments.push_back(std::make_shared<BooleanArgument>(name, present));
                     }
                 }
             }
 
-            // TODO in future genes might store their arguments
-            for(const std::pair<std::string, int> &arg : arguments) {
-                name += " -" + arg.first + " " + std::to_string(arg.second);
-            }
+            // // TODO in future genes might store their arguments
+            // for(const std::pair<std::string, int> &arg : arguments) {
+            //     name += " -" + arg.first + " " + std::to_string(arg.second);
+            // }
 
-            genes.push_back(Gene(name, prefix, postfix));
+            genes.push_back(Gene(name, prefix, postfix, arguments));
         }
 
         seeds.push_back(Individual(genes));

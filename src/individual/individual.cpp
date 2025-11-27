@@ -1,5 +1,6 @@
 #include "individual.hpp"
 
+#include <boost/json/array.hpp>
 #include <chrono>
 #include <iomanip>
 #include <iostream>
@@ -308,4 +309,16 @@ std::ostream& operator<<(std::ostream& out, const Individual& indivdual) {
     out << "\tTime:  " << indivdual.timeElapsed.count() << "s";
 
     return out;
+}
+
+
+json::object Individual::to_json() const {
+    json::object indivdual;
+
+    indivdual["genes"] = json::array();
+    for(const Gene &gene : chromosone) {
+        indivdual["genes"].as_array().push_back(gene.toJson());
+    }
+
+    return indivdual;
 }

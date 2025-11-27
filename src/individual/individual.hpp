@@ -3,6 +3,9 @@
 #include <vector>
 #include <chrono>
 
+#include <boost/json/object.hpp>
+namespace json = boost::json;
+
 // #include "../chromosone/chromosone.hpp"
 #include "../gene/gene.hpp"
 
@@ -52,4 +55,6 @@ public:
 
     // 
     friend std::ostream& operator<<(std::ostream& out, const Individual& indivdual);
+
+    json::object to_json() const;
 };

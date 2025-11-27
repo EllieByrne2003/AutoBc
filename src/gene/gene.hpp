@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <boost/json/object.hpp>
+namespace json = boost::json;
 
 class Argument;
 
@@ -29,4 +31,6 @@ public:
     const std::string getCommand() const;
 
     friend std::ostream& operator<<(std::ostream& out, const Gene& gene);
+
+    json::object toJson() const;
 };

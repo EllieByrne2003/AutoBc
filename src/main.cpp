@@ -159,6 +159,10 @@ int main(int argc, char** rawArgv ) {
         population.runGeneration(pAbcs, pNtks, nThreads);
     }
 
+    if(!writeSeed("test.json", population.getFittest())) {
+        std::cout << "Failed to write seed" << std::endl;
+    }
+
     // Cleanup abc
     // TODO cleanup original ntk
     Abc_FrameEnd(pAbc);
