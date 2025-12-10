@@ -2,5 +2,6 @@
   "C_Cpp.errorSquiggles": "enabledIfIncludesResolve",
   "files.associations": {
     "iostream": "cpp"
-  }
+  },
+  "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix"
 }

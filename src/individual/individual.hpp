@@ -30,13 +30,7 @@ public:
     Individual(const std::vector<Gene> chromosone);
     Individual(const int chromosoneLength);
 
-    // mutating and mating for working with chromosones
-    // Individual(const std::vector<const Gene *> &chromosone);
-    // Individual(const std::vector<const Gene *> &chromosone, const int mutationRate);
-    // Individual(const std::vector<const Gene *> &parentChromosone1, const std::vector<const Gene *> &parentChromosone2);
-
     // Cloning, mutating and mating for working with individuals
-    // Individual(const Individual &individual);
     Individual(const Individual &individual, const float mutationRate);
     Individual(const Individual &parent1, const Individual &parent2);
 
@@ -46,7 +40,6 @@ public:
     
     // ~Individual();
 
-    // TODO take an abc frame later
     void calculateFitness(Abc_Frame_t *pAbc);
 
     // Comparison operators for sorting by fitness

@@ -169,42 +169,16 @@ Individual Individual::removeGenes() {
         child.chromosone.erase(child.chromosone.begin() + index);
     }
 
-    // // Creates a child with a random number of genes missing
-    // Individual child;
-
-    // for(int i = 0; i < this->chromosone.size(); i++) {
-    //     // Reverse, includes the gene if less than rate
-    //     if(REMOVE_RATE < randomFloat(0.0, 1.0)) {
-    //         child.chromosone.push_back(this->chromosone[i]);
-    //     }
-    // }
-
     return child;
 }
 
 Individual Individual::addGenes() {
     // Creates child and adds x genes randomly
     Individual child(this->chromosone);
-
     for(int i = 0; i < MIN_ADDITION_NUM; i++) {
         const int index = randomInt(0, child.chromosone.size());
         child.chromosone.insert(child.chromosone.begin() + index, Genome::getInstance().getRandomGene());
     }
-    // // Creates child and adds a random number of extra genes
-    // Individual child;
-
-    // if(ADD_RATE < randomFloat(0.0, 1.0)) {
-    //     child.chromosone.push_back(Genome::getInstance().getRandomGene());
-    // }
-
-    // for(int i = 0; i < this->chromosone.size(); i++) {
-    //     child.chromosone.push_back(this->chromosone[i]);
-           
-    //     // Add gene after gene copy
-    //     if(ADD_RATE > randomFloat(0.0, 1.0)) {
-    //         child.chromosone.push_back(Genome::getInstance().getRandomGene());
-    //     }
-    // }
 
     return child;
 }

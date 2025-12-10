@@ -39,18 +39,6 @@ const Individual & Population::getRandomIndividual(const int sampleSize) {
     return indivduals[dist(gen)];
 }
 
-// void runIndividuals(std::vector<Individual> &indivduals, Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk, const int start, const int end) {
-//     for(int i = start; i < end; i++) {
-//         // Create a copy of the network given
-//         Abc_FrameSetCurrentNetwork(pAbc, Abc_NtkDup(pNtk));
-
-//         indivduals[i].calculateFitness(pAbc);
-
-//         // Delete the network and free the memory
-//         Abc_FrameDeleteAllNetworks(pAbc);
-//     }
-// }
-
 void runIndividuals(std::vector<Individual> &indivduals, std::atomic_int &nextIndex, Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk) {
     while(true) {
         const int currentIndex = nextIndex.fetch_add(1, std::memory_order_relaxed);
@@ -68,16 +56,6 @@ void runIndividuals(std::vector<Individual> &indivduals, std::atomic_int &nextIn
         // Delete the network to free its memory
         Abc_FrameDeleteAllNetworks(pAbc);
     }
-
-    // for(int i = start; i < end; i++) {
-    //     // Create a copy of the network given
-    //     Abc_FrameSetCurrentNetwork(pAbc, Abc_NtkDup(pNtk));
-
-    //     indivduals[i].calculateFitness(pAbc);
-
-    //     // Delete the network and free the memory
-    //     Abc_FrameDeleteAllNetworks(pAbc);
-    // }
 }
 
 void Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int nThreads) {
@@ -91,16 +69,6 @@ void Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int 
     }
 
     runIndividuals(indivduals, nextIndividual, pAbc[nThreads - 1], pNtks[nThreads - 1]);
-
-    // // TODO fix this, have threads pull from the vector until the end instead of predefined splits
-    // for(int i = n * (nThreads - 1); i < indivduals.size(); i++) {
-    //     Abc_FrameSetCurrentNetwork(pAbc[nThreads - 1], Abc_NtkDup(pNtks[nThreads - 1]));
-        
-    //     indivduals[i].calculateFitness(pAbc[nThreads - 1]);
-
-    //     // Duplicate network and set it
-    //     Abc_FrameDeleteAllNetworks(pAbc[nThreads - 1]);
-    // }
 
     for(std::thread &thread : threads) {
         thread.join();
@@ -137,12 +105,6 @@ void Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int 
             newIndividuals.push_back(indivduals[i].addGenes());
         }
     }
-
-    // // Mutate fittest 20% from old population
-    // s = (20 * size) / 100;
-    // for(int i = 0; i < s; i++) {
-    //     newIndividuals.push_back((Individual(indivduals[i], 0.1)));
-    // }
 
     // Mate fittest 50% from old population
     s = (60 * size) / 100;

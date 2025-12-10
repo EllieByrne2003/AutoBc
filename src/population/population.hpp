@@ -14,8 +14,7 @@ private:
     std::vector<Individual> indivduals;
 
     const Individual & getRandomIndividual(const int sampleSize);
-
-    // void runIndividuals(Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk, const int start, const int end);
+    
 public:
     Population(const int size, const int startingChromosoneLength);
     Population(std::vector<Individual> &seedExamples, const int size, const int startingChromosoneLength);

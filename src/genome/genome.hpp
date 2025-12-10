@@ -8,59 +8,6 @@
 #include "../gene/gene.hpp"
 #include "../genePrototype/genePrototype.hpp"
 
-// struct Argument {
-//     const std::string name;
-//     const int min;
-//     const int max;
-//     const int step; // TODO something using this value
-
-//     Argument(const std::string &name, const int min, const int max) :
-//         Argument(name, min, max, 1) { }
-
-//     Argument(const std::string &name, const int min, const int max, const int step) :
-//         name(name), min(min), max(max), step(step) {
-//         assert(min <= max);
-//         assert(step >= 1);
-//     }
-
-//     std::string to_string() const {
-//         return " -" + name + " " + std::to_string(randomInt(min, max));
-//     }
-// };
-
-// struct GenePrototype {
-//     const std::string name;
-//     const std::string prefix;
-//     const std::string postfix;
-
-//     const std::vector<Argument> arguments;
-
-//     GenePrototype(const std::string &name) : name(name) {}
-
-//     GenePrototype(const std::string &name, const std::string &prefix, const std::string &postfix) :
-//         name(name), prefix(prefix), postfix(postfix) {}
-
-//     GenePrototype(const std::string &name, const std::vector<Argument> &arguements) :
-//         name(name), arguments(arguements) {} 
-
-//     GenePrototype(const std::string &name, const std::string &prefix, const std::string &postfix, const std::vector<Argument> &arguements) :
-//         name(name), prefix(prefix), postfix(postfix), arguments(arguements) {}
-
-//     Gene createGene() const {
-//         std::string nameWithArgs = name + makeArgs(0);
-
-//         return Gene(nameWithArgs, prefix, postfix);
-//     }
-
-//     std::string makeArgs(const int i) const {
-//         if(i >= arguments.size()) {
-//             return "";
-//         }
-
-//         return arguments[i].to_string() + makeArgs(i + 1);
-//     }
-// };
-
 class Genome {
 private:
     std::vector<const Gene *> genes;

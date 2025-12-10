@@ -22,34 +22,11 @@ void Genome::addPrototype(const std::string &name, const std::string &prefix, co
 
 
 void Genome::addPrototype(const std::string &name, const std::vector<std::shared_ptr<ArgumentPrototype>> &arguements) {
-    // int newGenes = 1;
-    
-    // for(const Argument &arg : arguements) {
-    //     // If min == max, theres 1 possibility
-    //     newGenes *= (1 + (arg.max - arg.min));
-    // }
-
     prototypes.push_back(GenePrototype(name, arguements));
-
-    // totalGenes += newGenes;
 }
 
-#include <iostream>
-
 void Genome::addPrototype(const std::string &name, const std::string &prefix, const std::string &postfix, const std::vector<std::shared_ptr<ArgumentPrototype>> &arguements) {
-    // int newGenes = 1;
-
-    // for(const Argument &arg : arguements) {
-    //     // If min == max, theres 1 possibility
-    //     newGenes *= (1 + (arg.max - arg.min));
-    // }
-
     prototypes.push_back(GenePrototype(name, prefix, postfix, arguements));
-    std::cout << "args: " << arguements.size() << std::endl;
-    for(auto arg : arguements) {
-        std::cout << arg->createArgument()->to_string();
-    }
-    // totalGenes += newGenes;
 }
 
 void Genome::addGene(const std::string &name) {
@@ -74,26 +51,5 @@ void Genome::addGene(const std::string &name, std::vector<std::tuple<const std::
 }
 
 const Gene Genome::getRandomGene() {
-    // const int n = randomInt(0, totalGenes);
-    
-    // int currentGene = 0;
-    // for(const auto &prototype : prototypes) {
-    //     if(n > currentGene + prototype.first) {
-    //         currentGene += prototype.first;
-    //         continue;
-    //     }
-
-    //     return prototype.second.createGene();
-    // }
-
     return prototypes[randomInt(0, prototypes.size() - 1)].createGene();
-
-    assert(false);
-
-    // const auto pro = prototypes[randomInt(0, prototypes.size() - 1)];
-
-    // std::cout << pro.second.createGene()->getCommand() << std::endl;
-
-
-    // return genes[randomInt(0, genes.size() - 1)];
 }

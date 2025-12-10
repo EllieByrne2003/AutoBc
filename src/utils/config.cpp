@@ -20,6 +20,10 @@ namespace json = boost::json;
 
 // TODO this library returns a lot of references, copying might be expensive
 
+bool openFile(const std::string &filename, std::ifstream &ifs);
+bool openFile(const std::string &filename, std::ofstream &ofs);
+bool openFile(const std::string &filename, std::fstream  &fs);
+
 bool readSeeds(json::array &jsonSeeds, std::vector<Individual> &seeds);
 bool readGenome(json::object &jsonGenome, Genome &genome);
 
@@ -45,9 +49,19 @@ bool readConfig(const std::string &filename, std::vector<Individual> &seeds, Gen
         return false;
     }
 
-    // if(!readSeeds(jsonObj.at("seeds").as_array(), seeds)) {
-    //     return false;
-    // }
+    if(!readSeeds(jsonObj.at("seeds").as_array(), seeds)) {
+        return false;
+    }
+
+    return true;
+}
+
+bool readGenes(const std::string &filename, Genome &genome) {
+
+    return true;
+}
+
+bool readSeeds(const std::string &filename, std::vector<Individual> &seeds) {
 
     return true;
 }
@@ -188,6 +202,36 @@ bool readGenome(json::object &jsonGenome, Genome &genome) {
         }
 
         genome.addPrototype(name, prefix, postfix, arguments);
+    }
+
+    return true;
+}
+
+bool openFile(const std::string &filename, std::ifstream &ifs) {
+    ifs = std::ifstream(filename);
+    if(!ifs.is_open()) {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+        return false;
+    }
+
+    return true;
+}
+
+bool openFile(const std::string &filename, std::ofstream &ofs) {
+    ofs = std::ofstream(filename);
+    if(!ofs.is_open()) {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+        return false;
+    }
+
+    return true;
+}
+
+bool openFile(const std::string &filename, std::fstream  &fs) {
+    fs = std::fstream(filename);
+    if(!fs.is_open()) {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+        return false;
     }
 
     return true;
