@@ -159,30 +159,45 @@ bool readGenome(json::object &jsonGenome, Genome &genome) {
     for(int i = 0; i < prototypes.size(); i++) {
         json::object prototype = prototypes[i].as_object();
 
-        if(!prototype.contains("command")) {
-            std::cout << "All genes must have a command." << std::endl;
-            std::cout << "Please fix: " << prototype << std::endl;
+        // if(!prototype.contains("command")) {
+        //     std::cout << "All genes must have a command." << std::endl;
+        //     std::cout << "Please fix: " << prototype << std::endl;
             
-            return false;
-        }
+        //     return false;
+        // }
 
-        std::string prefix(""), name, postfix("");
+        // std::string prefix(""), name, postfix("");
+        std::string name, inputType, outputType;
         std::vector<std::shared_ptr<ArgumentPrototype>> arguments;
 
-        if(prototype.contains(prefix)) {
-            prefix = prototype.at("prefix").as_string();
+        // if(prototype.contains(prefix)) {
+        //     prefix = prototype.at("prefix").as_string();
+        // }
+
+        // if(prototype.contains("prefix")) {
+        //     postfix = prototype.at("postfix").as_string();
+        // }
+
+        // json::object command = prototype.at("command").as_object();
+
+        name = prototype.at("name").as_string();
+
+        if(!prototype.contains("input")) {
+            std::cout << "Error: Gene prototype does not specify input type" << std::endl;
+            continue;
+        } else {
+            inputType = prototype.at("input").as_string();
         }
 
-        if(prototype.contains("prefix")) {
-            postfix = prototype.at("postfix").as_string();
+        if(!prototype.contains("output")) {
+            std::cout << "Error: Gene prototype does not specify output type" << std::endl;
+            continue;
+        } else {
+            outputType = prototype.at("output").as_string();
         }
 
-        json::object command = prototype.at("command").as_object();
-
-        name = command.at("name").as_string();
-
-        if(command.contains("arguments")) {
-            json::array jsonArguments = command.at("arguments").as_array();
+        if(prototype.contains("arguments")) {
+            json::array jsonArguments = prototype.at("arguments").as_array();
 
             for(int j = 0; j < jsonArguments.size(); j++) {
                 json::object argument = jsonArguments[j].as_object();
@@ -201,7 +216,7 @@ bool readGenome(json::object &jsonGenome, Genome &genome) {
             }
         }
 
-        genome.addPrototype(name, prefix, postfix, arguments);
+        genome.addPrototype(name, inputType, outputType, arguments);
     }
 
     return true;

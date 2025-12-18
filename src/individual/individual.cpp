@@ -118,11 +118,15 @@ void Individual::calculateFitness(Abc_Frame_t *pAbc) {
     }
 
     const auto start = std::chrono::system_clock::now();
+    std::string ntkType = "aig"; // TODO fix, the netwokr might not be aig after loading
 
     // Step 1: Run through all commands in chromosone
     for(const Gene &gene : chromosone) {
         // std::cout << gene.getCommand() << std::endl;
-        if(gene.execute(pAbc)) {
+        std::cout << "Running: " << gene.getCommand(ntkType) << std::endl;
+        ntkType = gene.execute(pAbc, ntkType);
+
+        if(ntkType == "error") {
             error = true;
             return;
         }
@@ -265,8 +269,9 @@ std::ostream& operator<<(std::ostream& out, const Individual& indivdual) {
     out << "\tLength: " << indivdual.chromosone.size() << std::endl;
 
     out << "\tChromosone: ";
+    std::string ntkType = "aig"; // TODO may not be true
     for(const Gene &gene : indivdual.chromosone) {
-        out << gene << "; ";
+        out << gene.getCommand(ntkType) << "; "; // TODO remove this
     }
     out << std::endl;
     
