@@ -1,124 +1,195 @@
 {
     "genome": {
         "genePrototypes": [
+            
             {
-                "command": {
-                    "name": "balance",
-                    "arguments": [
-                        {
-                            "name": "l"
-                        },
-                        {
-                            "name": "d"
-                        }
-                    ]
-                }
+                "name": "balance",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "l"
+                    },
+                    {
+                        "name": "d"
+                    },
+                    {
+                        "name": "s"
+                    },
+                    {
+                        "name": "x"
+                    }
+                ],
+                "input": "aig",
+                "output": "aig"
             },
             {
-                "command": {
-                    "name": "rewrite"
-                }
+                "name": "sweep",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "s"
+                    }
+                ],
+                "input": "logic",
+                "output": "logic"
             },
             {
-                "command": {
-                    "name": "refactor",
-                    "arguments": [
-                        {
-                            "name": "N",
-                            "min": 2,
-                            "max": 15
-                        },
-                        {
-                            "name": "M",
-                            "min": 1,
-                            "max": 16,
-                            "TODO": "TODO M has no actual max, could be usefult to try higher"
-                        }
-                    ]
-                }
+                "name": "rewrite",
+                "enabled": true,
+                "input": "aig",
+                "output": "aig"
             },
             {
-                "command": {
-                    "name": "fraig",
-					"arguments": [
-						{
-							"name": "R",
-							"min": 128,
-							"max": 32768
-						},
-						{
-							"name": "D",
-							"min": 128,
-							"max": 32768
-						},
-						{
-							"name": "r"
-						},
-						{
-							"name": "s"
-						},
-						{
-							"name": "c"
-						},
-						{
-							"name": "e"
-						}
-					]
-                }
+                "name": "refactor",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "N",
+                        "min": 2,
+                        "max": 15
+                    },
+                    {
+                        "name": "M",
+                        "min": 1,
+                        "max": 16,
+                        "TODO": "TODO M has no actual max, could be usefult to try higher"
+                    }
+                ],
+                "input": "aig",
+                "output": "aig"
             },
             {
-                "command": {
-                    "name": "cleanup"
-                }
+                "name": "fraig",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "R",
+                        "min": 128,
+                        "max": 32768
+                    },
+                    {
+                        "name": "D",
+                        "min": 128,
+                        "max": 32768
+                    },
+                    {
+                        "name": "r"
+                    },
+                    {
+                        "name": "s"
+                    },
+                    {
+                        "name": "c"
+                    },
+                    {
+                        "name": "e"
+                    }
+                ],
+                "input": "aig",
+                "output": "aig"
             },
             {
-                "prefix": "strash",
-                "command": {
-                    "name": "renode",
-                    "arguments": [
-                        {
-                            "name": "K",
-                            "min": 4,
-                            "max": 15
-                        },
-                        {
-                            "name": "C",
-                            "min": 1,
-                            "max": 8
-                        }
-                    ]
-                },
-                "postfix": "strash"
+                "name": "cleanup",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "i"
+                    },
+                    {
+                        "name": "o"
+                    }
+                ],
+                "input": "logic",
+                "output": "logic"
             },
             {
-                "command": {
-                    "name": "resub",
-                    "arguments": [
-                        {
-                            "name": "K",
-                            "min": 4,
-                            "max": 16
-                        }
-                    ]
-                }
+                "name": "cleanup",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "i"
+                    },
+                    {
+                        "name": "o"
+                    }
+                ],
+                "input": "aig",
+                "output": "aig"
             },
-			{
-				"command": {
-					"name": "csweep",
-					"arguments": [
-						{
-							"name": "C",
-							"min": 2,
-							"max": 64
-						},
-						{
-							"name": "K",
-							"min": 3,
-							"max": 16
-						}
-					]
-				}
-			}
+            {
+                "name": "renode",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "K",
+                        "min": 4,
+                        "max": 15
+                    },
+                    {
+                        "name": "C",
+                        "min": 1,
+                        "max": 8
+                    },
+                    {
+                        "name": "F",
+                        "min": 0,
+                        "max": 15
+                    },
+                    {
+                        "name": "A",
+                        "min": 0,
+                        "max": 15
+                    },
+                    {
+                        "name": "s"
+                    },
+                    {
+                        "name": "b"
+                    },
+                    {
+                        "name": "c"
+                    },
+                    {
+                        "name": "i"
+                    },
+                    {
+                        "name": "a"
+                    }
+                ],
+                "input": "aig",
+                "output": "logic"
+            },
+            {
+                "name": "resub",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "K",
+                        "min": 4,
+                        "max": 16
+                    }
+                ],
+                "input": "aig",
+                "output": "aig"
+            },
+            {
+                "name": "csweep",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "C",
+                        "min": 2,
+                        "max": 64
+                    },
+                    {
+                        "name": "K",
+                        "min": 3,
+                        "max": 16
+                    }
+                ],
+                "input": "aig",
+                "output": "aig"
+            }
         ]
     },
     "seeds": [
@@ -128,7 +199,7 @@
                     "prefix": "strash",
                     "command": {
                         "name": "renode",
-                        "arguments": [ 
+                        "arguments": [
                             {
                                 "name": "K",
                                 "value": 10

@@ -180,17 +180,27 @@ bool readGenome(json::object &jsonGenome, Genome &genome) {
 
         // json::object command = prototype.at("command").as_object();
 
-        name = prototype.at("name").as_string();
+        if(!prototype.contains("name")) {
+            std::cerr << "Config Error: Nameless prototype in genome. Skipping." << std::endl;
+        } else {
+            name = prototype.at("name").as_string();
+        }
+
+        // Skip disabled genes
+        if(!prototype.contains("enabled") || !prototype.at("enabled").as_bool()) {
+            std::cout << "Skipping: " << name << ", it is not an enabled part of the genome." << std::endl;
+            continue;
+        }
 
         if(!prototype.contains("input")) {
-            std::cout << "Error: Gene prototype does not specify input type" << std::endl;
+            std::cerr << "Config Error: " << name << " does not specify an input type. Skipping." << std::endl;
             continue;
         } else {
             inputType = prototype.at("input").as_string();
         }
 
         if(!prototype.contains("output")) {
-            std::cout << "Error: Gene prototype does not specify output type" << std::endl;
+            std::cerr << "Config Error: " << name << " does not specify an output type. Skipping." << std::endl;
             continue;
         } else {
             outputType = prototype.at("output").as_string();
