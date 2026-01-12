@@ -1,341 +1,495 @@
 {
     "genome": {
         "genePrototypes": [
-            
+            {
+                "name": "collapse ; strash",
+                "enabled": true,
+                "arguments": [
+
+                ],
+                "input": "aig",
+                "output": "logic"
+            },
+            {
+                "name": "satclp",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "strash",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
             {
                 "name": "balance",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
-                    {
-                        "name": "l"
-                    },
-                    {
-                        "name": "d"
-                    },
-                    {
-                        "name": "s"
-                    },
-                    {
-                        "name": "x"
-                    }
+
                 ],
-                "input": "aig",
-                "output": "aig"
+                "input": "",
+                "output": ""
             },
             {
-                "name": "sweep",
-                "enabled": true,
+                "name": "mux_struct",
+                "enabled": false,
                 "arguments": [
-                    {
-                        "name": "s"
-                    }
+
                 ],
-                "input": "logic",
-                "output": "logic"
+                "input": "",
+                "output": ""
             },
             {
-                "name": "rewrite",
-                "enabled": true,
-                "input": "aig",
-                "output": "aig"
-            },
-            {
-                "name": "refactor",
-                "enabled": true,
+                "name": "multi",
+                "enabled": false,
                 "arguments": [
-                    {
-                        "name": "N",
-                        "min": 2,
-                        "max": 15
-                    },
-                    {
-                        "name": "M",
-                        "min": 1,
-                        "max": 16,
-                        "TODO": "TODO M has no actual max, could be usefult to try higher"
-                    }
+
                 ],
-                "input": "aig",
-                "output": "aig"
-            },
-            {
-                "name": "fraig",
-                "enabled": true,
-                "arguments": [
-                    {
-                        "name": "R",
-                        "min": 128,
-                        "max": 32768
-                    },
-                    {
-                        "name": "D",
-                        "min": 128,
-                        "max": 32768
-                    },
-                    {
-                        "name": "r"
-                    },
-                    {
-                        "name": "s"
-                    },
-                    {
-                        "name": "c"
-                    },
-                    {
-                        "name": "e"
-                    }
-                ],
-                "input": "aig",
-                "output": "aig"
-            },
-            {
-                "name": "cleanup",
-                "enabled": true,
-                "arguments": [
-                    {
-                        "name": "i"
-                    },
-                    {
-                        "name": "o"
-                    }
-                ],
-                "input": "logic",
-                "output": "logic"
-            },
-            {
-                "name": "cleanup",
-                "enabled": true,
-                "arguments": [
-                    {
-                        "name": "i"
-                    },
-                    {
-                        "name": "o"
-                    }
-                ],
-                "input": "aig",
-                "output": "aig"
+                "input": "",
+                "output": ""
             },
             {
                 "name": "renode",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
-                    {
-                        "name": "K",
-                        "min": 4,
-                        "max": 15
-                    },
-                    {
-                        "name": "C",
-                        "min": 1,
-                        "max": 8
-                    },
-                    {
-                        "name": "F",
-                        "min": 0,
-                        "max": 15
-                    },
-                    {
-                        "name": "A",
-                        "min": 0,
-                        "max": 15
-                    },
-                    {
-                        "name": "s"
-                    },
-                    {
-                        "name": "b"
-                    },
-                    {
-                        "name": "c"
-                    },
-                    {
-                        "name": "i"
-                    },
-                    {
-                        "name": "a"
-                    }
+
                 ],
-                "input": "aig",
-                "output": "logic"
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "cleanup",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "sweep",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "fx",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "fxch",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "eliminate",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "dsd",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "sparsify",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "lutpack",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "lutmin",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "mfs",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "mfs2",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "mfs3",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "mfse",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "logicpush",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "trace",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "glitch",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "speedup",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "powerdown",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "addbuffs",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "merge",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "testdec",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "testnpn",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "testrpo",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "testtruth",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "testsupp",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "testrand",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "runsat",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "runeco",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "rungen",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "runscript",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "xec",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "rewrite",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "refactor",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
             },
             {
                 "name": "resub",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
-                    {
-                        "name": "K",
-                        "min": 4,
-                        "max": 16
-                    }
+
                 ],
-                "input": "aig",
-                "output": "aig"
+                "input": "",
+                "output": ""
             },
             {
-                "name": "csweep",
-                "enabled": true,
+                "name": "resub_unate",
+                "enabled": false,
                 "arguments": [
-                    {
-                        "name": "C",
-                        "min": 2,
-                        "max": 64
-                    },
-                    {
-                        "name": "K",
-                        "min": 3,
-                        "max": 16
-                    }
+
                 ],
-                "input": "aig",
-                "output": "aig"
-            }
-        ]
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "resub_core",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "resub_check",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "cascade",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "lutcasdec",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "lutcas",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "bseval",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "extract",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "varmin",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "faultclasses",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "exact",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "orchestrate",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "aigaug",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            }            
+       ]
     },
-    "seeds": [
-        {
-            "genes": [
-                {
-                    "prefix": "strash",
-                    "command": {
-                        "name": "renode",
-                        "arguments": [
-                            {
-                                "name": "K",
-                                "value": 10
-                            },
-                            {
-                                "name": "C",
-                                "value": 3
-                            }
-                        ]
-                    },
-                    "postfix": "strash"
-                },
-                {
-                    "command": {
-                        "name": "resub",
-                        "arguments": [
-                            {
-                                "name": "K",
-                                "value": 13
-                            }
-                        ]
-                    }
-                },
-                {
-                    "prefix": "strash",
-                    "command": {
-                        "name": "renode",
-                        "arguments": [
-                            {
-                                "name": "K",
-                                "value": 7
-                            },
-                            {
-                                "name": "C",
-                                "value": 16
-                            }
-                        ]
-                    },
-                    "postfix": "strash"
-                },
-                {
-                    "prefix": "strash",
-                    "command": {
-                        "name": "renode",
-                        "arguments": [
-                            {
-                                "name": "K",
-                                "value": 7
-                            },
-                            {
-                                "name": "C",
-                                "value": 16
-                            }
-                        ]
-                    },
-                    "postfix": "strash"
-                },
-                {
-                    "command": {
-                        "name": "resub",
-                        "arguments": [
-                            {
-                                "name": "K",
-                                "value": 9
-                            }
-                        ]
-                    }
-                },
-                {
-                    "prefix": "strash",
-                    "command": {
-                        "name": "renode",
-                        "arguments": [
-                            {
-                                "name": "K",
-                                "value": 14
-                            },
-                            {
-                                "name": "C",
-                                "value": 13
-                            }
-                        ]
-                    },
-                    "postfix": "strash"
-                },
-                {
-                    "command": {
-                        "name": "rewrite"
-                    }
-                },
-                {
-                    "prefix": "strash",
-                    "command": {
-                        "name": "renode",
-                        "arguments": [
-                            {
-                                "name": "K",
-                                "value": 11
-                            },
-                            {
-                                "name": "C",
-                                "value": 8
-                            }
-                        ]
-                    },
-                    "postfix": "strash"
-                },
-                {
-                    "command": {
-                        "name": "resub",
-                        "arguments": [
-                            {
-                                "name": "K",
-                                "value": 14
-                            }
-                        ]
-                    }
-                },
-                {
-                    "prefix": "strash",
-                    "command": {
-                        "name": "renode",
-                        "arguments": [
-                            {
-                                "name": "K",
-                                "value": 15
-                            },
-                            {
-                                "name": "C",
-                                "value": 8
-                            }
-                        ]
-                    },
-                    "postfix": "strash"
-                }
-            ]
-        }
+    "seeds" : [
+
     ]
 }
