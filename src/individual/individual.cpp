@@ -21,7 +21,7 @@
 Individual::Individual() {}
 
 
-Individual::Individual(const std::vector<Gene> chromosone) : chromosone(chromosone) {}
+Individual::Individual(const std::vector<Gene> &chromosone) : chromosone(chromosone) {}
 
 Individual::Individual(const int chromosoneLength) {
     for(int i = 0; i < chromosoneLength; i++) {
@@ -37,6 +37,39 @@ Individual::Individual(const Individual &individual, const float mutationRate) {
     //         this->chromosone.push_back(Genome::getInstance().getRandomGene());
     //     }
     // }
+
+    // Copy the chromosone
+    this->chromosone = individual.chromosone;
+
+    // First remove, then mutate then add
+    // TODO can have these be global and altered in between generations and set to constant at start
+    const float additionChance = 0.1f;
+    const int additionAttempts = 1;
+
+    const float mutationChance = 0.1f;
+    const int mutationAttempts = 1;
+    
+    const float removalChance = 0.1f;
+    const int removalAttempts = 1;
+    
+    for(int i = 0; i < removalAttempts; i++) {
+        if(removalChance > randomFloat(0.0f, 1.0f)) {
+            this->chromosone;
+        }        
+    }
+
+    for(int i = 0; i < mutationAttempts; i++) {
+        if(mutationChance > randomFloat(0.0f, 1.0f)) {
+            
+        }
+    }
+
+    for(int i = 0; i < additionAttempts; i++) {
+        if(additionChance > randomFloat(0.0f, 1.0f)) {
+            
+        }        
+    }
+
 
     const float mutationType = randomFloat(0.0, 1.0);
     if(mutationType < 1.0 / 3.0) {

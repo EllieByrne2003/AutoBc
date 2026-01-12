@@ -97,6 +97,7 @@ void Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int 
     for(int i = 0; i < s; i++) {
         const float choice = randomFloat(0.0, 1.0);
 
+        // TODO let genes be mixed and matched
         if(choice < CHANGE_CHANCE) {
             newIndividuals.push_back(indivduals[i].mutateGenes());
         } else if(choice < (CHANGE_CHANCE + REMOVE_CHANCE)) {

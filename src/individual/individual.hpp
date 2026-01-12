@@ -27,7 +27,7 @@ private:
 public:
     // Initiaisation, create random chromosone of this length
     Individual();
-    Individual(const std::vector<Gene> chromosone);
+    Individual(const std::vector<Gene> &chromosone);
     Individual(const int chromosoneLength);
 
     // Cloning, mutating and mating for working with individuals

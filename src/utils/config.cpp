@@ -12,8 +12,9 @@
 #include <boost/json/parse.hpp>
 #include <boost/json/stream_parser.hpp>
 #include <boost/json.hpp>
-#include <memory>
 namespace json = boost::json;
+
+#include <memory>
 
 #include "../arguments/arguments.hpp"
 #include "../argumentPrototypes/argumentPrototypes.hpp"
@@ -75,7 +76,7 @@ bool writeSeed(const std::string &filename, const Individual &seed) {
 
     std::string input(std::istreambuf_iterator<char>(ifs), {});
 
-    json::value val= json::parse(input);
+    json::value val = json::parse(input);
 
     // Write seed
     if(!val.as_object().contains("seeds") || !val.as_object()["seeds"].is_array()) {
@@ -215,6 +216,12 @@ bool readGenome(json::object &jsonGenome, Genome &genome) {
                 std::string argName;
                 argName = argument.at("name").as_string();
 
+                // Skip disabled arguments
+                if(!argument.contains("enabled") || !argument.at("enabled").as_bool()) {
+                    std::cout << "Skipping: " << argName << ", it is not an enabled part of the genome." << std::endl;
+                    continue;
+                }
+
                 if(argument.contains("min") && argument.contains("max")) {
                     int min = argument.at("min").as_int64();
                     int max = argument.at("max").as_int64();
@@ -252,7 +259,7 @@ bool openFile(const std::string &filename, std::ofstream &ofs) {
     return true;
 }
 
-bool openFile(const std::string &filename, std::fstream  &fs) {
+bool openFile(const std::string &filename, std::fstream &fs) {
     fs = std::fstream(filename);
     if(!fs.is_open()) {
         std::cerr << "Failed to open file: " << filename << std::endl;
