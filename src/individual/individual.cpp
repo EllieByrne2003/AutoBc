@@ -165,6 +165,11 @@ void Individual::calculateFitness(Abc_Frame_t *pAbc) {
         }
     }
 
+    // Turn back into AIG for analysis
+    if(ntkType == "logic" || ntkType == "logic-sop") {
+        Cmd_CommandExecute(pAbc, "strash");
+    }
+
     const auto end = std::chrono::system_clock::now();
     timeElapsed = (end - start);
 
@@ -201,6 +206,10 @@ Individual Individual::mutateGenes() {
 Individual Individual::removeGenes() {
     // Creates a child and removes x genes randomly
     Individual child(this->chromosone);
+    if(child.chromosone.size() <= 0) {
+        return child;
+    }
+
     for(int i = 0; i < MIN_REMOVAL_NUM; i++) {
         const int index = randomInt(0, child.chromosone.size() - 1);
         child.chromosone.erase(child.chromosone.begin() + index);
