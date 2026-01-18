@@ -2,10 +2,27 @@
     "genome": {
         "genePrototypes": [
             {
-                "name": "collapse ; strash",
-                "enabled": true,
+                "name": "collapse ",
+                "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "B",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 1000000000
+                    },
+                    {
+                        "name": "r",
+                        "enabled": false
+                    },
+                    {
+                        "name": "o",
+                        "enabled": true
+                    },
+                    {
+                        "name": "d",
+                        "enabled": false
+                    }
                 ],
                 "input": "aig",
                 "output": "logic"
@@ -14,28 +31,87 @@
                 "name": "satclp",
                 "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "C",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 1000000
+                    },
+                    {
+                        "name": "L",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 1000000
+                    },
+                    {
+                        "name": "Z",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 20000000
+                    },
+                    {
+                        "name": "c",
+                        "enabled": false
+                    },
+                    {
+                        "name": "r",
+                        "enabled": false
+                    },
+                    {
+                        "name": "s",
+                        "enabled": false
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "logic"
             },
             {
                 "name": "strash",
                 "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "a",
+                        "enabled": true
+                    },
+                    {
+                        "name": "c",
+                        "enabled": true
+                    },
+                    {
+                        "name": "r",
+                        "enabled": true
+                    },
+                    {
+                        "name": "i",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "aig"
             },
             {
                 "name": "balance",
                 "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "l",
+                        "enabled": true
+                    },
+                    {
+                        "name": "d",
+                        "enabled": true
+                    },
+                    {
+                        "name": "s",
+                        "enabled": true
+                    },
+                    {
+                        "name": "x",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "aig"
             },
             {
                 "name": "mux_struct",
@@ -50,55 +126,215 @@
                 "name": "multi",
                 "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "F",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 100
+                    },
+                    {
+                        "name": "T",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 5
+                    },
+                    {
+                        "name": "m",
+                        "enabled": true
+                    },
+                    {
+                        "name": "s",
+                        "enabled": true
+                    },
+                    {
+                        "name": "f",
+                        "enabled": true
+                    },
+                    {
+                        "name": "c",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "logic"
             },
             {
                 "name": "renode",
                 "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "K",
+                        "enabled": true,
+                        "min": 2,
+                        "max": 15
+                    },
+                    {
+                        "name": "C",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 16
+                    },
+                    {
+                        "name": "F",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 4
+                    },
+                    {
+                        "name": "A",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 4
+                    },
+                    {
+                        "name": "s",
+                        "enabled": true
+                    },
+                    {
+                        "name": "b",
+                        "enabled": true
+                    },
+                    {
+                        "name": "c",
+                        "enabled": true
+                    },
+                    {
+                        "name": "i",
+                        "enabled": true
+                    },
+                    {
+                        "name": "a",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "logic"
             },
             {
                 "name": "cleanup",
                 "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "i",
+                        "enabled": true
+                    },
+                    {
+                        "name": "o",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "aig"
+            },
+            {
+                "name": "cleanup",
+                "enabled": false,
+                "arguments": [
+                    {
+                        "name": "i",
+                        "enabled": true
+                    },
+                    {
+                        "name": "o",
+                        "enabled": true
+                    }
+                ],
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "sweep",
                 "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "s",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "fx",
                 "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "S",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 20000
+                    },
+                    {
+                        "name": "D",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 30000
+                    },
+                    {
+                        "name": "N",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 1000000
+                    },
+                    {
+                        "name": "W",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 4
+                    },
+                    {
+                        "name": "M",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 16
+                    },
+                    {
+                        "name": "P",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 1000000000
+                    },
+                    {
+                        "name": "s",
+                        "enabled": true
+                    },
+                    {
+                        "name": "d",
+                        "enabled": true
+                    },
+                    {
+                        "name": "z",
+                        "enabled": true
+                    },
+                    {
+                        "name": "c",
+                        "enabled": true
+                    },
+                    {
+                        "name": "n",
+                        "enabled": true
+                    },
+                    {
+                        "name": "x",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic-sop",
+                "output": "logic-sop"
             },
             {
                 "name": "fxch",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "N",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 0
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic-sop",
+                "output": "logic-sop"
             },
             {
                 "name": "eliminate",
