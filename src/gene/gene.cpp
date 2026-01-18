@@ -33,13 +33,33 @@ std::string Gene::execute(Abc_Frame_t *pAbc, const std::string &ntkType) const {
 
     // Convert network if required
     if(ntkType != inputType) {
-        if(inputType == "aig") {
-            if(Cmd_CommandExecute(pAbc, "strash")) {
+        if(ntkType == "aig") {
+            if(inputType == "logic"){
+                if(Cmd_CommandExecute(pAbc, "multi")) {
+                    return "error";
+                }
+            } else if(inputType == "logic-sop") {
+            if(Cmd_CommandExecute(pAbc, "multi ; sop")) {
                 return "error";
             }
-        } else if(inputType == "logic") {
-            if(Cmd_CommandExecute(pAbc, "multi")) {
-                return "error";
+            }
+        } else if(ntkType == "logic") {
+            if(inputType == "aig") {
+                if(Cmd_CommandExecute(pAbc, "strash")) {
+                    return "error";
+                }
+            } else if(inputType == "logic-sop") {
+                if(Cmd_CommandExecute(pAbc, "sop")) {
+                    return "error";
+                }
+            }
+        } else if(ntkType == "logic-sop") {
+            if(inputType == "aig") {
+                if(Cmd_CommandExecute(pAbc, "strash")) {
+                    return "error";
+                }
+            } else if(inputType == "logic") {
+                // Nothing, it's okay
             }
         }
     }
@@ -81,10 +101,24 @@ const std::string Gene::getCommand(const std::string &ntkType) const {
     std::string retValue;
 
     if(ntkType != inputType) {
-        if(inputType == "aig") {
-            retValue += "strash ; ";
-        } else if(inputType == "logic") {
-            retValue += "multi ; ";
+        if(ntkType == "aig") {
+            if(inputType == "logic"){
+                retValue += "mutli ; ";
+            } else if(inputType == "logic-sop") {
+                retValue += "mutli ; sop ; ";
+            }
+        } else if(ntkType == "logic") {
+            if(inputType == "aig") {
+                retValue += "strash ; ";
+            } else if(inputType == "logic-sop") {
+                retValue += "sop ; ";
+            }
+        } else if(ntkType == "logic-sop") {
+            if(inputType == "aig") {
+                retValue += "strash ; ";
+            } else if(inputType == "logic") {
+                // Nothing, it's okay
+            }
         }
     }
 
