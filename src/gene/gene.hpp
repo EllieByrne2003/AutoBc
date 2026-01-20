@@ -7,6 +7,7 @@
 namespace json = boost::json;
 
 class Argument;
+class GenePrototype;
 
 typedef struct Abc_Frame_t_ Abc_Frame_t;
 
@@ -35,6 +36,8 @@ public:
     // const std::string getCommand() const;
 
     // friend std::ostream& operator<<(std::ostream& out, const Gene& gene);
+
+    Gene mutate();
 
     json::object toJson() const;
 };

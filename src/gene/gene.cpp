@@ -35,11 +35,11 @@ std::string Gene::execute(Abc_Frame_t *pAbc, const std::string &ntkType) const {
     if(ntkType != inputType) {
         if(ntkType == "aig") {
             if(inputType == "logic"){
-                if(Cmd_CommandExecute(pAbc, "multi")) {
+                if(Cmd_CommandExecute(pAbc, "logic")) {
                     return "error";
                 }
             } else if(inputType == "logic-sop") {
-            if(Cmd_CommandExecute(pAbc, "multi ; sop")) {
+            if(Cmd_CommandExecute(pAbc, "logic ; sop")) {
                 return "error";
             }
             }
@@ -103,9 +103,9 @@ const std::string Gene::getCommand(const std::string &ntkType) const {
     if(ntkType != inputType) {
         if(ntkType == "aig") {
             if(inputType == "logic"){
-                retValue += "mutli ; ";
+                retValue += "logic ; ";
             } else if(inputType == "logic-sop") {
-                retValue += "mutli ; sop ; ";
+                retValue += "logic ; sop ; ";
             }
         } else if(ntkType == "logic") {
             if(inputType == "aig") {
@@ -166,6 +166,13 @@ const std::string Gene::getCommand(const std::string &ntkType) const {
 
 //     return out;
 // }
+
+
+Gene Gene::mutate() {
+    // return prototype.createGene();
+    // TODO implement this.
+    return Gene(*this);
+}
 
 
 json::object Gene::toJson() const {
