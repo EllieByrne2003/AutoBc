@@ -29,6 +29,53 @@ Individual::Individual(const int chromosoneLength) {
     }
 }
 
+
+Individual::Individual(const Individual &individual, const MutationParams &params){
+    this->chromosone = individual.chromosone;
+
+    for(int i = 0; i < params.removalAttempts; i++) {
+        if(this->chromosone.size() <= 0) {
+            break;
+        }
+
+        if(params.removalChance > randomFloat(0.0f, 1.0f)) {
+            const int pos = randomInt(0, this->chromosone.size() - 1);
+            this->chromosone.erase(this->chromosone.begin() + pos);
+        }        
+    }
+
+    // TODO make a proper note that coarse mutation changes genes and fine changes params
+    for(int i = 0; i < params.coarseMutationAttempts; i++) {
+        if(this->chromosone.size() <= 0) {
+            break;
+        }
+
+        if(params.coarseMutationChance > randomFloat(0.0f, 1.0f)) {
+            const int pos = randomInt(0, this->chromosone.size() - 1);
+            this->chromosone[pos] = Genome::getInstance().getRandomGene();            
+        }
+    }
+
+    for(int i = 0; i < params.fineMutationAttempts; i++) {
+        if(this->chromosone.size() <= 0) {
+            break;
+        }
+
+        if(params.fineMutationChance > randomFloat(0.0f, 1.0f)) {
+            // TODO implement later
+            
+        }
+    }
+
+    for(int i = 0; i < params.additionAttempts; i++) {
+        if(params.additionChance > randomFloat(0.0f, 1.0f)) {
+            const int pos = randomInt(0, this->chromosone.size());
+            this->chromosone.insert(this->chromosone.begin() + pos, Genome::getInstance().getRandomGene());
+        }        
+    }
+
+}
+
 Individual::Individual(const Individual &individual, const float mutationRate) {
     // for(int i = 0; i < individual.chromosone.size(); i++) {
     //     if(mutationRate < randomFloat(0.0, 1.0)) {
@@ -130,6 +177,7 @@ Individual::Individual(const Individual &parent1, const Individual &parent2) {
 
     // Single point crossover, avg length of parents
     std::pair<int, int> crosses = randomIntPair({0, parent1.chromosone.size() - 1}, {0, parent2.chromosone.size() - 1});
+
     for(int i = 0; i < crosses.first; i++) {
         chromosone.push_back(parent1.chromosone[i]);
     }
@@ -304,6 +352,25 @@ bool operator>(const Individual &left, const Individual &right) {
     // }
 
     return false;        
+}
+
+std::string Individual::getCommand() const {
+    std::string ret;
+
+    std::string ntkType = "aig"; // TODO may not be true
+    for(const Gene &gene : chromosone) {
+        ret += gene.getCommand(ntkType) + "; "; // TODO remove this
+    }
+
+    return ret;
+}
+
+int Individual::getLevels() const {
+    return nLevels;
+}
+
+int Individual::getGates() const {
+    return nGates;
 }
 
 std::ostream& operator<<(std::ostream& out, const Individual& indivdual) {
