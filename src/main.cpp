@@ -156,7 +156,13 @@ int main(int argc, char** rawArgv ) {
     // Run x number of generations
     for(int i = 0; i < generationLimit; i++) {
         // Run generation
-        population.runGeneration(pAbcs, pNtks, nThreads);
+        Stage stage = population.runGeneration(pAbcs, pNtks, nThreads);
+
+        std::cout << "Stage: " << stage << std::endl;
+
+        if(stage == COMPLETION) {
+            break;
+        }
     }
 
     if(!writeSeed("test.json", population.getFittest())) {
