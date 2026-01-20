@@ -17,8 +17,8 @@ int randomInt(const int start, const int end) {
 std::pair<int, int> randomIntPair(const std::pair<int, int> &bounds1, const std::pair<int, int> &bounds2) {
     const float ratio = randomFloat(0.0, 1.0);
 
-    const int n1 = static_cast<int>(ratio * (bounds1.second - bounds1.first));
-    const int n2 = static_cast<int>(ratio * (bounds2.second - bounds2.first));
+    const int n1 = static_cast<int>(bounds1.first + ratio * (bounds1.second - bounds1.first));
+    const int n2 = static_cast<int>(bounds2.first + ratio * (bounds2.second - bounds2.first));
 
     return std::pair<int, int>(n1, n2);
 }
