@@ -1,5 +1,7 @@
 #pragma once
 
+#include <limits>
+#include <string>
 #include <vector>
 #include <chrono>
 
@@ -10,6 +12,20 @@ namespace json = boost::json;
 #include "../gene/gene.hpp"
 
 typedef struct Abc_Frame_t_ Abc_Frame_t;
+
+struct MutationParams {
+    int additionAttempts;
+    float additionChance;
+
+    int removalAttempts;
+    float removalChance;
+
+    int coarseMutationAttempts;
+    float coarseMutationChance;
+
+    int fineMutationAttempts;
+    float fineMutationChance;
+};
 
 class Individual
 {
@@ -31,6 +47,7 @@ public:
     Individual(const int chromosoneLength);
 
     // Cloning, mutating and mating for working with individuals
+    Individual(const Individual &individual, const MutationParams &params);
     Individual(const Individual &individual, const float mutationRate);
     Individual(const Individual &parent1, const Individual &parent2);
 
@@ -45,6 +62,10 @@ public:
     // Comparison operators for sorting by fitness
     friend bool operator<(const Individual &left, const Individual &right);
     friend bool operator>(const Individual &left, const Individual &right);
+
+    std::string getCommand() const;
+    int getLevels() const;
+    int getGates() const;
 
     // 
     friend std::ostream& operator<<(std::ostream& out, const Individual& indivdual);
