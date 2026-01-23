@@ -237,6 +237,16 @@ void Individual::calculateFitness(Abc_Frame_t *pAbc) {
     calculated = true;
 }
 
+void Individual::calculateFitness(const Result &result) {
+    calculated = true;
+
+    error = result.error;
+    equivalent = result.equivalent;
+    nGates = result.numGates;
+    nLevels = result.numLevels;
+    timeElapsed = result.time;
+}
+
 Individual Individual::mutateGenes() {
     Individual child;
 

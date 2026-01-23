@@ -10,6 +10,7 @@ namespace json = boost::json;
 
 // #include "../chromosone/chromosone.hpp"
 #include "../gene/gene.hpp"
+#include "../resultCache/result/result.hpp"
 
 typedef struct Abc_Frame_t_ Abc_Frame_t;
 
@@ -58,6 +59,7 @@ public:
     // ~Individual();
 
     void calculateFitness(Abc_Frame_t *pAbc);
+    void calculateFitness(const Result &result);
 
     // Comparison operators for sorting by fitness
     friend bool operator<(const Individual &left, const Individual &right);

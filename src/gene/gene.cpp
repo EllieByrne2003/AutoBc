@@ -103,19 +103,19 @@ const std::string Gene::getCommand(const std::string &ntkType) const {
     if(ntkType != inputType) {
         if(ntkType == "aig") {
             if(inputType == "logic"){
-                retValue += "logic ; ";
+                retValue += "logic; ";
             } else if(inputType == "logic-sop") {
-                retValue += "logic ; sop ; ";
+                retValue += "logic; sop; ";
             }
         } else if(ntkType == "logic") {
             if(inputType == "aig") {
-                retValue += "strash ; ";
+                retValue += "strash; ";
             } else if(inputType == "logic-sop") {
-                retValue += "sop ; ";
+                retValue += "sop; ";
             }
         } else if(ntkType == "logic-sop") {
             if(inputType == "aig") {
-                retValue += "strash ; ";
+                retValue += "strash; ";
             } else if(inputType == "logic") {
                 // Nothing, it's okay
             }

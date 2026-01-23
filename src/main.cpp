@@ -2,6 +2,7 @@
 #include <thread>
 #include <vector>
 #include <iostream>
+#include <chrono>
 
 #include "constants.hpp"
 #include "abc.hpp"
@@ -151,14 +152,20 @@ int main(int argc, char** rawArgv ) {
 
     // Create population
     // Population population(256, 5);
-    Population population(seedExamples, size, length);
+    // Population population(seedExamples, size, length);
+    Population population(size, length, originalNtk);
 
     // Run x number of generations
     for(int i = 0; i < generationLimit; i++) {
         // Run generation
-        Stage stage = population.runGeneration(pAbcs, pNtks, nThreads);
+        const auto start = std::chrono::system_clock::now();
+        Stage stage = population.runGeneration(pAbcs, nThreads);
+
+        const auto end = std::chrono::system_clock::now();
+        const std::chrono::duration<double> timeElapsed = end - start;
 
         std::cout << "Stage: " << stage << std::endl;
+        std::cout << "Took:  " << timeElapsed.count() << "s" << std::endl;
 
         if(stage == COMPLETION) {
             break;

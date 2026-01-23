@@ -38,13 +38,35 @@ void Abc_FrameInit( Abc_Frame_t * pAbc );
 void Abc_FrameEnd( Abc_Frame_t * pAbc );
 
 // Duplicating networks
-Abc_Ntk_t * Abc_NtkDup( Abc_Ntk_t * pNtk );
+Abc_Ntk_t * Abc_NtkDup( const Abc_Ntk_t * pNtk );
 Abc_Ntk_t * Abc_FrameReadNtk( Abc_Frame_t * p );
 void Abc_FrameSetCurrentNetwork( Abc_Frame_t * p, Abc_Ntk_t * pNtkNew );
 void Abc_FrameDeleteAllNetworks( Abc_Frame_t * p );
 
+// Deleting networks
+void Abc_NtkDelete( Abc_Ntk_t * pNtk );
+
+// Check network types
+int Abc_NtkIsNetlist( Abc_Ntk_t * pNtk );
+int Abc_NtkIsLogic( Abc_Ntk_t * pNtk );
+int Abc_NtkIsStrash( Abc_Ntk_t * pNtk );
+
+int Abc_NtkIsSopNetlist( Abc_Ntk_t * pNtk );
+int Abc_NtkIsBddNetlist( Abc_Ntk_t * pNtk );
+int Abc_NtkIsAigNetlist( Abc_Ntk_t * pNtk );
+int Abc_NtkIsMappedNetlist( Abc_Ntk_t * pNtk );
+int Abc_NtkIsBlifMvNetlist( Abc_Ntk_t * pNtk );
+int Abc_NtkIsSopLogic( Abc_Ntk_t * pNtk );
+int Abc_NtkIsBddLogic( Abc_Ntk_t * pNtk );
+int Abc_NtkIsAigLogic( Abc_Ntk_t * pNtk );
+int Abc_NtkIsMappedLogic( Abc_Ntk_t * pNtk );
+
+// Convert network types
+Abc_Ntk_t * Abc_NtkStrash( Abc_Ntk_t * pNtk, int fAllNodes, int fCleanup, int fRecord );
+
 // Verifying equivalence
-int    Abc_ApiCec( Abc_Frame_t * pAbc, int argc, char ** argv );
+int Abc_ApiCec( Abc_Frame_t * pAbc, int argc, char ** argv );
+int Abc_ApiCec2( Abc_Ntk_t * pNtk );
 
 // Getting stats on the ntk
 int Abc_NtkNodeNum( Abc_Ntk_t * pNtk );

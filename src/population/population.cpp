@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <iostream>
+#include <memory>
 #include <ostream>
 #include <string>
 #include <vector>
@@ -31,6 +32,15 @@ Population::Population(std::vector<Individual> &seedExamples, const int size, co
     while(indivduals.size() < size) {
         indivduals.push_back(Individual(startingChromosoneLength));
     }
+}
+
+Population::Population(const int size, const int length, Abc_Ntk_t *base) :
+    size(size) {
+    while(indivduals.size() < size) {
+        indivduals.push_back(Individual(length));
+    }
+
+    resultCache = std::make_shared<ResultCache>(base);
 }
 
 const Individual & Population::getRandomIndividual(const int sampleSize) {
@@ -64,8 +74,9 @@ Stage Population::getStage() {
     const int curr75AvgLevels = total75Levels / (size * 0.75);
     const int curr75AvgGates  = total75Gates  / (size * 0.75);
 
+    // TODO should have a tally of how long is spent on each
     // If significant changes ongoing, EXPANSION
-    if(bestCommand != lastBestCommand || last25AvgLevels - curr25AvgLevels >= 5 || last25AvgGates - curr25AvgGates >= 25) {
+    if(generation < 16 || (generation < 48 && (last25AvgLevels - curr25AvgLevels >= 5 || last25AvgGates - curr25AvgGates >= 25))) {
         last25AvgLevels = curr25AvgLevels;
         last25AvgGates  = curr25AvgGates;
         last75AvgLevels = curr75AvgLevels;
@@ -75,7 +86,7 @@ Stage Population::getStage() {
     }
 
     // If some changes, COMPETITION
-    if(last25AvgLevels - curr25AvgLevels >= 3 || last75AvgLevels - curr75AvgLevels >= 5 || last25AvgGates - curr25AvgGates >= 15) {
+    if(generation < 32 || (generation < 96 && (last25AvgLevels - curr25AvgLevels >= 3 || last75AvgLevels - curr75AvgLevels >= 5 || last25AvgGates - curr25AvgGates >= 15))) {
         last25AvgLevels = curr25AvgLevels;
         last25AvgGates  = curr25AvgGates;
         last75AvgLevels = curr75AvgLevels;
@@ -90,7 +101,7 @@ Stage Population::getStage() {
     }
 
     // If few any changes, REFINEMENT
-    if(last25AvgLevels - curr25AvgLevels >= 1 || last75AvgLevels - curr75AvgLevels >= 3 || last25AvgGates - curr25AvgGates >= 5) {
+    if(generation < 84 || (generation < 192 && (last25AvgLevels - curr25AvgLevels >= 1 || last75AvgLevels - curr75AvgLevels >= 3 || last25AvgGates - curr25AvgGates >= 5))) {
         last25AvgLevels = curr25AvgLevels;
         last25AvgGates  = curr25AvgGates;
         last75AvgLevels = curr75AvgLevels;
@@ -111,7 +122,7 @@ Stage Population::getStage() {
 
     // If barely any changes, REDUCTION
 
-    if(last75AvgGates - curr75AvgGates >= 1) {
+    if(generation < 128 || (generation < 256 && (last75AvgGates - curr75AvgGates >= 1))) {
         last25AvgLevels = curr25AvgLevels;
         last25AvgGates  = curr25AvgGates;
         last75AvgLevels = curr75AvgLevels;
@@ -294,7 +305,7 @@ void Population::createMutants(std::vector<Individual> &newGen, const int num, c
     }
 }
 
-void runIndividuals(std::vector<Individual> &indivduals, std::atomic_int &nextIndex, Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk) {
+void runIndividuals(std::shared_ptr<ResultCache> resultCache, std::vector<Individual> &indivduals, std::atomic_int &nextIndex, Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk) {
     while(true) {
         const int currentIndex = nextIndex.fetch_add(1, std::memory_order_relaxed);
 
@@ -313,6 +324,23 @@ void runIndividuals(std::vector<Individual> &indivduals, std::atomic_int &nextIn
     }
 }
 
+void runIndividuals2(std::shared_ptr<ResultCache> resultCache, std::vector<Individual> &indivduals, std::atomic_int &nextIndex, Abc_Frame_t *pAbc) {
+    while(true) {
+        const int currentIndex = nextIndex.fetch_add(1, std::memory_order_relaxed);
+
+        if(currentIndex >= indivduals.size()) {
+            break;
+        }
+
+        Individual &indi = indivduals[currentIndex];
+        std::string command(indi.getCommand());
+        std::string_view commandView(command);
+        const Result &result = resultCache->getResult(pAbc, commandView);
+
+        indi.calculateFitness(result);
+    }
+}
+
 Stage Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int nThreads) {
     std::vector<std::thread> threads;
     std::atomic_int nextIndividual = 0;
@@ -320,10 +348,10 @@ Stage Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int
     // int n = indivduals.size() / nThreads;
     for(int i = 0; i < nThreads - 1; i++) {
         // threads.emplace_back(runIndividuals, std::ref(indivduals), pAbc[i], pNtks[i], i * n, (i + 1) * n);
-        threads.emplace_back(runIndividuals, std::ref(indivduals), std::ref(nextIndividual), pAbc[i], pNtks[i]);
+        threads.emplace_back(runIndividuals, resultCache, std::ref(indivduals), std::ref(nextIndividual), pAbc[i], pNtks[i]);
     }
 
-    runIndividuals(indivduals, nextIndividual, pAbc[nThreads - 1], pNtks[nThreads - 1]);
+    runIndividuals(resultCache, indivduals, nextIndividual, pAbc[nThreads - 1], pNtks[nThreads - 1]);
 
     for(std::thread &thread : threads) {
         thread.join();
@@ -381,6 +409,40 @@ Stage Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int
     // indivduals = newIndividuals;
     generation++;
 
+    gensOnCurrentStage++;
+    return currentStage;
+}
+
+Stage Population::runGeneration(Abc_Frame_t **pAbc, const int nThreads) {
+    std::vector<std::thread> threads;
+    std::atomic_int nextIndividual = 0;
+
+    for(int i = 0; i < nThreads - 1; i++) {
+        threads.emplace_back(runIndividuals2, resultCache, std::ref(indivduals), std::ref(nextIndividual), pAbc[i]);
+    }
+
+    runIndividuals2(resultCache, indivduals, nextIndividual, pAbc[nThreads - 1]);
+
+    for(std::thread &thread : threads) {
+        thread.join();
+    }
+
+    // Show fittest
+    std::cout << "Generation: " << generation << std::endl;
+    std::cout << getFittest() << std::endl;
+
+    // Sort population
+    // TODO fix this so reversing isn't required
+    std::sort(indivduals.begin(), indivduals.end());
+    std::reverse(indivduals.begin(), indivduals.end());
+
+    // Find new stage
+    currentStage = getStage();
+
+    // Create next generation to test
+    createNewGeneration();
+
+    generation++;
     gensOnCurrentStage++;
     return currentStage;
 }

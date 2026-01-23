@@ -1,9 +1,11 @@
 #pragma once
 
+#include <memory>
 #include <limits>
 #include <vector>
 
 #include "../individual/individual.hpp"
+#include "../resultCache/resultCache.hpp"
 
 typedef struct Abc_Frame_t_ Abc_Frame_t;
 typedef struct Abc_Ntk_t_   Abc_Ntk_t;
@@ -21,6 +23,7 @@ private:
     const int size;
     int generation = 0;
     std::vector<Individual> indivduals;
+    std::shared_ptr<ResultCache> resultCache;
 
     Stage currentStage = EXPANSION;
     int gensOnCurrentStage = 0;
@@ -40,9 +43,11 @@ private:
 public:
     Population(const int size, const int startingChromosoneLength);
     Population(std::vector<Individual> &seedExamples, const int size, const int startingChromosoneLength);
+    Population(const int size, const int length, Abc_Ntk_t *base);
 
     // TODO should have it's own frames and just take the network
     Stage runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int nThreads);
+    Stage runGeneration(Abc_Frame_t **pAbc, const int nThreads);
 
     const Individual & getFittest();
 };
