@@ -5,15 +5,21 @@
 #include <string>
 #include <memory>
 
+#include "result/result.hpp"
 #include "resultNode/resultNode.hpp"
 
 typedef struct Abc_Ntk_t_ Abc_Ntk_t;
 
 class ResultCache{
 private:
-    std::mutex lock;
+    std::mutex m;
 
-    std::unique_ptr<ResultNode> begin = nullptr;
+    std::map<std::string, Result> resultMap;
+    std::unique_ptr<ResultNode> resultTree = nullptr;
+
+    bool mapContains(const std::string &key);
+    const Result & getFromMap(const std::string &key);
+    void insertIntoMap(const std::string &key, const Result &result);
 
 protected:
 
@@ -22,4 +28,7 @@ public:
     ~ResultCache();
 
     const Result & getResult(Abc_Frame_t *frame, std::string_view &str);
+
+    bool prune();
+    // void remove_unused();
 };

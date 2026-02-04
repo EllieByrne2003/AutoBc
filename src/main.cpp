@@ -159,7 +159,8 @@ int main(int argc, char** rawArgv ) {
     for(int i = 0; i < generationLimit; i++) {
         // Run generation
         const auto start = std::chrono::system_clock::now();
-        Stage stage = population.runGeneration(pAbcs, nThreads);
+        // Stage stage = population.runGeneration(pAbcs, pNtks, nThreads); // 2 to get > 30s on i10.aig
+        Stage stage = population.runGeneration(pAbcs, nThreads); // 21 to get > 30s on i10.aig
 
         const auto end = std::chrono::system_clock::now();
         const std::chrono::duration<double> timeElapsed = end - start;
@@ -172,9 +173,20 @@ int main(int argc, char** rawArgv ) {
         }
     }
 
-    if(!writeSeed("test.json", population.getFittest())) {
-        std::cout << "Failed to write seed" << std::endl;
-    }
+    // population.~Population();
+
+    // for(int i = 0; i < 1024*1024*1024; i++) {
+    //     std::cout << "Waiting: " << i << std::endl;
+    // }
+
+    // if(!writeSeed("test.json", population.getFittest())) {
+    //     std::cout << "Failed to write seed" << std::endl;
+    // }
+
+    // for(int i = 0; i < nThreads; i++) {
+    //     Abc_FrameEnd(pAbcs[i]);
+    //     Abc_FrameDeallocate(pAbcs[i]);
+    // }
 
     // Cleanup abc
     // TODO cleanup original ntk

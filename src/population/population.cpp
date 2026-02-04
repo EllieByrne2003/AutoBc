@@ -43,6 +43,10 @@ Population::Population(const int size, const int length, Abc_Ntk_t *base) :
     resultCache = std::make_shared<ResultCache>(base);
 }
 
+Population::~Population() {
+    std::cout << "Destroyed population" << std::endl;
+}
+
 const Individual & Population::getRandomIndividual(const int sampleSize) {
     static std::random_device rd;
     static std::mt19937 gen(rd());
@@ -305,7 +309,7 @@ void Population::createMutants(std::vector<Individual> &newGen, const int num, c
     }
 }
 
-void runIndividuals(std::shared_ptr<ResultCache> resultCache, std::vector<Individual> &indivduals, std::atomic_int &nextIndex, Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk) {
+void runIndividuals(std::vector<Individual> &indivduals, std::atomic_int &nextIndex, Abc_Frame_t *pAbc, Abc_Ntk_t *pNtk) {
     while(true) {
         const int currentIndex = nextIndex.fetch_add(1, std::memory_order_relaxed);
 
@@ -348,10 +352,10 @@ Stage Population::runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int
     // int n = indivduals.size() / nThreads;
     for(int i = 0; i < nThreads - 1; i++) {
         // threads.emplace_back(runIndividuals, std::ref(indivduals), pAbc[i], pNtks[i], i * n, (i + 1) * n);
-        threads.emplace_back(runIndividuals, resultCache, std::ref(indivduals), std::ref(nextIndividual), pAbc[i], pNtks[i]);
+        threads.emplace_back(runIndividuals, std::ref(indivduals), std::ref(nextIndividual), pAbc[i], pNtks[i]);
     }
 
-    runIndividuals(resultCache, indivduals, nextIndividual, pAbc[nThreads - 1], pNtks[nThreads - 1]);
+    runIndividuals(indivduals, nextIndividual, pAbc[nThreads - 1], pNtks[nThreads - 1]);
 
     for(std::thread &thread : threads) {
         thread.join();
@@ -426,6 +430,11 @@ Stage Population::runGeneration(Abc_Frame_t **pAbc, const int nThreads) {
     for(std::thread &thread : threads) {
         thread.join();
     }
+
+    resultCache->prune();
+    // resultCache->prune();
+    // resultCache->prune();
+    // resultCache->prune();
 
     // Show fittest
     std::cout << "Generation: " << generation << std::endl;

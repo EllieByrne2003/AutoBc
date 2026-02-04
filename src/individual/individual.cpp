@@ -372,7 +372,7 @@ std::string Individual::getCommand() const {
         ret += gene.getCommand(ntkType) + "; "; // TODO remove this
     }
 
-    return ret;
+    return ret.substr(0, ret.find_last_of(";")); // Remove last ';'
 }
 
 int Individual::getLevels() const {

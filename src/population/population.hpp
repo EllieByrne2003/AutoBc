@@ -44,6 +44,7 @@ public:
     Population(const int size, const int startingChromosoneLength);
     Population(std::vector<Individual> &seedExamples, const int size, const int startingChromosoneLength);
     Population(const int size, const int length, Abc_Ntk_t *base);
+    ~Population();
 
     // TODO should have it's own frames and just take the network
     Stage runGeneration(Abc_Frame_t **pAbc, Abc_Ntk_t **pNtks, const int nThreads);
