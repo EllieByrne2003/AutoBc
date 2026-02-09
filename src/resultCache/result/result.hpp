@@ -5,7 +5,7 @@
 #include <string>
 
 struct Result {
-    const std::chrono::duration<double> time;
+    const std::chrono::duration<double> time; // TODO remove this
     const bool error;
     const bool equivalent;
     const int numLevels;

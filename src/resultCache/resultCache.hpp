@@ -16,6 +16,7 @@ private:
 
     std::map<std::string, Result> resultMap;
     std::unique_ptr<ResultNode> resultTree = nullptr;
+    std::chrono::duration<double> minInsertionTime = std::chrono::duration<double>(0.0f);
 
     bool mapContains(const std::string &key);
     const Result & getFromMap(const std::string &key);
@@ -27,7 +28,7 @@ public:
     ResultCache(Abc_Ntk_t *base);
     ~ResultCache();
 
-    const Result & getResult(Abc_Frame_t *frame, std::string_view &str);
+    const Result getResult(Abc_Frame_t *frame, std::string_view &str);
 
     bool prune();
     // void remove_unused();

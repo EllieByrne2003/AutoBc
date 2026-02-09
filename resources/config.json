@@ -67,7 +67,7 @@
             },
             {
                 "name": "strash",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
                     {
                         "name": "a",
@@ -91,7 +91,7 @@
             },
             {
                 "name": "balance",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
                     {
                         "name": "l",
@@ -172,7 +172,7 @@
                         "name": "C",
                         "enabled": true,
                         "min": 1,
-                        "max": 16
+                        "max": 15
                     },
                     {
                         "name": "F",
@@ -256,7 +256,7 @@
             },
             {
                 "name": "fx",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
                     {
                         "name": "S",
@@ -581,30 +581,30 @@
             },
             {
                 "name": "rewrite",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "aig"
             },
             {
                 "name": "refactor",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "aig"
             },
             {
                 "name": "resub",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "aig"
             },
             {
                 "name": "resub_unate",

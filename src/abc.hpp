@@ -70,6 +70,7 @@ int Abc_ApiCec2( Abc_Ntk_t * pNtk );
 
 // Getting stats on the ntk
 int Abc_NtkNodeNum( Abc_Ntk_t * pNtk );
+int Abc_AigLevel( Abc_Ntk_t * pNtk );
 int Abc_NtkLevel( Abc_Ntk_t * pNtk );
 
 

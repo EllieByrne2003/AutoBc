@@ -8,23 +8,23 @@
 
 ResultCache::ResultCache(Abc_Ntk_t *base) {
     // Strash copy of network if needed
-    Abc_Ntk_t *ntk = Abc_NtkDup(base);
+    // Abc_Ntk_t *ntk = Abc_NtkDup(base);
 
-    if(!Abc_NtkIsStrash(ntk)) {
-        Abc_Ntk_t *temp = Abc_NtkStrash(ntk, 0, 1, 0);
-        Abc_NtkDelete(ntk);
-        ntk = temp;
-    }
+    // if(!Abc_NtkIsStrash(ntk)) {
+    //     Abc_Ntk_t *temp = Abc_NtkStrash(ntk, 0, 1, 0);
+    //     Abc_NtkDelete(ntk);
+    //     ntk = temp;
+    // }
 
-    // Get results
+    // // Get results
     const std::chrono::duration<double> time(0.0);
-    const int numLevels = Abc_NtkLevel(ntk);
-    const int numGates  = Abc_NtkNodeNum(ntk);
+    // const int numLevels = Abc_NtkLevel(ntk);
+    // const int numGates  = Abc_NtkNodeNum(ntk);
 
     // Remove network
-    Abc_NtkDelete(ntk);
+    // Abc_NtkDelete(ntk);
 
-    resultTree = std::make_unique<ResultNode>(m, time, base, Result(time, false, true, numLevels, numGates));
+    resultTree = std::make_unique<ResultNode>(m, time, base, false);
 }
 
 ResultCache::~ResultCache() {
@@ -53,12 +53,13 @@ void ResultCache::insertIntoMap(const std::string &key, const Result &result) {
     resultMap[key] = result;
 }
 
-const Result & ResultCache::getResult(Abc_Frame_t *frame, std::string_view &str) {
+const Result ResultCache::getResult(Abc_Frame_t *frame, std::string_view &str) {
     if(mapContains(std::string(str))) {
         return getFromMap(std::string(str));
     }
     
-    const Result &result = resultTree->getResult(frame, str);
+    const Result &result = resultTree->getResult(frame, str, minInsertionTime);
+    // const Result &result = resultTree->getResult(frame, str);
     insertIntoMap(std::string(str), result);
     return result;
 }
@@ -134,6 +135,9 @@ bool ResultCache::prune() {
         numRemoved = resultTree->get_node_count_under_time(mid);
         tryNum++;
     }
+
+    // Update minInsertionTime
+    minInsertionTime = std::min(mid, std::chrono::duration<double>(1.0f));
 
     std::cout << "PRUNE | time aim is: " << mid.count() << std::endl;
     std::cout << "PRUNE | need to prune: " << needRemoved << " nodes." << std::endl;

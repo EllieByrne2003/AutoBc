@@ -458,5 +458,6 @@ Stage Population::runGeneration(Abc_Frame_t **pAbc, const int nThreads) {
 
 const Individual & Population::getFittest()
 {
-    return *std::max_element(indivduals.begin(), indivduals.end());
+    return indivduals[0];
+    // return *std::max_element(indivduals.begin(), indivduals.end());
 }

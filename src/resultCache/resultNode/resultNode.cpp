@@ -1,5 +1,6 @@
 #include "resultNode.hpp"
 
+#include <chrono>
 #include <iostream>
 #include <cassert>
 #include <memory>
@@ -10,15 +11,15 @@
 
 #include "../../abc.hpp"
 
-ResultNode::ResultNode() : m(*(new std::mutex)), time(0.0f), result() {
+ResultNode::ResultNode() : m(*(new std::mutex)), time(0.0f), error(true) {
     assert(false); // This should never be used
 }
 
-ResultNode::ResultNode(std::mutex &m, const std::chrono::duration<double> time, Abc_Ntk_t *ntk, const Result &result) : m(m), time(time), ntk(ntk, Abc_NtkDelete), result(result) {
+ResultNode::ResultNode(std::mutex &m, const std::chrono::duration<double> time, Abc_Ntk_t *ntk, const bool error) : m(m), time(time), ntk(ntk, Abc_NtkDelete), error(error) {
 
 }
 
-ResultNode::ResultNode(std::mutex &m, const std::chrono::duration<double> time, std::shared_ptr<Abc_Ntk_t> ntk, const Result &result, const std::map<std::string, std::shared_ptr<ResultNode>> &results) : m(m), time(time), ntk(ntk), result(result), results(results) {
+ResultNode::ResultNode(std::mutex &m, const std::chrono::duration<double> time, std::shared_ptr<Abc_Ntk_t> ntk, const bool error, const std::map<std::string, std::shared_ptr<ResultNode>> &results) : m(m), time(time), ntk(ntk), error(error), results(results) {
 
 }
 
@@ -47,7 +48,7 @@ Abc_Ntk_t * ResultNode::cloneNtk() {
     return Abc_NtkDup(ntk.get());
 }
 
-std::shared_ptr<ResultNode> & ResultNode::insertNode(const std::string &command, const std::chrono::duration<double> time, Abc_Ntk_t *ntk, const Result &result) {
+std::shared_ptr<ResultNode> & ResultNode::insertNode(const std::string &command, const std::chrono::duration<double> time, Abc_Ntk_t *ntk, const bool error) {
     std::unique_lock<std::mutex> lock(m);
 
     // We've been beaten here by another thread, free the ntk and return result
@@ -56,14 +57,45 @@ std::shared_ptr<ResultNode> & ResultNode::insertNode(const std::string &command,
         return results[command];
     }
 
-    results.emplace(command, std::make_shared<ResultNode>(m, time, ntk, result));
+    results.emplace(command, std::make_shared<ResultNode>(m, time, ntk, error));
     return results[command]; // This saves a little unecessary locking
 }
 
-const Result & ResultNode::getResult(Abc_Frame_t *frame, std::string_view &str) {
+
+Result ResultNode::makeResult(Abc_Frame_t *frame) {
+    // 1. Get copy of ntk
+    Abc_Ntk_t *copy = cloneNtk();
+
+    // 2. Strash it and set it
+    Abc_Ntk_t *strashedCopy = Abc_NtkStrash(copy, 0, 1, 0);
+    Abc_FrameSetCurrentNetwork(frame, strashedCopy);
+
+    // 3. Check combinational equivalence
+    if(Abc_ApiCec(frame, 1, (char **) &"cec")) {
+        // Not equivalent, early return
+        Abc_FrameDeleteAllNetworks(frame);
+        Abc_NtkDelete(copy);
+
+        return Result(); // Default constructor result returns poor result
+    }
+
+    // 4. Get levels and gates
+    // const int levels = Abc_NtkLevel(strashedCopy);
+    const int levels = Abc_AigLevel(strashedCopy);
+    const int gates  = Abc_NtkNodeNum(strashedCopy);
+
+    // 5. Free networks
+    Abc_FrameDeleteAllNetworks(frame); // strashed copy
+    Abc_NtkDelete(copy); // original copy
+
+    // 6. Return result
+    return Result(time, false, true, levels, gates);
+}
+
+const Result ResultNode::getResult(Abc_Frame_t *frame, std::string_view &str) {
     // 1. Check if this result is errored or non equivalent, return result
-    if(result.error || !result.equivalent) {
-        return result; // Nothing else after matters, an error is an error
+    if(error) {
+        return Result(); // Nothing else after matters, an error is an error
     }
 
     // Remove leading whitespace and trailing whitespace/';'
@@ -72,7 +104,7 @@ const Result & ResultNode::getResult(Abc_Frame_t *frame, std::string_view &str) 
 
     // 2. If str is empty, return result
     if(str == "" || str.empty()) {
-        return result; // No more commands to run, this is what was asked for
+        return makeResult(frame); // No more commands to run, this is what was asked for
     }
 
     std::cout << "Got: \"" << str << "\"" << std::endl;
@@ -137,41 +169,193 @@ const Result & ResultNode::getResult(Abc_Frame_t *frame, std::string_view &str) 
         Abc_FrameDeleteAllNetworks(frame);
 
         const auto end = std::chrono::system_clock::now();
-        const std::chrono::duration<double> timeElapsed = result.time + (end - start);
-        insertNode(command, timeElapsed, nullptr, Result());
-        return results[command]->result;
+        const std::chrono::duration<double> timeElapsed = time + (end - start);
+        insertNode(command, timeElapsed, nullptr, true);
+        return Result();
     }
 
-    // Strash copy of network if needed
-    Abc_Ntk_t *ntkCopy = Abc_NtkDup(Abc_FrameReadNtk(frame));
 
-    if(!Abc_NtkIsStrash(ntkCopy)) {
-        Abc_Ntk_t *temp = Abc_NtkStrash(ntkCopy, 0, 1, 0);
-        Abc_NtkDelete(ntkCopy);
-        ntkCopy = temp;
-    }
+    // // const auto start = std::chrono::system_clock::now();
+    // Abc_Ntk_t *temp = Abc_NtkDup(Abc_FrameReadNtk(frame));
+    // if(Abc_ApiCec(frame, 1, (char **) &"cec")) {
+    //     // Not equivalent, early return
+    //     Abc_FrameDeleteAllNetworks(frame);
+    //     Abc_NtkDelete(temp);
 
-    // Get results
-    // const bool isEquivalent = Abc_ApiCec2(ntkCopy);
-    const bool isEquivalent = true;
-    const int numLevels     = Abc_NtkLevel(ntkCopy);
-    const int numGates      = Abc_NtkNodeNum(ntkCopy);
+    //     const auto end = std::chrono::system_clock::now();
+    //     return insertNode(command, (end - start), nullptr, Result())->result;
+    // }
 
-    Abc_NtkDelete(ntkCopy);
+    // Abc_FrameSetCurrentNetwork(frame, temp);
 
-    // Copy network
-    Abc_Ntk_t *ntk = nullptr;
-    if(isEquivalent) {
-        ntk = Abc_NtkDup(Abc_FrameReadNtk(frame));
-    }
+    // // Strash copy of network if needed
+    // Abc_Ntk_t *ntkCopy = Abc_NtkDup(Abc_FrameReadNtk(frame));
+
+    // if(!Abc_NtkIsStrash(ntkCopy)) {
+    //     Abc_Ntk_t *temp = Abc_NtkStrash(ntkCopy, 0, 1, 0);
+    //     Abc_NtkDelete(ntkCopy);
+    //     ntkCopy = temp;
+    // }
+
+    // // Get results
+    // // const bool isEquivalent = Abc_ApiCec2(ntkCopy);
+    // const bool isEquivalent = true;
+    // const int numLevels     = Abc_NtkLevel(ntkCopy);
+    // const int numGates      = Abc_NtkNodeNum(ntkCopy);
+
+    // Abc_NtkDelete(ntkCopy);
+
+    Abc_Ntk_t *ntk = Abc_NtkDup(Abc_FrameReadNtk(frame)); 
+
+    // // Copy network
+    // Abc_Ntk_t *ntk = nullptr;
+    // if(isEquivalent) {
+    //     ntk = Abc_NtkDup(Abc_FrameReadNtk(frame));
+    // }
     // Delete ntk from frame
     Abc_FrameDeleteAllNetworks(frame);
 
     const auto end = std::chrono::system_clock::now();
-    const std::chrono::duration<double> timeElapsed = result.time + (end - start);
+    const std::chrono::duration<double> timeElapsed = time + (end - start);
 
-    // 6. Insert result and call getResults on it
-    return insertNode(command, (end - start), ntk, Result(timeElapsed, false, isEquivalent, numLevels, numGates))->getResult(frame, str);
+    // // 6. Insert result and call getResults on it
+    // return insertNode(command, (end - start), ntk, Result(timeElapsed, false, isEquivalent, numLevels, numGates))->getResult(frame, str);
+    return insertNode(command, (end - start), ntk, false)->getResult(frame, str);
+}
+
+
+const Result ResultNode::getResult(Abc_Frame_t *frame, std::string_view &str, const std::chrono::duration<double> minInsertionTime) {
+    // 1. Check if this result is errored or non equivalent, return result
+    if(error) {
+        return Result(); // Nothing else after matters, an error is an error
+    }
+
+    // Remove leading whitespace and trailing whitespace/';'
+    // str.remove_prefix(str.find_first_not_of(" \t\n\v\f\r;"));
+    // str.remove_suffix(str.length - str.find_last_not_of(" \t\n\v\f\r;"));
+
+    // 2. If str is empty, return result
+    if(str == "" || str.empty()) {
+        return makeResult(frame); // No more commands to run, this is what was asked for
+    }
+
+    std::cout << "Got: \"" << str << "\"" << std::endl;
+
+    // 3. Look for command in cache, remove commands until found or empty
+    std::string command(str);
+    std::string remaining = "";
+    while(command != "") {
+        // 4a. Look for command, return result if exists
+        std::cout << "Looking for: \"" << command << "\"" << std::endl;
+        std::cout << "Remaining:   \"" << remaining << "\"" << std::endl; 
+        if(containsNode(command)) {
+            return getNode(command)->getResult(frame, str, minInsertionTime);
+        }
+
+        // 5a. lop off last command, add it to the start of remaining
+        const int pos = command.find_last_of(";");
+        if(pos == command.npos) {
+            break; // No command left to lop off
+        }
+        
+        if(remaining == "") {
+            remaining = command.substr(pos + 2);
+        } else {
+            remaining = command.substr(pos + 2) + "; " + remaining;            
+        }
+        command   = command.substr(0, pos);
+    }
+
+    // 4b. Have to get the result ourselves. Run n commands until over minInsertionTime
+    std::chrono::duration<double> totalTime(0.0f);
+    std::string totalCommands("");
+    Abc_FrameSetCurrentNetwork(frame, cloneNtk());
+
+    do {
+        // 5b. Get next command
+        command = str.substr(0, str.find(';'));
+        if(str.find(';') == str.npos) {
+            str = ""; // No other command, set to nothing
+        } else {
+            str.remove_prefix(str.find(';') + 2);
+        }
+
+        std::cout << "Running:   \"" << command << "\"" << std::endl;
+        std::cout << "Afterwards \"" << str << "\"" << std::endl << std::endl;
+
+        // 5c. Run command, check time, errors and equivalence
+        const auto start = std::chrono::system_clock::now();
+        if(Cmd_CommandExecute(frame, command.c_str())) {
+            // Early return if errors occur
+            Abc_FrameDeleteAllNetworks(frame);
+
+            const auto end = std::chrono::system_clock::now();
+            totalTime += (end - start);
+            if(remaining == "") {
+                totalCommands = command;
+            } else {
+                totalCommands = command + "; " + totalCommands;            
+            }
+
+            if(totalTime >= minInsertionTime) {
+                insertNode(totalCommands, totalTime, nullptr, true);
+            }
+
+            return Result();
+        }
+
+        const auto end = std::chrono::system_clock::now();
+        totalTime += (end - start);
+        if(remaining == "") {
+            totalCommands = command;
+        } else {
+            totalCommands = command + "; " + totalCommands;            
+        }
+    } while(totalTime < minInsertionTime && str != "");
+
+
+    // const auto start = std::chrono::system_clock::now();
+    // Abc_Ntk_t *temp = Abc_NtkDup(Abc_FrameReadNtk(frame));
+    // if(Abc_ApiCec(frame, 1, (char **) &"cec")) {
+    //     // Not equivalent, early return
+    //     Abc_FrameDeleteAllNetworks(frame);
+    //     Abc_NtkDelete(temp);
+
+    //     if(remaining == "") {
+    //         totalCommands = command;
+    //     } else {
+    //         totalCommands = command + "; " + totalCommands;            
+    //     }
+
+    //     if(totalTime >= minInsertionTime) {
+    //         insertNode(totalCommands, totalTime, nullptr, Result());
+    //     }
+
+    //     return Result();
+    // }
+
+    // Abc_FrameSetCurrentNetwork(frame, temp);
+
+    // 5c. Done running commands, get results
+    // Abc_Ntk_t *resultNtk = Abc_FrameReadNtk(frame);
+    Abc_Ntk_t *ntkCopy   = Abc_NtkDup(Abc_FrameReadNtk(frame)); // Store for later, might want to save it
+
+    // // Strash result
+    // if(!Abc_NtkIsStrash(resultNtk)) {
+    //     resultNtk = Abc_NtkStrash(resultNtk, 0, 1, 0);
+    // }
+
+    // // Get results
+    // const int numLevels     = Abc_NtkLevel(resultNtk);
+    // const int numGates      = Abc_NtkNodeNum(resultNtk);
+
+    // Abc_NtkDelete(result); 
+    Abc_FrameDeleteAllNetworks(frame);
+
+    // const auto end = std::chrono::system_clock::now();
+    // totalTime += (end - start);
+
+    return insertNode(command, totalTime, ntkCopy, false)->getResult(frame, str, minInsertionTime);  
 }
 
 int ResultNode::prune(const std::chrono::duration<double> &minTime) {
@@ -257,11 +441,11 @@ int ResultNode::get_node_count_under_time(const std::chrono::duration<double> &t
 void ResultNode::collapse(const std::string &name, std::vector<std::pair<std::string, std::shared_ptr<ResultNode>>> &newNodes) {
     for(auto nv : results) {
         const std::shared_ptr<ResultNode> &node = nv.second;
-        const Result &result = node->result;
+        // const Result &result = node->result;
         const std::chrono::duration<double> totalTime = time + node->time;
 
         const std::string newName   = name + "; " + nv.first;
-        std::shared_ptr<ResultNode> newNode = std::make_shared<ResultNode>(m, totalTime, node->ntk, result, node->results);
+        std::shared_ptr<ResultNode> newNode = std::make_shared<ResultNode>(m, totalTime, node->ntk, false, node->results);
 
         newNodes.push_back({newName, newNode});
     }

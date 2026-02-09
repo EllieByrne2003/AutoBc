@@ -229,7 +229,7 @@ void Individual::calculateFitness(Abc_Frame_t *pAbc) {
     } else {
         equivalent = true;
     }
-    equivalent = true;
+    // equivalent = true;
     
     nGates = Abc_NtkNodeNum(Abc_FrameReadNtk(pAbc));
     nLevels = Abc_NtkLevel(Abc_FrameReadNtk(pAbc));
@@ -312,10 +312,10 @@ bool operator<(const Individual &left, const Individual &right) {
         return false;
     }
 
-    // Prefer shorter execution times
-    if(left.timeElapsed > right.timeElapsed) {
-        return true;
-    }
+    // // Prefer shorter execution times
+    // if(left.timeElapsed > right.timeElapsed) {
+    //     return true;
+    // }
 
     // // Prefer smaller chromosones
     // if(left.chromosone.size() > right.chromosone.size()) {
@@ -351,10 +351,10 @@ bool operator>(const Individual &left, const Individual &right) {
     }
 
 
-    // Prefer shorter execution times
-    if(left.timeElapsed < right.timeElapsed) {
-        return true;
-    }
+    // // Prefer shorter execution times
+    // if(left.timeElapsed < right.timeElapsed) {
+    //     return true;
+    // }
 
     // // Prefer smaller chromosones
     // if(left.chromosone.size() < right.chromosone.size()) {
@@ -389,13 +389,15 @@ std::ostream& operator<<(std::ostream& out, const Individual& indivdual) {
 
     out << "\tChromosone: ";
     std::string ntkType = "aig"; // TODO may not be true
-    for(const Gene &gene : indivdual.chromosone) {
-        out << gene.getCommand(ntkType) << "; "; // TODO remove this
-    }
-    out << std::endl;
+    // for(const Gene &gene : indivdual.chromosone) {
+    //     out << gene.getCommand(ntkType) << "; "; // TODO remove this
+    // }
+    // out << std::endl;
     
+    out << indivdual.getCommand() << std::endl;
+
     if(indivdual.error) {
-        out << "\tError: This script produces errors when run." <<std::endl;
+        out << "\tError: This script produces errors when run." << std::endl;
     }
 
     if(!indivdual.equivalent) {

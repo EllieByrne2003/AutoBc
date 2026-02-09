@@ -18,24 +18,28 @@ private:
 
     const std::chrono::duration<double> time;
     std::map<std::string, std::shared_ptr<ResultNode>> results;
-    Result result;
+    // Result result;
+    const bool error;
     std::shared_ptr<Abc_Ntk_t> ntk = nullptr;
     // Abc_Ntk_t *ntk = nullptr;
 
     bool containsNode(const std::string &command);
     std::shared_ptr<ResultNode> & getNode(const std::string &command);
     Abc_Ntk_t * cloneNtk();
-    std::shared_ptr<ResultNode> & insertNode(const std::string &command, const std::chrono::duration<double> time, Abc_Ntk_t *ntk, const Result &result);
+    std::shared_ptr<ResultNode> & insertNode(const std::string &command, const std::chrono::duration<double> time, Abc_Ntk_t *ntk, const bool error);
+
+    Result makeResult(Abc_Frame_t *frame);
 
 protected:
 
 public:
     ResultNode();
-    ResultNode(std::mutex &lock, const std::chrono::duration<double> time, Abc_Ntk_t *ntk, const Result &result);
-    ResultNode(std::mutex &lock, const std::chrono::duration<double> time, std::shared_ptr<Abc_Ntk_t> ntk, const Result &result, const std::map<std::string, std::shared_ptr<ResultNode>> &results);
+    ResultNode(std::mutex &lock, const std::chrono::duration<double> time, Abc_Ntk_t *ntk, const bool error);
+    ResultNode(std::mutex &lock, const std::chrono::duration<double> time, std::shared_ptr<Abc_Ntk_t> ntk, const bool error, const std::map<std::string, std::shared_ptr<ResultNode>> &results);
     ~ResultNode();
 
-    const Result & getResult(Abc_Frame_t *frame, std::string_view &str);
+    const Result getResult(Abc_Frame_t *frame, std::string_view &str);
+    const Result getResult(Abc_Frame_t *frame, std::string_view &str, const std::chrono::duration<double> minInsertionTime);
 
     int prune(const std::chrono::duration<double> &minTime);
     void remove_unused();

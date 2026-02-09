@@ -3,5 +3,6 @@
   "files.associations": {
     "iostream": "cpp"
   },
+  "nixEnvSelector.suggestion": false,
   "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix"
 }

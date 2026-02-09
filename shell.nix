@@ -6,6 +6,8 @@ pkgs.mkShell {
         gcc
         gdb
         gnumake
+        bear
+        valgrind
 
         boost
         readline
