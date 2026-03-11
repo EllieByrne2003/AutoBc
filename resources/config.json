@@ -1,8 +1,18 @@
 {
+    "function": {
+        "form": {
+            "type": "logic",
+            "fanin": 6
+        },
+        "comparisons": [
+            "levels",
+            "gates"
+        ]
+    },
     "genome": {
         "genePrototypes": [
             {
-                "name": "collapse ",
+                "name": "collapse",
                 "enabled": false,
                 "arguments": [
                     {
@@ -128,13 +138,13 @@
                 "arguments": [
                     {
                         "name": "F",
-                        "enabled": true,
-                        "min": 1,
+                        "enabled": false,
+                        "min": 2,
                         "max": 100
                     },
                     {
                         "name": "T",
-                        "enabled": true,
+                        "enabled": false,
                         "min": 1,
                         "max": 5
                     },
@@ -152,7 +162,7 @@
                     },
                     {
                         "name": "c",
-                        "enabled": true
+                        "enabled": false
                     }
                 ],
                 "input": "aig",
@@ -160,7 +170,7 @@
             },
             {
                 "name": "renode",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
                     {
                         "name": "K",
@@ -172,7 +182,7 @@
                         "name": "C",
                         "enabled": true,
                         "min": 1,
-                        "max": 15
+                        "max": 8
                     },
                     {
                         "name": "F",
@@ -182,29 +192,29 @@
                     },
                     {
                         "name": "A",
-                        "enabled": true,
+                        "enabled": false,
                         "min": 0,
                         "max": 4
                     },
                     {
                         "name": "s",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "name": "b",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "name": "c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "name": "i",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "name": "a",
-                        "enabled": true
+                        "enabled": false
                     }
                 ],
                 "input": "aig",
@@ -324,7 +334,7 @@
             },
             {
                 "name": "fxch",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
                     {
                         "name": "N",
@@ -340,10 +350,39 @@
                 "name": "eliminate",
                 "enabled": false,
                 "arguments": [
-
+                    {
+                        "name": "V",
+                        "enabled": true,
+                        "min": -1,
+                        "max": 64
+                    },
+                    {
+                        "name": "N",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 16
+                    },
+                    {
+                        "name": "I",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 4
+                    },
+                    {
+                        "name": "g",
+                        "enabled": false
+                    },
+                    {
+                        "name": "r",
+                        "enabled": true
+                    },
+                    {
+                        "name": "s",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "dsd",
@@ -351,8 +390,8 @@
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "logic"
             },
             {
                 "name": "sparsify",
@@ -383,21 +422,166 @@
             },
             {
                 "name": "mfs",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
+                    {
+                        "name": "W",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 16
+                    },
+                    {
+                        "name": "F",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 64
+                    },
+                    {
+                        "name": "D",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 64
+                    },
+                    {
+                        "name": "M",
+                        "enabled": true,
+                        "min": 128,
+                        "max": 1024
+                    },
+                    {
+                        "name": "L",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 64
+                    },
+                    {
+                        "name": "C",
+                        "enabled": false,
+                        "min": 1,
+                        "max": 8192
+                    },
+                    {
+                        "name": "d",
+                        "enabled": true
+                    },
+                    {
+                        "name": "r",
+                        "enabled": false
+                    },
+                    {
+                        "name": "a",
+                        "enabled": false
+                    },
+                    {
+                        "name": "e",
+                        "enabled": true
+                    },
+                    {
+                        "name": "s",
+                        "enabled": false
+                    },
+                    {
+                        "name": "t",
+                        "enabled": false
+                    },
+                    {
+                        "name": "p",
+                        "enabled": false
+                    },
+                    {
+                        "name": "g",
+                        "enabled": true
+                    }
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "mfs2",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "W",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 16
+                    },
+                    {
+                        "name": "F",
+                        "enabled": false,
+                        "min": 1,
+                        "max": 64
+                    },
+                    {
+                        "name": "D",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 64
+                    },
+                    {
+                        "name": "M",
+                        "enabled": false,
+                        "min": 128,
+                        "max": 1024
+                    },
+                    {
+                        "name": "L",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 64
+                    },
+                    {
+                        "name": "C",
+                        "enabled": false,
+                        "min": 1,
+                        "max": 8192
+                    },
+                    {
+                        "name": "Z",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 16
+                    },
+                    {
+                        "name": "N",
+                        "enabled": false,
+                        "min": 1,
+                        "max": 8192
+                    },
+                    {
+                        "name": "I",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 16
+                    },
+                    {
+                        "name": "d",
+                        "enabled": true
+                    },
+                    {
+                        "name": "a",
+                        "enabled": true
+                    },
+                    {
+                        "name": "e",
+                        "enabled": false
+                    },
+                    {
+                        "name": "i",
+                        "enabled": false
+                    },
+                    {
+                        "name": "j",
+                        "enabled": false
+                    },
+                    {
+                        "name": "l",
+                        "enabled": false
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "mfs3",
@@ -410,21 +594,69 @@
             },
             {
                 "name": "mfse",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "I",
+                        "enabled": false,
+                        "min": 2,
+                        "max": 16
+                    },
+                    {
+                        "name": "O",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 16
+                    },
+                    {
+                        "name": "W",
+                        "enabled": true,
+                        "min": 64,
+                        "max": 1024
+                    },
+                    {
+                        "name": "F",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 32
+                    },
+                    {
+                        "name": "L",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 16
+                    },
+                    {
+                        "name": "C",
+                        "enabled": false,
+                        "min": 1,
+                        "max": 8192
+                    },
+                    {
+                        "name": "a",
+                        "enabled": true
+                    },
+                    {
+                        "name": "d",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "logicpush",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "K",
+                        "enabled": true,
+                        "min": 2,
+                        "max": 6
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "trace",
@@ -432,8 +664,8 @@
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "glitch",
@@ -441,35 +673,78 @@
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "speedup",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "P",
+                        "enabled": false,
+                        "min": 1,
+                        "max": 100
+                    },
+                    {
+                        "name": "N",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 5
+                    },
+                    {
+                        "name": "l",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "aig"
             },
             {
                 "name": "powerdown",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "P",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 100
+                    },
+                    {
+                        "name": "N",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 5
+                    },
+                    {
+                        "name": "l",
+                        "enabled": false
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "aig"
             },
             {
                 "name": "addbuffs",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "I",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 8192
+                    },
+                    {
+                        "name": "d",
+                        "enabled": false
+                    },
+                    {
+                        "name": "r",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "merge",
@@ -477,8 +752,8 @@
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "testdec",
@@ -581,7 +856,7 @@
             },
             {
                 "name": "rewrite",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
 
                 ],
@@ -590,7 +865,7 @@
             },
             {
                 "name": "refactor",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
 
                 ],
@@ -599,7 +874,7 @@
             },
             {
                 "name": "resub",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
 
                 ],
