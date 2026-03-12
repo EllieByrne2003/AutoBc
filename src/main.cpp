@@ -144,11 +144,10 @@ int main(int argc, char** rawArgv ) {
     Cmd_CommandExecute(pAbc, ("read " + inputFileName).c_str());
     originalNtk = Abc_NtkDup(Abc_FrameReadNtk(pAbc));
 
-
-    Abc_Ntk_t * pNtks[nThreads];
-    for(int i = 0; i < nThreads; i++) {
-        pNtks[i] = Abc_NtkDup(originalNtk);
-    }
+    // Abc_Ntk_t * pNtks[nThreads];
+    // for(int i = 0; i < nThreads; i++) {
+    //     pNtks[i] = Abc_NtkDup(originalNtk);
+    // }
 
     // Create population
     // Population population(256, 5);

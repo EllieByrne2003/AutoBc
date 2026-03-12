@@ -1,0 +1,1928 @@
+Skipping: collapse, it is not an enabled part of the genome.
+Skipping: satclp, it is not an enabled part of the genome.
+Skipping: mux_struct, it is not an enabled part of the genome.
+Skipping: multi, it is not an enabled part of the genome.
+Skipping: A, it is not an enabled part of the genome.
+Skipping: s, it is not an enabled part of the genome.
+Skipping: b, it is not an enabled part of the genome.
+Skipping: c, it is not an enabled part of the genome.
+Skipping: i, it is not an enabled part of the genome.
+Skipping: a, it is not an enabled part of the genome.
+Skipping: cleanup, it is not an enabled part of the genome.
+Skipping: cleanup, it is not an enabled part of the genome.
+Skipping: sweep, it is not an enabled part of the genome.
+Skipping: S, it is not an enabled part of the genome.
+Skipping: D, it is not an enabled part of the genome.
+Skipping: N, it is not an enabled part of the genome.
+Skipping: P, it is not an enabled part of the genome.
+Skipping: fxch, it is not an enabled part of the genome.
+Skipping: eliminate, it is not an enabled part of the genome.
+Skipping: dsd, it is not an enabled part of the genome.
+Skipping: sparsify, it is not an enabled part of the genome.
+Skipping: lutpack, it is not an enabled part of the genome.
+Skipping: lutmin, it is not an enabled part of the genome.
+Skipping: mfs, it is not an enabled part of the genome.
+Skipping: F, it is not an enabled part of the genome.
+Skipping: M, it is not an enabled part of the genome.
+Skipping: L, it is not an enabled part of the genome.
+Skipping: C, it is not an enabled part of the genome.
+Skipping: Z, it is not an enabled part of the genome.
+Skipping: N, it is not an enabled part of the genome.
+Skipping: I, it is not an enabled part of the genome.
+Skipping: e, it is not an enabled part of the genome.
+Skipping: i, it is not an enabled part of the genome.
+Skipping: j, it is not an enabled part of the genome.
+Skipping: l, it is not an enabled part of the genome.
+Skipping: mfs3, it is not an enabled part of the genome.
+Skipping: I, it is not an enabled part of the genome.
+Skipping: O, it is not an enabled part of the genome.
+Skipping: L, it is not an enabled part of the genome.
+Skipping: C, it is not an enabled part of the genome.
+Skipping: trace, it is not an enabled part of the genome.
+Skipping: glitch, it is not an enabled part of the genome.
+Skipping: P, it is not an enabled part of the genome.
+Skipping: powerdown, it is not an enabled part of the genome.
+Skipping: d, it is not an enabled part of the genome.
+Skipping: merge, it is not an enabled part of the genome.
+Skipping: testdec, it is not an enabled part of the genome.
+Skipping: testnpn, it is not an enabled part of the genome.
+Skipping: testrpo, it is not an enabled part of the genome.
+Skipping: testtruth, it is not an enabled part of the genome.
+Skipping: testsupp, it is not an enabled part of the genome.
+Skipping: testrand, it is not an enabled part of the genome.
+Skipping: runsat, it is not an enabled part of the genome.
+Skipping: runeco, it is not an enabled part of the genome.
+Skipping: rungen, it is not an enabled part of the genome.
+Skipping: runscript, it is not an enabled part of the genome.
+Skipping: xec, it is not an enabled part of the genome.
+Skipping: rewrite, it is not an enabled part of the genome.
+Skipping: refactor, it is not an enabled part of the genome.
+Skipping: resub, it is not an enabled part of the genome.
+Skipping: resub_unate, it is not an enabled part of the genome.
+Skipping: resub_core, it is not an enabled part of the genome.
+Skipping: resub_check, it is not an enabled part of the genome.
+Skipping: cascade, it is not an enabled part of the genome.
+Skipping: lutcasdec, it is not an enabled part of the genome.
+Skipping: lutcas, it is not an enabled part of the genome.
+Skipping: bseval, it is not an enabled part of the genome.
+Skipping: extract, it is not an enabled part of the genome.
+Skipping: varmin, it is not an enabled part of the genome.
+Skipping: faultclasses, it is not an enabled part of the genome.
+Skipping: exact, it is not an enabled part of the genome.
+Skipping: orchestrate, it is not an enabled part of the genome.
+Skipping: aigaug, it is not an enabled part of the genome.
+Running: renode -K 4 -C 8 -F 1
+Running: logic; strash -a -r
+Running: logic; sop; fx -W 0 -M 4 -d -c -n
+Running: logic; strash
+Running: logic; logicpush -K 6
+Running: logic; mfs2 -W 14 -D 47
+Running: balance -x
+Running: balance -l -d -x
+Running: logic; logicpush -K 4
+Running: logic; addbuffs -I 2401 -r
+Running: logic; mfs2 -W 1 -D 22
+Running: logic; mfs2 -W 2 -D 10
+Running: logic; sop; fx -W 2 -M 11 -z -c -x
+Running: logic; addbuffs -I 1793
+Running: logic; addbuffs -I 3760 -r
+Saved 12251 nodes after 12367 pushes.
+Saved 14261 nodes after 14377 pushes.
+The network was strashed and balanced before FPGA mapping.
+Warning: The network has not been changed by "fx".
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Networks are equivalent after structural hashing.  Time =     0.57 sec
+Finished: logic; strash -a -r, it took: 18.0285s
+Running: renode -K 4 -C 8 -F 1
+Networks are equivalent after structural hashing.  Time =     0.42 sec
+Finished: logic; strash, it took: 19.2061s
+Running: logic; speedup -N 3 -l
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: balance -x, it took: 28.6333s
+Running: logic; strash -a -i
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: balance -l -d -x, it took: 30.8593s
+Running: logic; logicpush -K 5
+The network was strashed and balanced before FPGA mapping.
+Saved 14093 nodes after 14210 pushes.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; sop; fx -W 0 -M 4 -d -c -n, it took: 36.1246s
+Running: balance -l -d
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; sop; fx -W 2 -M 11 -z -c -x, it took: 36.3076s
+Running: logic; mfse -W 213 -F 17 -d
+Obj   274: Found 1 Hvars and 2 Gvars: 0xB  0x1
+Obj   303: Found 1 Hvars and 2 Gvars: 0xE  0x1
+Obj   316: Found 1 Hvars and 2 Gvars: 0x1  0x4
+Obj   330: Found 1 Hvars and 2 Gvars: 0xB  0x1
+Obj   372: Found 1 Hvars and 2 Gvars: 0x1  0x4
+Obj   377: Found 1 Hvars and 2 Gvars: 0xE  0xE
+Obj   385: Found 1 Hvars and 2 Gvars: 0xE  0x1
+Obj   452: Found 1 Hvars and 2 Gvars: 0x1  0x4
+Obj   457: Found 1 Hvars and 2 Gvars: 0xE  0xE
+Obj   544: Found 1 Hvars and 2 Gvars: 0x1  0x4
+Obj   648: Found 1 Hvars and 2 Gvars: 0x1  0x4
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Networks are NOT EQUIVALENT after structural hashing.  Time =     0.57 sec
+Finished: logic; strash -a -i, it took: 18.6234s
+Running: renode -K 14 -C 7 -F 0
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: balance -l -d, it took: 38.2272s
+Running: logic; mfs2 -W 15 -D 35 -d
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; mfs2 -W 2 -D 10, it took: 82.1068s
+Running: logic; strash -r -i
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 2401 -r, it took: 82.2454s
+Running: logic; mfse -W 191 -F 22 -a
+Finished: logic; mfs2 -W 1 -D 22, it took: 92.0544s
+Running: logic; addbuffs -I 1965
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 3760 -r, it took: 93.5024s
+Running: logic; addbuffs -I 7064 -r
+Finished: logic; mfs2 -W 14 -D 47, it took: 95.9462s
+Running: logic; logicpush -K 3
+Saved 10010 nodes after 10010 pushes.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Networks are NOT EQUIVALENT after structural hashing.  Time =     0.44 sec
+Finished: logic; strash -r -i, it took: 17.9681s
+Running: renode -K 8 -C 4 -F 1
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 1793, it took: 108.92s
+Running: logic; addbuffs -I 1326
+Finished: renode -K 4 -C 8 -F 1, it took: 109.806s
+Running: logic; addbuffs -I 3126
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 4 -C 8 -F 1, it took: 113.694s
+Running: renode -K 2 -C 5 -F 4
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; mfs2 -W 15 -D 35 -d, it took: 108.061s
+Running: logic; logicpush -K 5
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 2 -C 5 -F 4, it took: 58.1491s
+Running: logic; mfs2 -W 12 -D 21 -d
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Finished: logic; mfse -W 191 -F 22 -a, it took: 126.017s
+Running: logic; addbuffs -I 277
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 7064 -r, it took: 133.951s
+Running: logic; addbuffs -I 6052 -r
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 1326, it took: 120.516s
+Running: logic; mfs2 -W 16 -D 11 -d -a
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 1965, it took: 140.336s
+Running: logic; logicpush -K 4
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 277, it took: 71.6794s
+Running: balance -d -s
+The number of nodes on the critical paths =  10243  (41.61 %)
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 3126, it took: 172.25s
+Running: logic; logicpush -K 2
+Saved 0 nodes after 0 pushes.
+The network was strashed and balanced before FPGA mapping.
+Finished: logic; mfs2 -W 12 -D 21 -d, it took: 100.858s
+Running: renode -K 11 -C 6 -F 1
+Finished: logic; mfs2 -W 16 -D 11 -d -a, it took: 82.4855s
+Running: logic; strash -c -r -i
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 2, it took: 35.547s
+Running: logic; logicpush -K 2
+Running: logic; speedup -N 3 -l
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: balance -d -s, it took: 37.7523s
+Running: logic; logicpush -K 5
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 8 -C 4 -F 1, it took: 222.102s
+Running: renode -K 10 -C 4 -F 0
+Networks are NOT EQUIVALENT after structural hashing.  Time =     0.44 sec
+Finished: logic; strash -c -r -i, it took: 18.2623s
+Running: logic; sop; fx -W 4 -M 14 -s -c
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 6052 -r, it took: 118.14s
+Running: logic; strash -r -i
+Running: logic; addbuffs -I 3009 -r
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; sop; fx -W 4 -M 14 -s -c, it took: 29.6372s
+Running: logic; strash -c
+Networks are equivalent after structural hashing.  Time =     0.52 sec
+Finished: logic; strash -c, it took: 17.5979s
+Running: renode -K 2 -C 6 -F 2
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 2 -C 6 -F 2, it took: 40.6316s
+Running: logic; strash -a -i
+Running: logic; logicpush -K 6
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 3009 -r, it took: 89.5118s
+Running: renode -K 2 -C 4 -F 0
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 2 -C 4 -F 0, it took: 43.9302s
+Running: logic; addbuffs -I 636
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 10 -C 4 -F 0, it took: 191.668s
+Running: logic; strash -a -c -i
+The network was strashed and balanced before FPGA mapping.
+Networks are NOT EQUIVALENT after structural hashing.  Time =     0.41 sec
+Finished: logic; strash -a -c -i, it took: 17.7296s
+Running: logic; logicpush -K 3
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 636, it took: 76.0822s
+Running: logic; mfs2 -W 13 -D 18 -d
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; mfse -W 213 -F 17 -d, it took: 601.716s
+Running: logic; addbuffs -I 2150 -r
+Finished: logic; mfs2 -W 13 -D 18 -d, it took: 87.2808s
+Running: logic; speedup -N 1 -l
+The network was strashed and balanced before FPGA mapping.
+Networks are equivalent after structural hashing.  Time =     0.58 sec
+Finished: logic; speedup -N 1 -l, it took: 50.5595s
+Running: balance -x
+Running: renode -K 12 -C 8 -F 2
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; speedup -N 3 -l, it took: 695.47s
+Running: renode -K 12 -C 7 -F 2
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 2150 -r, it took: 79.9023s
+Running: logic; addbuffs -I 1821 -r
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 1821 -r, it took: 76.5635s
+Running: logic; logicpush -K 2
+Running: logic; speedup -N 5
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Finished: renode -K 14 -C 7 -F 0, it took: 796.395s
+Running: logic; speedup -N 5
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 11 -C 6 -F 1, it took: 635.052s
+Running: renode -K 2 -C 4 -F 1
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 2 -C 4 -F 1, it took: 46.2049s
+Running: logic; addbuffs -I 7176 -r
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; speedup -N 3 -l, it took: 657.367s
+Running: logic; strash -a
+Networks are equivalent after structural hashing.  Time =     0.41 sec
+Finished: logic; strash -a, it took: 19.5038s
+Running: logic; strash -a -r
+Running: logic; logicpush -K 4
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; speedup -N 5, it took: 263.248s
+Running: logic; sop; fx -W 1 -M 14 -d -c -n -x
+Warning: The network has not been changed by "fx".
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; sop; fx -W 1 -M 14 -d -c -n -x, it took: 29.023s
+Running: logic; speedup -N 1
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 7176 -r, it took: 118.948s
+Running: renode -K 8 -C 7 -F 3
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; speedup -N 5, it took: 267.444s
+Running: logic; mfse -W 475 -F 22 -a -d
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; mfse -W 475 -F 22 -a -d, it took: 116.121s
+Running: logic; logicpush -K 2
+Running: logic; strash -a -i
+Running: balance -l -s -x
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; speedup -N 1, it took: 145.345s
+Running: renode -K 6 -C 4 -F 3
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: balance -l -s -x, it took: 29.8953s
+Running: logic; mfse -W 749 -F 31 -a
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Finished: logic; mfse -W 749 -F 31 -a, it took: 122.768s
+Running: logic; logicpush -K 6
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 6 -C 4 -F 3, it took: 166.321s
+Running: logic; logicpush -K 4
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Finished: renode -K 8 -C 7 -F 3, it took: 617.483s
+Running: logic; addbuffs -I 780 -r
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 780 -r, it took: 62.195s
+Running: renode -K 14 -C 2 -F 4
+Finished: renode -K 12 -C 7 -F 2, it took: 1069.16s
+Running: renode -K 11 -C 3 -F 2
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 14 -C 2 -F 4, it took: 109.637s
+Running: logic; strash -c -r -i
+Running: logic; mfs2 -W 10 -D 5
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 11 -C 3 -F 2, it took: 164.909s
+Running: balance -l -x
+The network was strashed and balanced before FPGA mapping.
+Finished: logic; mfs2 -W 10 -D 5, it took: 79.5668s
+Running: logic; sop; fx -W 2 -M 8 -s -n
+Warning: The network has not been changed by "fx".
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: balance -l -x, it took: 30.3671s
+Running: renode -K 6 -C 4 -F 4
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; sop; fx -W 2 -M 8 -s -n, it took: 32.0875s
+Running: logic; addbuffs -I 7170 -r
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 12 -C 8 -F 2, it took: 1354.76s
+Running: logic; addbuffs -I 4636 -r
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 7170 -r, it took: 110.36s
+Running: renode -K 11 -C 7 -F 0
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 4636 -r, it took: 107.632s
+Running: renode -K 7 -C 5 -F 3
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 6 -C 4 -F 4, it took: 202.669s
+Running: logic; addbuffs -I 4999 -r
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 4999 -r, it took: 112.173s
+Running: logic; mfs2 -W 13 -D 63
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 3, it took: 2281.46s
+Running: logic; addbuffs -I 1995 -r
+Finished: logic; mfs2 -W 13 -D 63, it took: 95.4481s
+Running: logic; strash -r
+Networks are equivalent after structural hashing.  Time =     0.45 sec
+Finished: logic; strash -r, it took: 19.2938s
+Running: logic; speedup -N 1
+Running: logic; sop; fx -W 1 -M 8 -c -x
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; sop; fx -W 1 -M 8 -c -x, it took: 33.5133s
+Running: balance -d -s
+Running: renode -K 13 -C 5 -F 4
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 1995 -r, it took: 77.319s
+Running: logic; strash -c
+Running: logic; addbuffs -I 7970 -r
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 4, it took: 2459.08s
+Running: logic; mfs2 -W 10 -D 49
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 7 -C 5 -F 3, it took: 370.419s
+Running: logic; strash -a -c -i
+Running: logic; strash -r -i
+Running: renode -K 11 -C 6 -F 3
+The network was strashed and balanced before FPGA mapping.
+Finished: logic; mfs2 -W 10 -D 49, it took: 90.1679s
+Running: logic; mfse -W 817 -F 32
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 7970 -r, it took: 111.241s
+Running: logic; addbuffs -I 834 -r
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 834 -r, it took: 63.442s
+Running: logic; mfs2 -W 14 -D 2
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 4, it took: 2423.17s
+Running: balance -d
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; mfs2 -W 14 -D 2, it took: 32.2784s
+Running: logic; addbuffs -I 7028
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: balance -d, it took: 36.3044s
+Running: logic; mfse -W 471 -F 10 -a
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 11 -C 7 -F 0, it took: 693.886s
+Running: logic; sop; fx -W 2 -M 4 -z -c -x
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Finished: logic; mfse -W 471 -F 10 -a, it took: 123.183s
+Running: renode -K 8 -C 2 -F 3
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; sop; fx -W 2 -M 4 -z -c -x, it took: 34.3528s
+Running: renode -K 2 -C 8 -F 0
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 3, it took: 2313.99s
+Running: logic; addbuffs -I 3084
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 7028, it took: 194.162s
+Running: logic; logicpush -K 4
+Running: balance -s -x
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 2 -C 8 -F 0, it took: 43.902s
+Running: renode -K 4 -C 3 -F 2
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: balance -s -x, it took: 32.791s
+Running: logic; speedup -N 1 -l
+Running: balance -l -d
+Running: logic; strash -a -c
+The network was strashed and balanced before FPGA mapping.
+Networks are equivalent after structural hashing.  Time =     0.43 sec
+Finished: logic; strash -a -c, it took: 19.6282s
+Running: logic; mfs2 -W 8 -D 26
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 8 -C 2 -F 3, it took: 107.97s
+Running: logic; strash -c -r
+Networks are equivalent after structural hashing.  Time =     0.46 sec
+Finished: logic; strash -c -r, it took: 19.0586s
+Running: logic; speedup -N 4 -l
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 4 -C 3 -F 2, it took: 77.5697s
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; addbuffs -I 3084, it took: 141.806s
+Finished: logic; mfs2 -W 8 -D 26, it took: 94.8238s
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+The network was strashed and balanced before FPGA mapping.
+Finished: logic; mfse -W 817 -F 32, it took: 563.414s
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 13 -C 5 -F 4, it took: 716.532s
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 6, it took: 3251.53s
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 5, it took: 3271.11s
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 4, it took: 2311.16s
+Finished: renode -K 11 -C 6 -F 3, it took: 801.49s
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 5, it took: 3218.73s
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 5, it took: 3131.28s
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 6, it took: 3063.87s
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 4, it took: 2127.15s
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 6, it took: 2506.87s
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; speedup -N 4 -l, it took: 1191.37s
+Generation: 0
+Individual: 
+	Length: 1
+	Chromosone: logic; logicpush -K 4
+	Levels: 1023	Gates: 003874
+Stage: 0
+Took:  4133.48s
+Running: logic; logicpush -K 4
+Running: logic; logicpush -K 4
+Running: logic; logicpush -K 4
+Running: logic; logicpush -K 4
+Running: logic; logicpush -K 5
+Running: logic; logicpush -K 6
+Running: logic; logicpush -K 6
+Running: logic; logicpush -K 6
+Running: logic; logicpush -K 4Running: logic; logicpush -K 5
+Running: logic; logicpush -K 3
+
+Running: renode -K 2 -C 6 -F 2; mfs2 -W 7 -D 57 -a; addbuffs -I 6255 -r
+Running: logic; speedup -N 1 -l
+Running: logic; sop; fx -W 4 -M 14 -s -c; strash; balance; logic; mfs2 -W 16 -D 28 -a; mfs2 -W 16 -D 28 -a
+Running: logic; addbuffs -I 3009 -r; mfse -W 282 -F 15 -a -d; strash; balance -l -s
+Running: logic; logicpush -K 5
+Running: renode -K 11 -C 4 -F 3; logicpush -K 4; speedup -N 5; logic; speedup -N 5
+Running: balance -l -x
+Running: logic; logicpush -K 2; logicpush -K 2; strash; renode -K 2 -C 8 -F 0
+Running: logic; addbuffs -I 3188; logicpush -K 6; mfse -W 749 -F 31 -a
+Running: logic; speedup -N 5
+Running: logic; mfs2 -W 5 -D 8; logicpush -K 5
+Running: balance -l; logic; logicpush -K 4; mfse -W 782 -F 6 -d
+Running: logic; mfse -W 209 -F 8 -d; mfs2 -W 2 -D 10; strash -a -r; logic; sop; fx -W 1 -M 14 -s -d -c -n
+Running: logic; addbuffs -I 2929 -r; logicpush -K 6; logicpush -K 4
+Running: logic; logicpush -K 3; logicpush -K 4; strash -a -c -r
+Running: logic; speedup -N 3; logic; speedup -N 3; logic; sop; fx -W 4 -M 10 -d -c -x; logicpush -K 5; logicpush -K 5
+Running: logic; mfs2 -W 16 -D 9 -d -a; strash; renode -K 13 -C 7 -F 0
+Running: logic; mfs2 -W 13 -D 18 -d
+Running: balance -l -s -x; logic; mfse -W 654 -F 8 -a; speedup -N 2 -l; renode -K 8 -C 4 -F 1; strash; renode -K 8 -C 4 -F 1
+Running: logic; strash -a -i; logic; logicpush -K 4
+Saved 0 nodes after 0 pushes.
+Saved 12306 nodes after 12367 pushes.
+Saved 14091 nodes after 14208 pushes.
+Obj   274: Found 1 Hvars and 2 Gvars: 0xB  0x1
+Obj   303: Found 1 Hvars and 2 Gvars: 0xE  0x1
+Saved 2242 nodes after 4312 pushes.
+Obj   316: Found 1 Hvars and 2 Gvars: 0x1  0x4
+Obj   330: Found 1 Hvars and 2 Gvars: 0xB  0x1
+Obj   372: Found 1 Hvars and 2 Gvars: Saved 12083 nodes after 12145 pushes.
+0x1  0x4
+Obj   377: Found 1 Hvars and 2 Gvars: 0xE  0xE
+Obj   385: Found 1 Hvars and 2 Gvars: 0xE  0x1
+Obj   452: Found 1 Hvars and 2 Gvars: 0x1  0x4
+Obj   457: Found 1 Hvars and 2 Gvars: 0xE  0xE
+Obj   544: Found 1 Hvars and 2 Gvars: 0x1  0x4
+The network was strashed and balanced before FPGA mapping.
+Obj   648: Found 1 Hvars and 2 Gvars: 0x1  0x4
+The network was strashed and balanced before FPGA mapping.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: logic; logicpush -K 2; logicpush -K 2; strash; renode -K 2 -C 8 -F 0, it took: 57.0334s
+Running: logic; speedup -N 4 -l; logic; strash -a -r -i; renode -K 3 -C 1 -F 1; strash -a -c
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Saved 1076322 nodes after 14377 pushes.
+Saved 0 nodes after 0 pushes.
+Finished: logic; sop; fx -W 4 -M 14 -s -c; strash; balance; logic; mfs2 -W 16 -D 28 -a; mfs2 -W 16 -D 28 -a, it took: 114.652s
+Running: logic; logicpush -K 5; strash -c -i; logic; logicpush -K 3
+The network was strashed and balanced before FPGA mapping.
+Saved 901592 nodes after 14377 pushes.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Performing renoding with choices.
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Finished: renode -K 2 -C 6 -F 2; mfs2 -W 7 -D 57 -a; addbuffs -I 6255 -r, it took: 216.958s
+Running: logic; mfs2 -W 3 -D 9 -a; logicpush -K 4; strash -a -c
+Saved 12249 nodes after 12365 pushes.
+Networks are NOT EQUIVALENT after structural hashing.  Time =     3.48 sec
+Finished: logic; speedup -N 4 -l; logic; strash -a -r -i; renode -K 3 -C 1 -F 1; strash -a -c, it took: 188.34s
+Running: logic; logicpush -K 5; sop; fx -W 3 -M 16 -s -c -x; strash; renode -K 2 -C 5 -F 4; strash; renode -K 2 -C 5 -F 4

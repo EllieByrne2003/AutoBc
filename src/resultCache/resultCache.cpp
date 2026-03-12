@@ -53,14 +53,23 @@ void ResultCache::insertIntoMap(const std::string &key, const Result &result) {
     resultMap[key] = result;
 }
 
-const Result ResultCache::getResult(Abc_Frame_t *frame, std::string_view &str) {
+const Result ResultCache::getResult(Abc_Frame_t *frame, std::string_view &str, const std::string &finalFormat) {
+    std::cout << "Running: " << str << std::endl;
+
+    const auto start = std::chrono::system_clock::now();
+
     if(mapContains(std::string(str))) {
         return getFromMap(std::string(str));
     }
     
-    const Result &result = resultTree->getResult(frame, str, minInsertionTime);
+    const Result result = resultTree->getResult(frame, str, finalFormat, minInsertionTime);
     // const Result &result = resultTree->getResult(frame, str);
     insertIntoMap(std::string(str), result);
+
+    const auto end = std::chrono::system_clock::now();
+    const std::chrono::duration<double> timeElapsed = end - start;
+    std::cout << "Finished: " << str << ", it took: " << timeElapsed.count() << "s" << std::endl;
+
     return result;
 }
 
@@ -102,11 +111,11 @@ const Result ResultCache::getResult(Abc_Frame_t *frame, std::string_view &str) {
 bool ResultCache::prune() {
     std::unique_lock<std::mutex> lock(m);
 
-    const int targetNum  = 2048;
+    const int targetNum  = 4096;
     const int currentNum = resultTree->get_node_count();
 
-    std::cout << "PRUNE | map count is: " << resultMap.size() << std::endl;
-    std::cout << "PRUNE | node count at start is: " << currentNum << std::endl;
+    // std::cout << "PRUNE | map count is: " << resultMap.size() << std::endl;
+    // std::cout << "PRUNE | node count at start is: " << currentNum << std::endl;
 
     if(currentNum <= targetNum) {
         return true;
@@ -120,8 +129,8 @@ bool ResultCache::prune() {
     const int needRemoved = currentNum - targetNum;
     int numRemoved = resultTree->get_node_count_under_time(mid);
 
-    std::cout << "PRUNE | min time is: " << low.count() << std::endl;
-    std::cout << "PRUNE | max time is: " << high.count() << std::endl;
+    // std::cout << "PRUNE | min time is: " << low.count() << std::endl;
+    // std::cout << "PRUNE | max time is: " << high.count() << std::endl;
     while(tryNum < maxTries) {
         if(numRemoved < needRemoved) {
             low = mid;

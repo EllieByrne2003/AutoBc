@@ -6,13 +6,11 @@
 #include "../utils/random.hpp"
 
 Genome::~Genome() {
-    for(int i = 0; i < genes.size(); i++) {
-        delete genes[i];
-    }
 }
 
 
 void Genome::addPrototype(const std::string &name, const std::string &inputType, const std::string outputType) {
+    pMap.emplace(name, GenePrototype(name, inputType, outputType));
     prototypes.push_back(GenePrototype(name, inputType, outputType));
 }
 
@@ -21,6 +19,7 @@ void Genome::addPrototype(const std::string &name, const std::string &inputType,
 // }
 
 void Genome::addPrototype(const std::string &name, const std::string &inputType, const std::string outputType, const std::vector<std::shared_ptr<ArgumentPrototype>> &arguements) {
+    pMap.emplace(name, GenePrototype(name, inputType, outputType, arguements));
     prototypes.push_back(GenePrototype(name, inputType, outputType, arguements));
 }
 

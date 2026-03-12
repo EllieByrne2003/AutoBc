@@ -198,7 +198,6 @@ void Individual::calculateFitness(Abc_Frame_t *pAbc) {
         return;
     }
 
-    const auto start = std::chrono::system_clock::now();
     std::string ntkType = "aig"; // TODO fix, the netwokr might not be aig after loading
 
     // Step 1: Run through all commands in chromosone
@@ -217,10 +216,6 @@ void Individual::calculateFitness(Abc_Frame_t *pAbc) {
     if(ntkType == "logic" || ntkType == "logic-sop") {
         Cmd_CommandExecute(pAbc, "strash");
     }
-
-    const auto end = std::chrono::system_clock::now();
-    timeElapsed = (end - start);
-
 
     // TODO segfault causes by this command
     // Step 2: Run appropiate commands to get fitness values
@@ -244,7 +239,6 @@ void Individual::calculateFitness(const Result &result) {
     equivalent = result.equivalent;
     nGates = result.numGates;
     nLevels = result.numLevels;
-    timeElapsed = result.time;
 }
 
 Individual Individual::mutateGenes() {
@@ -300,15 +294,29 @@ bool operator<(const Individual &left, const Individual &right) {
         return true;
     }
 
-    if(left.nLevels > right.nLevels) {
-        return true;
-    } else if (left.nLevels < right.nLevels) {
-        return false;
-    }
+    // // Option 1: prefer fewer levels
+    // if(left.nLevels > right.nLevels) {
+    //     return true;
+    // } else if (left.nLevels < right.nLevels) {
+    //     return false;
+    // }
 
+    // if(left.nGates > right.nGates) {
+    //     return true;
+    // } else if(left.nGates < right.nGates) {
+    //     return false;
+    // }
+
+    // Option 2: Prefer fewer gates
     if(left.nGates > right.nGates) {
         return true;
     } else if(left.nGates < right.nGates) {
+        return false;
+    }
+    
+    if(left.nLevels > right.nLevels) {
+        return true;
+    } else if (left.nLevels < right.nLevels) {
         return false;
     }
 
@@ -338,18 +346,31 @@ bool operator>(const Individual &left, const Individual &right) {
         return true;
     }
 
-    if(left.nLevels < right.nLevels) {
-        return true;
-    } else if (left.nLevels > right.nLevels) {
-        return false;
-    }
+    // // Option 1: Prefer fewer levels
+    // if(left.nLevels < right.nLevels) {
+    //     return true;
+    // } else if (left.nLevels > right.nLevels) {
+    //     return false;
+    // }
 
+    // if(left.nGates < right.nGates) {
+    //     return true;
+    // } else if(left.nGates > right.nGates) {
+    //     return false;
+    // }
+
+    // Option 2: Prefer fewer gates
     if(left.nGates < right.nGates) {
         return true;
     } else if(left.nGates > right.nGates) {
         return false;
     }
 
+    if(left.nLevels < right.nLevels) {
+        return true;
+    } else if (left.nLevels > right.nLevels) {
+        return false;
+    }
 
     // // Prefer shorter execution times
     // if(left.timeElapsed < right.timeElapsed) {
@@ -369,7 +390,10 @@ std::string Individual::getCommand() const {
 
     std::string ntkType = "aig"; // TODO may not be true
     for(const Gene &gene : chromosone) {
+        // Add conversion if needed
+
         ret += gene.getCommand(ntkType) + "; "; // TODO remove this
+        ntkType = gene.getOutput();
     }
 
     return ret.substr(0, ret.find_last_of(";")); // Remove last ';'
@@ -405,8 +429,7 @@ std::ostream& operator<<(std::ostream& out, const Individual& indivdual) {
     }
 
     out << "\tLevels: " << std::setfill('0') << std::setw(3) << indivdual.nLevels;
-    out << "\tGates: " << std::setfill('0') << std::setw(6) << indivdual.nGates << std::endl;
-    out << "\tTime:  " << indivdual.timeElapsed.count() << "s";
+    out << "\tGates: " << std::setfill('0') << std::setw(6) << indivdual.nGates;
 
     return out;
 }

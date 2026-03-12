@@ -28,7 +28,8 @@ public:
     ResultCache(Abc_Ntk_t *base);
     ~ResultCache();
 
-    const Result getResult(Abc_Frame_t *frame, std::string_view &str);
+    // const Result getResult(Abc_Frame_t *frame, std::string_view &str);
+    const Result getResult(Abc_Frame_t *frame, std::string_view &str, const std::string &finalFormat = "aig");
 
     bool prune();
     // void remove_unused();

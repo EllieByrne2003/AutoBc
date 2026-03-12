@@ -3,13 +3,15 @@
 #include <cassert>
 #include <string>
 #include <vector>
+#include <map>
 
 #include "../gene/gene.hpp"
 #include "../genePrototype/genePrototype.hpp"
 
 class Genome {
 private:
-    std::vector<const Gene *> genes;
+    // std::vector<const Gene *> genes;
+    std::map<std::string, GenePrototype> pMap;
     std::vector<GenePrototype> prototypes;
 
     Genome() {};
@@ -35,4 +37,5 @@ public:
     // void addGene(const std::string &name, std::vector<std::tuple<const std::string, const int, const int>> &arguements);
 
     const Gene getRandomGene();
+    const GenePrototype &getPrototype(const std::string &name);
 };

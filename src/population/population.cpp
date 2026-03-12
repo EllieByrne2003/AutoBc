@@ -339,7 +339,7 @@ void runIndividuals2(std::shared_ptr<ResultCache> resultCache, std::vector<Indiv
         Individual &indi = indivduals[currentIndex];
         std::string command(indi.getCommand());
         std::string_view commandView(command);
-        const Result &result = resultCache->getResult(pAbc, commandView);
+        const Result &result = resultCache->getResult(pAbc, commandView, "logic 6");
 
         indi.calculateFitness(result);
     }
@@ -431,19 +431,17 @@ Stage Population::runGeneration(Abc_Frame_t **pAbc, const int nThreads) {
         thread.join();
     }
 
+    // TODO have separate function to trim leaves and merge others
     resultCache->prune();
-    // resultCache->prune();
-    // resultCache->prune();
-    // resultCache->prune();
-
-    // Show fittest
-    std::cout << "Generation: " << generation << std::endl;
-    std::cout << getFittest() << std::endl;
 
     // Sort population
     // TODO fix this so reversing isn't required
     std::sort(indivduals.begin(), indivduals.end());
     std::reverse(indivduals.begin(), indivduals.end());
+
+    // Show fittest
+    std::cout << "Generation: " << generation << std::endl;
+    std::cout << getFittest() << std::endl;
 
     // Find new stage
     currentStage = getStage();

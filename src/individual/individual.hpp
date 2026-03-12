@@ -39,7 +39,6 @@ private:
     bool equivalent; // Whether the output circuit is equivalent
     int nGates;
     int nLevels;
-    std::chrono::duration<double> timeElapsed;
 
 public:
     // Initiaisation, create random chromosone of this length

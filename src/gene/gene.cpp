@@ -131,6 +131,14 @@ const std::string Gene::getCommand(const std::string &ntkType) const {
     return retValue;
 }
 
+std::string Gene::getInput() const {
+    return inputType;
+}
+
+std::string Gene::getOutput() const {
+    return outputType;
+}
+
 // // TODO update this or add other commands
 // const std::string Gene::getCommand() const {
 //     std::string retValue;
