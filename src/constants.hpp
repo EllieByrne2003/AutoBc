@@ -9,7 +9,7 @@
 #endif
 
 #ifndef DEFAULT_GENERATION_LIMIT
-    #define DEFAULT_GENERATION_LIMIT 25
+    #define DEFAULT_GENERATION_LIMIT 50
 #endif
 
 #ifndef MIN_ADDITION_NUM

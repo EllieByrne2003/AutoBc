@@ -112,8 +112,8 @@ int main(int argc, char** rawArgv ) {
             }
 
             generationLimit = std::atoi(argv[i++].c_str());
-            if(generationLimit < 1) {
-                std::cout << "The generation limit must be at least 1, though higher is recommended." << std::endl;
+            if(generationLimit < 10) {
+                std::cout << "The generation limit must be at least 10, though higher is recommended." << std::endl;
                 show_usage(rawArgv[0]);
 
                 return -1;
