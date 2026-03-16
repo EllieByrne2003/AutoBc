@@ -348,7 +348,7 @@
             },
             {
                 "name": "eliminate",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
                     {
                         "name": "V",
@@ -746,29 +746,7 @@
                 "input": "logic",
                 "output": "logic"
             },
-            {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
+            {                
                 "name": "merge",
                 "enabled": false,
                 "arguments": [
@@ -878,27 +856,102 @@
             },
             {
                 "name": "rewrite",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "l",
+                        "enabled": true
+                    },
+                    {
+                        "name": "z",
+                        "enabled": true
+                    }
                 ],
                 "input": "aig",
                 "output": "aig"
             },
             {
                 "name": "refactor",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "N",
+                        "enabled": true,
+                        "min": 2,
+                        "max": 15
+                    },
+                    {
+                        "name": "M",
+                        "enabled": false,
+                        "min": 1,
+                        "max": 16
+                    },
+                    {
+                        "name": "l",
+                        "enabled": true
+                    },
+                    {
+                        "name": "z",
+                        "enabled": true
+                    }
                 ],
                 "input": "aig",
                 "output": "aig"
             },
             {
                 "name": "resub",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "K",
+                        "enabled": true,
+                        "min": 5,
+                        "max": 15
+                    },
+                    {
+                        "name": "N",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 3
+                    },
+                    {
+                        "name": "M",
+                        "enabled": true,
+                        "min": 1,
+                        "max": 4
+                    },
+                    {
+                        "name": "F",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 9
+                    },
+                    {
+                        "name": "P",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 32
+                    },
+                    {
+                        "name": "D",
+                        "enabled": false,
+                        "min": 4,
+                        "max": 7
+                    },
+                    {
+                        "name": "V",
+                        "enabled": false,
+                        "min": 4,
+                        "max": 16
+                    },
+                    {
+                        "name": "l",
+                        "enabled": true
+                    },
+                    {
+                        "name": "z",
+                        "enabled": true
+                    }
                 ],
                 "input": "aig",
                 "output": "aig"
@@ -936,8 +989,8 @@
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "aig"
             },
             {
                 "name": "lutcasdec",
@@ -945,8 +998,8 @@
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "aig"
             },
             {
                 "name": "lutcas",
@@ -954,8 +1007,8 @@
                 "arguments": [
 
                 ],
-                "input": "",
-                "output": ""
+                "input": "logic",
+                "output": "logic"
             },
             {
                 "name": "bseval",
@@ -968,12 +1021,21 @@
             },
             {
                 "name": "extract",
-                "enabled": false,
+                "enabled": true,
                 "arguments": [
-
+                    {
+                        "name": "K",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 8
+                    },
+                    {
+                        "name": "a",
+                        "enabled": true
+                    }
                 ],
-                "input": "",
-                "output": ""
+                "input": "aig",
+                "output": "aig"
             },
             {
                 "name": "varmin",
@@ -1004,6 +1066,53 @@
             },
             {
                 "name": "orchestrate",
+                "enabled": true,
+                "arguments": [
+                    {
+                        "name": "K",
+                        "enabled": true,
+                        "min": 4,
+                        "max": 16
+                    },
+                    {
+                        "name": "N",
+                        "enabled": true,
+                        "min": 0,
+                        "max": 3
+                    },
+                    {
+                        "name": "F",
+                        "enabled": false,
+                        "min": 0,
+                        "max": 8
+                    },
+                    {
+                        "name": "l",
+                        "enabled": true
+                    },
+                    {
+                        "name": "z",
+                        "enabled": true
+                    },
+                    {
+                        "name": "Z",
+                        "enabled": true
+                    }
+                ],
+                "input": "aig",
+                "output": "aig"
+            },
+            {
+                "name": "aigaug",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "aig",
+                "output": "aig"
+            },
+            {
+                "name": "bms_start",
                 "enabled": false,
                 "arguments": [
 
@@ -1012,14 +1121,599 @@
                 "output": ""
             },
             {
-                "name": "aigaug",
+                "name": "bms_stop",
                 "enabled": false,
                 "arguments": [
 
                 ],
                 "input": "",
                 "output": ""
-            }            
+            },
+            {
+                "name": "bms_ps",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "majexact",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "twoexact",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "lutexact",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "allexact",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "testexact",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "majgen",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "logic",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "aig",
+                "output": "logic"
+            },
+            {
+                "name": "comb",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "miter",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "miter2",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "demiter",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "orpos",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "andpos",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "zeropos",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "swappos",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "removeps",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "dropsat",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "addpi",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "addflop",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "append",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "putontop",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "frames",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "dframes",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "sop",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "bdd",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "aig",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "reorder",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "bidec",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "order",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "muxes",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "cubes",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "expand",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "splitsop",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "ext_seq_dcs",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "reach",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "cone",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "node",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "rane",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "cof",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "topmost",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "bottommost",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "topand",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "trim",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "short_names",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "move_names",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "excd_free",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "exdc_get",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "exdc_set",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "care_set",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "cut",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "espresso",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "gen",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "gentf",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "genat",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "genfsm",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "cover",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "double",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "inter",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "bb2wb",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "outdec",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "nodedup",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "wrap",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "testcolor",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            },
+            {
+                "name": "test",
+                "enabled": false,
+                "arguments": [
+
+                ],
+                "input": "",
+                "output": ""
+            }  
        ]
     },
     "seeds" : [
