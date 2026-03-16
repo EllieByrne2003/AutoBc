@@ -56,121 +56,132 @@ const Individual & Population::getRandomIndividual(const int sampleSize) {
 
 
 Stage Population::getStage() {
-    // Analyze stage, check best command, check average scores of entire pop and top quartile
-    const std::string bestCommand = getFittest().getCommand();
-    int total25Levels = 0, total75Levels = 0;
-    int total25Gates  = 0, total75Gates  = 0;
-    for(int i = 0; i < size * 0.25; i++) {
-        const Individual &ind = indivduals[i];
-
-        total25Levels += ind.getLevels();
-        total25Gates  += ind.getGates();
-    }
-    for(int i = 0; i < size * 0.75; i++) {
-        const Individual &ind = indivduals[i];
-
-        total75Levels += ind.getLevels();
-        total75Gates  += ind.getGates();
-    }
-
-    const int curr25AvgLevels = total25Levels / (size * 0.25);
-    const int curr25AvgGates  = total25Gates  / (size * 0.25);
-    const int curr75AvgLevels = total75Levels / (size * 0.75);
-    const int curr75AvgGates  = total75Gates  / (size * 0.75);
-
-    // TODO should have a tally of how long is spent on each
-    // If significant changes ongoing, EXPANSION
-    if(generation < 16 || (generation < 48 && (last25AvgLevels - curr25AvgLevels >= 5 || last25AvgGates - curr25AvgGates >= 25))) {
-        last25AvgLevels = curr25AvgLevels;
-        last25AvgGates  = curr25AvgGates;
-        last75AvgLevels = curr75AvgLevels;
-        last75AvgGates  = curr75AvgGates;
-        lastBestCommand = bestCommand;
+    const int stage = generation % 10;
+    if(stage < 4) {
         return EXPANSION;
-    }
-
-    // If some changes, COMPETITION
-    if(generation < 32 || (generation < 96 && (last25AvgLevels - curr25AvgLevels >= 3 || last75AvgLevels - curr75AvgLevels >= 5 || last25AvgGates - curr25AvgGates >= 15))) {
-        last25AvgLevels = curr25AvgLevels;
-        last25AvgGates  = curr25AvgGates;
-        last75AvgLevels = curr75AvgLevels;
-        last75AvgGates  = curr75AvgGates;
-
-        if(gensOnCurrentStage < 1 && currentStage == EXPANSION) {
-            return currentStage;
-        }
-
-        gensOnCurrentStage = 0;
+    } else if(stage < 6) {
         return COMPETITION;
-    }
-
-    // If few any changes, REFINEMENT
-    if(generation < 84 || (generation < 192 && (last25AvgLevels - curr25AvgLevels >= 1 || last75AvgLevels - curr75AvgLevels >= 3 || last25AvgGates - curr25AvgGates >= 5))) {
-        last25AvgLevels = curr25AvgLevels;
-        last25AvgGates  = curr25AvgGates;
-        last75AvgLevels = curr75AvgLevels;
-        last75AvgGates  = curr75AvgGates;
-
-        if(gensOnCurrentStage < 2 && (currentStage == EXPANSION || currentStage == COMPETITION)) {
-            return currentStage;
-        }
-
-        if(currentStage == EXPANSION) {
-            gensOnCurrentStage = 0;
-            return COMPETITION;
-        }
-
-        gensOnCurrentStage = 0;
+    } else if(stage < 8) {
         return REFINEMENT;
-    }
-
-    // If barely any changes, REDUCTION
-
-    if(generation < 128 || (generation < 256 && (last75AvgGates - curr75AvgGates >= 1))) {
-        last25AvgLevels = curr25AvgLevels;
-        last25AvgGates  = curr25AvgGates;
-        last75AvgLevels = curr75AvgLevels;
-        last75AvgGates  = curr75AvgGates;
-
-        if(gensOnCurrentStage < 3 && (currentStage == EXPANSION || currentStage == COMPETITION || currentStage == REFINEMENT)) {
-            return currentStage;
-        }
-
-        if(currentStage == EXPANSION) {
-            gensOnCurrentStage = 0;
-            return COMPETITION;
-        } 
-
-        if(currentStage == COMPETITION) {
-            gensOnCurrentStage = 0;
-            return REFINEMENT;
-        }
-
+    } else {
         return REDUCTION;
     }
 
-    if(gensOnCurrentStage < 4 && (currentStage == EXPANSION || currentStage == COMPETITION || currentStage == REFINEMENT || currentStage == REDUCTION)) {
-        return currentStage;
-    }
+    // // Analyze stage, check best command, check average scores of entire pop and top quartile
+    // const std::string bestCommand = getFittest().getCommand();
+    // int total25Levels = 0, total75Levels = 0;
+    // int total25Gates  = 0, total75Gates  = 0;
+    // for(int i = 0; i < size * 0.25; i++) {
+    //     const Individual &ind = indivduals[i];
 
-    if(currentStage == EXPANSION) {
-        gensOnCurrentStage = 0;
-        return COMPETITION;
-    } 
+    //     total25Levels += ind.getLevels();
+    //     total25Gates  += ind.getGates();
+    // }
+    // for(int i = 0; i < size * 0.75; i++) {
+    //     const Individual &ind = indivduals[i];
 
-    if(currentStage == COMPETITION) {
-        gensOnCurrentStage = 0;
-        return REFINEMENT;
-    }
+    //     total75Levels += ind.getLevels();
+    //     total75Gates  += ind.getGates();
+    // }
 
-    if(currentStage == REFINEMENT) {
-        gensOnCurrentStage = 0;
-        return REDUCTION;
-    }
+    // const int curr25AvgLevels = total25Levels / (size * 0.25);
+    // const int curr25AvgGates  = total25Gates  / (size * 0.25);
+    // const int curr75AvgLevels = total75Levels / (size * 0.75);
+    // const int curr75AvgGates  = total75Gates  / (size * 0.75);
 
-    // If all equal or max gens reached, COMPLETION
-    gensOnCurrentStage = 0;
-    return COMPLETION;
+    // // TODO should have a tally of how long is spent on each
+    // // If significant changes ongoing, EXPANSION
+    // if(generation < 16 || (generation < 48 && (last25AvgLevels - curr25AvgLevels >= 5 || last25AvgGates - curr25AvgGates >= 25))) {
+    //     last25AvgLevels = curr25AvgLevels;
+    //     last25AvgGates  = curr25AvgGates;
+    //     last75AvgLevels = curr75AvgLevels;
+    //     last75AvgGates  = curr75AvgGates;
+    //     lastBestCommand = bestCommand;
+    //     return EXPANSION;
+    // }
+
+    // // If some changes, COMPETITION
+    // if(generation < 32 || (generation < 96 && (last25AvgLevels - curr25AvgLevels >= 3 || last75AvgLevels - curr75AvgLevels >= 5 || last25AvgGates - curr25AvgGates >= 15))) {
+    //     last25AvgLevels = curr25AvgLevels;
+    //     last25AvgGates  = curr25AvgGates;
+    //     last75AvgLevels = curr75AvgLevels;
+    //     last75AvgGates  = curr75AvgGates;
+
+    //     if(gensOnCurrentStage < 1 && currentStage == EXPANSION) {
+    //         return currentStage;
+    //     }
+
+    //     gensOnCurrentStage = 0;
+    //     return COMPETITION;
+    // }
+
+    // // If few any changes, REFINEMENT
+    // if(generation < 84 || (generation < 192 && (last25AvgLevels - curr25AvgLevels >= 1 || last75AvgLevels - curr75AvgLevels >= 3 || last25AvgGates - curr25AvgGates >= 5))) {
+    //     last25AvgLevels = curr25AvgLevels;
+    //     last25AvgGates  = curr25AvgGates;
+    //     last75AvgLevels = curr75AvgLevels;
+    //     last75AvgGates  = curr75AvgGates;
+
+    //     if(gensOnCurrentStage < 2 && (currentStage == EXPANSION || currentStage == COMPETITION)) {
+    //         return currentStage;
+    //     }
+
+    //     if(currentStage == EXPANSION) {
+    //         gensOnCurrentStage = 0;
+    //         return COMPETITION;
+    //     }
+
+    //     gensOnCurrentStage = 0;
+    //     return REFINEMENT;
+    // }
+
+    // // If barely any changes, REDUCTION
+
+    // if(generation < 128 || (generation < 256 && (last75AvgGates - curr75AvgGates >= 1))) {
+    //     last25AvgLevels = curr25AvgLevels;
+    //     last25AvgGates  = curr25AvgGates;
+    //     last75AvgLevels = curr75AvgLevels;
+    //     last75AvgGates  = curr75AvgGates;
+
+    //     if(gensOnCurrentStage < 3 && (currentStage == EXPANSION || currentStage == COMPETITION || currentStage == REFINEMENT)) {
+    //         return currentStage;
+    //     }
+
+    //     if(currentStage == EXPANSION) {
+    //         gensOnCurrentStage = 0;
+    //         return COMPETITION;
+    //     } 
+
+    //     if(currentStage == COMPETITION) {
+    //         gensOnCurrentStage = 0;
+    //         return REFINEMENT;
+    //     }
+
+    //     return REDUCTION;
+    // }
+
+    // if(gensOnCurrentStage < 4 && (currentStage == EXPANSION || currentStage == COMPETITION || currentStage == REFINEMENT || currentStage == REDUCTION)) {
+    //     return currentStage;
+    // }
+
+    // if(currentStage == EXPANSION) {
+    //     gensOnCurrentStage = 0;
+    //     return COMPETITION;
+    // } 
+
+    // if(currentStage == COMPETITION) {
+    //     gensOnCurrentStage = 0;
+    //     return REFINEMENT;
+    // }
+
+    // if(currentStage == REFINEMENT) {
+    //     gensOnCurrentStage = 0;
+    //     return REDUCTION;
+    // }
+
+    // // If all equal or max gens reached, COMPLETION
+    // gensOnCurrentStage = 0;
+    // return COMPLETION;
 }
 
 void Population::createNewGeneration() {
