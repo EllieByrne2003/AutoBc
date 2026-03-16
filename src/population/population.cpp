@@ -253,7 +253,7 @@ void Population::createMutants(std::vector<Individual> &newGen, const int num, c
             params.fineMutationAttempts = 1;
             params.fineMutationChance = 0.1;
 
-            params.additionAttempts = 4;
+            params.additionAttempts = 2;
             params.additionChance = 0.5;
 
             break;
@@ -340,6 +340,7 @@ void runIndividuals2(std::shared_ptr<ResultCache> resultCache, std::vector<Indiv
         std::string command(indi.getCommand());
         std::string_view commandView(command);
         const Result &result = resultCache->getResult(pAbc, commandView, "logic 6");
+        // const Result &result = resultCache->getResult(pAbc, commandView, "aig");
 
         indi.calculateFitness(result);
     }

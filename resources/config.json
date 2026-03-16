@@ -176,7 +176,7 @@
                         "name": "K",
                         "enabled": true,
                         "min": 2,
-                        "max": 15
+                        "max": 6
                     },
                     {
                         "name": "C",
@@ -499,7 +499,7 @@
             },
             {
                 "name": "mfs2",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
                     {
                         "name": "W",
@@ -594,7 +594,7 @@
             },
             {
                 "name": "mfse",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
                     {
                         "name": "I",
@@ -678,7 +678,7 @@
             },
             {
                 "name": "speedup",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
                     {
                         "name": "P",
@@ -726,7 +726,7 @@
             },
             {
                 "name": "addbuffs",
-                "enabled": true,
+                "enabled": false,
                 "arguments": [
                     {
                         "name": "I",

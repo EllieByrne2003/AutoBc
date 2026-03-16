@@ -59,6 +59,7 @@ const Result ResultCache::getResult(Abc_Frame_t *frame, std::string_view &str, c
     const auto start = std::chrono::system_clock::now();
 
     if(mapContains(std::string(str))) {
+        std::cout << "Found: " << str << std::endl;
         return getFromMap(std::string(str));
     }
     

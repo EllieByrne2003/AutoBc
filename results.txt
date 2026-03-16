@@ -1,0 +1,1 @@
+sqrt.aig: logic; logicpush -K 3; strash; renode -K 3 -C 5 -F 1; sop; fx -W 1 -M 7 -z -c; logicpush -K 6; logicpush -K 3; logicpush -K 5; sop; fx -W 3 -M 12 -z -c -x; logicpush -K 5; strash -a -r

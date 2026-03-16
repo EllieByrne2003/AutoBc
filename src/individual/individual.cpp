@@ -294,41 +294,41 @@ bool operator<(const Individual &left, const Individual &right) {
         return true;
     }
 
-    // // Option 1: prefer fewer levels
-    // if(left.nLevels > right.nLevels) {
-    //     return true;
-    // } else if (left.nLevels < right.nLevels) {
-    //     return false;
-    // }
-
-    // if(left.nGates > right.nGates) {
-    //     return true;
-    // } else if(left.nGates < right.nGates) {
-    //     return false;
-    // }
-
-    // Option 2: Prefer fewer gates
-    if(left.nGates > right.nGates) {
-        return true;
-    } else if(left.nGates < right.nGates) {
-        return false;
-    }
-    
+    // Option 1: prefer fewer levels
     if(left.nLevels > right.nLevels) {
         return true;
     } else if (left.nLevels < right.nLevels) {
         return false;
     }
 
+    if(left.nGates > right.nGates) {
+        return true;
+    } else if(left.nGates < right.nGates) {
+        return false;
+    }
+
+    // // Option 2: Prefer fewer gates
+    // if(left.nGates > right.nGates) {
+    //     return true;
+    // } else if(left.nGates < right.nGates) {
+    //     return false;
+    // }
+    
+    // if(left.nLevels > right.nLevels) {
+    //     return true;
+    // } else if (left.nLevels < right.nLevels) {
+    //     return false;
+    // }
+
     // // Prefer shorter execution times
     // if(left.timeElapsed > right.timeElapsed) {
     //     return true;
     // }
 
-    // // Prefer smaller chromosones
-    // if(left.chromosone.size() > right.chromosone.size()) {
-    //     return true;
-    // }
+    // Prefer smaller chromosones
+    if(left.chromosone.size() > right.chromosone.size()) {
+        return true;
+    }
 
     return false;
 }
@@ -346,41 +346,41 @@ bool operator>(const Individual &left, const Individual &right) {
         return true;
     }
 
-    // // Option 1: Prefer fewer levels
-    // if(left.nLevels < right.nLevels) {
-    //     return true;
-    // } else if (left.nLevels > right.nLevels) {
-    //     return false;
-    // }
-
-    // if(left.nGates < right.nGates) {
-    //     return true;
-    // } else if(left.nGates > right.nGates) {
-    //     return false;
-    // }
-
-    // Option 2: Prefer fewer gates
-    if(left.nGates < right.nGates) {
-        return true;
-    } else if(left.nGates > right.nGates) {
-        return false;
-    }
-
+    // Option 1: Prefer fewer levels
     if(left.nLevels < right.nLevels) {
         return true;
     } else if (left.nLevels > right.nLevels) {
         return false;
     }
 
+    if(left.nGates < right.nGates) {
+        return true;
+    } else if(left.nGates > right.nGates) {
+        return false;
+    }
+
+    // // Option 2: Prefer fewer gates
+    // if(left.nGates < right.nGates) {
+    //     return true;
+    // } else if(left.nGates > right.nGates) {
+    //     return false;
+    // }
+
+    // if(left.nLevels < right.nLevels) {
+    //     return true;
+    // } else if (left.nLevels > right.nLevels) {
+    //     return false;
+    // }
+
     // // Prefer shorter execution times
     // if(left.timeElapsed < right.timeElapsed) {
     //     return true;
     // }
 
-    // // Prefer smaller chromosones
-    // if(left.chromosone.size() < right.chromosone.size()) {
-    //     return true;
-    // }
+    // Prefer smaller chromosones
+    if(left.chromosone.size() < right.chromosone.size()) {
+        return true;
+    }
 
     return false;        
 }
