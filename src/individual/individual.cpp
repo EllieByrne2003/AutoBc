@@ -62,7 +62,8 @@ Individual::Individual(const Individual &individual, const MutationParams &param
         }
 
         if(params.fineMutationChance > randomFloat(0.0f, 1.0f)) {
-            // TODO implement later
+            const int pos = randomInt(0, this->chromosone.size() - 1);
+            this->chromosone[pos] = this->chromosone[pos].mutate();
             
         }
     }

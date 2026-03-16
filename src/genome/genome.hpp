@@ -37,5 +37,7 @@ public:
     // void addGene(const std::string &name, std::vector<std::tuple<const std::string, const int, const int>> &arguements);
 
     const Gene getRandomGene();
+    const Gene getMutantOf(const Gene &gene);
+    const Gene getMutantOf(const std::string &name);
     const GenePrototype &getPrototype(const std::string &name);
 };

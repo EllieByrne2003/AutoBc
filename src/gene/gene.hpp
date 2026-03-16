@@ -32,6 +32,7 @@ public:
     std::string execute(Abc_Frame_t *pAbc, const std::string &ntkType) const;
     // int execute(Abc_Frame_t *pAbc) const;
 
+    const std::string getCommand() const;
     const std::string getCommand(const std::string &ntkType) const;
     std::string getInput() const;
     std::string getOutput() const;

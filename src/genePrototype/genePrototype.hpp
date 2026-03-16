@@ -24,5 +24,7 @@ public:
     GenePrototype(const std::string &name, const std::string &inputType, const std::string outputType, const std::vector<std::shared_ptr<ArgumentPrototype>> &arguments);
     // GenePrototype(const std::string &name, const std::string &prefix, const std::string &suffix, const std::vector<std::shared_ptr<ArgumentPrototype>> &arguments);
 
+    std::string getName() const;
+
     Gene createGene() const;
 };

@@ -19,6 +19,10 @@ GenePrototype::GenePrototype(const std::string &name, const std::string &inputTy
 
 // }
 
+std::string GenePrototype::getName() const {
+    return name;
+}
+
 Gene GenePrototype::createGene() const {
     std::vector<std::shared_ptr<Argument>> args;
 

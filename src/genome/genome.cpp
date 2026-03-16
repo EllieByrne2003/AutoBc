@@ -51,3 +51,18 @@ void Genome::addPrototype(const std::string &name, const std::string &inputType,
 const Gene Genome::getRandomGene() {
     return prototypes[randomInt(0, prototypes.size() - 1)].createGene();
 }
+
+const Gene Genome::getMutantOf(const Gene &gene) {
+    return getMutantOf(gene.getCommand());
+}
+
+const Gene Genome::getMutantOf(const std::string &name) {
+    for(const GenePrototype &prototype : prototypes) {
+        if(prototype.getName() == name) {
+            return prototype.createGene();
+        }
+    }
+
+    // Couldn't find it
+    return Gene("", "", "", {});
+}

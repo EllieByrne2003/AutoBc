@@ -3,6 +3,7 @@
 #include <boost/json/array.hpp>
 
 #include "../abc.hpp"
+#include "../genome/genome.hpp"
 #include "../arguments/arguments.hpp"
 
 Gene::Gene(const std::string &command, const std::string &inputType, const std::string outputType, const std::vector<std::shared_ptr<Argument>> &arguements) : 
@@ -39,9 +40,13 @@ std::string Gene::execute(Abc_Frame_t *pAbc, const std::string &ntkType) const {
                     return "error";
                 }
             } else if(inputType == "logic-sop") {
-            if(Cmd_CommandExecute(pAbc, "logic ; sop")) {
-                return "error";
-            }
+                if(Cmd_CommandExecute(pAbc, "logic ; sop")) {
+                    return "error";
+                }
+            } else if(inputType == "logic-bdd") {
+                if(Cmd_CommandExecute(pAbc, "logic ; bdd")) {
+                    return "error";
+                }
             }
         } else if(ntkType == "logic") {
             if(inputType == "aig") {
@@ -52,6 +57,10 @@ std::string Gene::execute(Abc_Frame_t *pAbc, const std::string &ntkType) const {
                 if(Cmd_CommandExecute(pAbc, "sop")) {
                     return "error";
                 }
+            }else if(inputType == "logic-bdd") {
+                if(Cmd_CommandExecute(pAbc, "bdd")) {
+                    return "error";
+                }
             }
         } else if(ntkType == "logic-sop") {
             if(inputType == "aig") {
@@ -60,6 +69,22 @@ std::string Gene::execute(Abc_Frame_t *pAbc, const std::string &ntkType) const {
                 }
             } else if(inputType == "logic") {
                 // Nothing, it's okay
+            } else if(inputType == "logic-bdd") {
+                if(Cmd_CommandExecute(pAbc, "bdd")) {
+                    return "error";
+                }
+            }
+        }else if(ntkType == "logic-bdd") {
+            if(inputType == "aig") {
+                if(Cmd_CommandExecute(pAbc, "strash")) {
+                    return "error";
+                }
+            } else if(inputType == "logic") {
+                // Nothing, it's okay
+            }else if(inputType == "logic-sop") {
+                if(Cmd_CommandExecute(pAbc, "sop")) {
+                    return "error";
+                }
             }
         }
     }
@@ -96,6 +121,9 @@ std::string Gene::execute(Abc_Frame_t *pAbc, const std::string &ntkType) const {
 //     return retValue;
 // }
 
+const std::string Gene::getCommand() const {
+    return command;
+}
 
 const std::string Gene::getCommand(const std::string &ntkType) const {
     std::string retValue;
@@ -106,18 +134,32 @@ const std::string Gene::getCommand(const std::string &ntkType) const {
                 retValue += "logic; ";
             } else if(inputType == "logic-sop") {
                 retValue += "logic; sop; ";
+            } else if(inputType == "logic-bdd") {
+                retValue += "logic; bdd;";
             }
         } else if(ntkType == "logic") {
             if(inputType == "aig") {
                 retValue += "strash; ";
             } else if(inputType == "logic-sop") {
                 retValue += "sop; ";
+            }else if(inputType == "logic-bdd") {
+                retValue += "bdd;";
             }
         } else if(ntkType == "logic-sop") {
             if(inputType == "aig") {
                 retValue += "strash; ";
             } else if(inputType == "logic") {
                 // Nothing, it's okay
+            }else if(inputType == "logic-bdd") {
+                retValue += "bdd;";
+            }
+        }else if(ntkType == "logic-bdd") {
+            if(inputType == "aig") {
+                retValue += "strash; ";
+            } else if(inputType == "logic") {
+                // Nothing, it's okay
+            }else if(inputType == "logic-sop") {
+                retValue += "sop;";
             }
         }
     }
@@ -177,9 +219,7 @@ std::string Gene::getOutput() const {
 
 
 Gene Gene::mutate() {
-    // return prototype.createGene();
-    // TODO implement this.
-    return Gene(*this);
+    return Genome::getInstance().getMutantOf(*this);
 }
 
 
