@@ -1,0 +1,7 @@
+Generation: 0
+Individual: 
+	Length: 1
+	Chromosone: renode -K 6 -C 4 -F 0
+	Levels: 067	Gates: 008227
+Stage: 0
+Took:  644.45s

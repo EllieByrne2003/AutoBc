@@ -1,0 +1,31 @@
+Generation: 0
+Individual: 
+	Length: 1
+	Chromosone: orchestrate -K 11 -N 1 -z -Z
+	Levels: 1008	Gates: 004956
+Stage: 0
+Took:  353.796s
+--
+Generation: 1
+Individual: 
+	Length: 4
+	Chromosone: logic; logicpush -K 5; logicpush -K 5; strash; renode -K 5 -C 4 -F 2; strash; renode -K 5 -C 4 -F 2
+	Levels: 823	Gates: 006139
+Stage: 0
+Took:  853.195s
+--
+Generation: 2
+Individual: 
+	Length: 5
+	Chromosone: rewrite -l; logic; eliminate -V 23 -N 4 -I 3; eliminate -V 50 -N 16 -I 4 -r; sop; fx -W 4 -M 15 -s -z -n -x; fx -W 4 -M 15 -s -z -n -x
+	Levels: 551	Gates: 022443
+Stage: 0
+Took:  1000.51s
+--
+Generation: 3
+Individual: 
+	Length: 5
+	Chromosone: rewrite -l; logic; eliminate -V 23 -N 4 -I 3; eliminate -V 50 -N 16 -I 4 -r; sop; fx -W 4 -M 15 -s -z -n -x; fx -W 4 -M 15 -s -z -n -x
+	Levels: 551	Gates: 022443
+Stage: 0
+Took:  1679.31s

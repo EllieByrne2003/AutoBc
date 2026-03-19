@@ -1,0 +1,95 @@
+Generation: 0
+Individual: 
+	Length: 1
+	Chromosone: orchestrate -K 12 -N 0 -Z
+	Levels: 860	Gates: 009868
+Stage: 0
+Took:  526.492s
+--
+Generation: 1
+Individual: 
+	Length: 4
+	Chromosone: logic; logicpush -K 3; eliminate -V 0 -N 7 -I 2 -s; strash; renode -K 5 -C 3 -F 0; strash; renode -K 5 -C 3 -F 0
+	Levels: 850	Gates: 010671
+Stage: 0
+Took:  1515.78s
+--
+Generation: 2
+Individual: 
+	Length: 4
+	Chromosone: logic; logicpush -K 3; eliminate -V 0 -N 7 -I 2 -s; strash; renode -K 5 -C 3 -F 0; strash; renode -K 5 -C 3 -F 0
+	Levels: 850	Gates: 010671
+Stage: 0
+Took:  2869.72s
+--
+Generation: 3
+Individual: 
+	Length: 7
+	Chromosone: logic; logicpush -K 5; logicpush -K 3; strash; resub -K 12 -N 1 -M 1 -l; resub -K 12 -N 1 -M 1 -l; logic; eliminate -V 39 -N 13 -I 3 -r; strash; renode -K 6 -C 4 -F 1
+	Levels: 846	Gates: 010578
+Stage: 0
+Took:  1552.7s
+--
+Generation: 4
+Individual: 
+	Length: 7
+	Chromosone: resub -K 11 -N 1 -M 1 -z; resub -K 15 -N 3 -M 3 -l -z; orchestrate -K 9 -N 1 -l; logic; sop; fx -W 4 -M 10 -s -z; strash; renode -K 6 -C 6 -F 3; strash; renode -K 6 -C 6 -F 3; strash; rewrite -z
+	Levels: 837	Gates: 010932
+Stage: 1
+Took:  1802.13s
+--
+Generation: 5
+Individual: 
+	Length: 7
+	Chromosone: resub -K 11 -N 1 -M 1 -z; resub -K 15 -N 3 -M 3 -l -z; orchestrate -K 9 -N 1 -l; logic; sop; fx -W 4 -M 10 -s -z; strash; renode -K 6 -C 6 -F 3; strash; renode -K 6 -C 6 -F 3; strash; rewrite -z
+	Levels: 837	Gates: 010932
+Stage: 1
+Took:  691.413s
+--
+Generation: 6
+Individual: 
+	Length: 7
+	Chromosone: resub -K 11 -N 1 -M 1 -z; resub -K 15 -N 3 -M 3 -l -z; orchestrate -K 9 -N 1 -l; logic; sop; fx -W 4 -M 10 -s -z; strash; renode -K 6 -C 6 -F 3; strash; renode -K 6 -C 6 -F 3; strash; rewrite -z
+	Levels: 837	Gates: 010932
+Stage: 2
+Took:  1011.77s
+--
+Generation: 7
+Individual: 
+	Length: 7
+	Chromosone: resub -K 11 -N 1 -M 1 -z; resub -K 15 -N 3 -M 3 -l -z; orchestrate -K 9 -N 1 -l; logic; sop; fx -W 4 -M 10 -s -z; strash; renode -K 6 -C 6 -F 3; strash; renode -K 6 -C 6 -F 3; strash; rewrite -z
+	Levels: 837	Gates: 010932
+Stage: 2
+Took:  799.547s
+--
+Generation: 8
+Individual: 
+	Length: 7
+	Chromosone: resub -K 11 -N 1 -M 1 -z; resub -K 15 -N 3 -M 3 -l -z; orchestrate -K 9 -N 1 -l; logic; sop; fx -W 4 -M 10 -s -z; strash; renode -K 6 -C 6 -F 3; strash; renode -K 6 -C 6 -F 3; strash; rewrite -z
+	Levels: 837	Gates: 010932
+Stage: 3
+Took:  782.24s
+--
+Generation: 9
+Individual: 
+	Length: 10
+	Chromosone: resub -K 15 -N 3 -M 3 -l -z; orchestrate -K 9 -N 1 -l; logic; sop; fx -W 4 -M 10 -s -z; strash; renode -K 6 -C 6 -F 3; strash; refactor -N 9 -l; rewrite -l -z; refactor -N 11 -l -z; extract -K 7 -a; renode -K 6 -C 4 -F 1; strash; renode -K 6 -C 4 -F 1
+	Levels: 726	Gates: 007499
+Stage: 3
+Took:  399.074s
+--
+Generation: 10
+Individual: 
+	Length: 10
+	Chromosone: resub -K 15 -N 3 -M 3 -l -z; orchestrate -K 9 -N 1 -l; logic; sop; fx -W 4 -M 10 -s -z; strash; renode -K 6 -C 6 -F 3; strash; resub -K 5 -N 2 -M 4 -l; renode -K 6 -C 6 -F 3; strash; refactor -N 14 -z; renode -K 6 -C 6 -F 3; strash; renode -K 6 -C 6 -F 3; strash; renode -K 6 -C 6 -F 3
+	Levels: 594	Gates: 009511
+Stage: 0
+Took:  195.699s
+--
+Generation: 11
+Individual: 
+	Length: 10
+	Chromosone: resub -K 15 -N 3 -M 3 -l -z; orchestrate -K 9 -N 1 -l; logic; sop; fx -W 4 -M 10 -s -z; strash; renode -K 6 -C 6 -F 3; strash; resub -K 5 -N 2 -M 4 -l; renode -K 6 -C 6 -F 3; strash; refactor -N 14 -z; renode -K 6 -C 6 -F 3; strash; renode -K 6 -C 6 -F 3; strash; renode -K 6 -C 6 -F 3
+	Levels: 594	Gates: 009511
+Stage: 0
+Took:  1535.41s

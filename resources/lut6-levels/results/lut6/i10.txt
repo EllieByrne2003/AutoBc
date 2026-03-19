@@ -1,0 +1,700 @@
+================================================================================
+=== Standard script: resyn (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; resyn; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   597  edge =   2515  aig  =  2737  lev = 9
+
+================================================================================
+=== Standard script: resyn2 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; resyn2; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   581  edge =   2427  aig  =  2623  lev = 9
+
+================================================================================
+=== Standard script: resyn2a (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; resyn2a; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   572  edge =   2402  aig  =  2627  lev = 9
+
+================================================================================
+=== Standard script: resyn3 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; resyn3; if -K 6; print_stats".
+
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   577  edge =   2492  aig  =  3265  lev = 9
+
+================================================================================
+=== Standard script: compress (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; compress; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   559  edge =   2341  aig  =  2626  lev = 9
+
+================================================================================
+=== Standard script: compress2 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; compress2; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   576  edge =   2428  aig  =  2632  lev = 9
+
+================================================================================
+=== Standard script: choice (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; choice; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Fraiging part    1  (out of    1)  PI =   253. PO =   213. And =   5641. Lev =   33.                                                                                          resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   567  edge =   2331  aig  =  2663  lev = 9
+
+================================================================================
+=== Standard script: choice2 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; choice2; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Fraiging part    1  (out of    1)  PI =   253. PO =   213. And =   8454. Lev =   32.                                                                                          resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   560  edge =   2321  aig  =  2754  lev = 9
+
+================================================================================
+=== Standard script: rwsat (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; rwsat; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   556  edge =   2357  aig  =  2778  lev = 11
+
+================================================================================
+=== Standard script: drwsat2 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; drwsat2; if -K 6; print_stats".
+
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   551  edge =   2317  aig  =  2579  lev = 9
+
+================================================================================
+=== Standard script: share (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; share; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   561  edge =   2308  aig  =  2649  lev = 10
+
+================================================================================
+=== Standard script: addinit (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; addinit; if -K 6; print_stats".
+
+Io_ReadBenchInit(): Failed to open file "resources/circuits/i10.init".
+Warning: The current network is combinational.
+Warning: The current network is combinational.
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   612  edge =   2679  aig  =  4037  lev = 11
+
+================================================================================
+=== Standard script: blif2aig (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; blif2aig; if -K 6; print_stats".
+
+Warning: The current network is combinational.
+Warning: The current network is combinational.
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   612  edge =   2679  aig  =  4037  lev = 11
+
+================================================================================
+=== Standard script: v2p (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; v2p; if -K 6; print_stats".
+
+Error: Abc_CommandAbc9Vta2Gla(): There is no AIG.
+Error: Abc_CommandAbc9Ps(): There is no AIG.
+
+================================================================================
+=== Standard script: g2p (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; g2p; if -K 6; print_stats".
+
+Error: Abc_CommandAbc9Ps(): There is no AIG.
+
+================================================================================
+=== Standard script: &sw_ (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; &sw_; if -K 6; print_stats".
+
+Error: Empty network.
+
+================================================================================
+=== Standard script: &fx_ (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; &fx_; if -K 6; print_stats".
+
+Error: Empty network.
+
+================================================================================
+=== Standard script: &dc3 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; &dc3; if -K 6; print_stats".
+
+Error: Abc_CommandAbc9Balance(): There is no AIG.
+
+================================================================================
+=== Standard script: &dc4 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; &dc4; if -K 6; print_stats".
+
+Error: Abc_CommandAbc9Balance(): There is no AIG.
+
+================================================================================
+=== IWLS script: src_rw (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; src_rw; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   558  edge =   2360  aig  =  2689  lev = 12
+
+================================================================================
+=== IWLS script: src_rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; src_rs; if -K 6; print_stats".
+
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   574  edge =   2439  aig  =  3097  lev = 11
+
+================================================================================
+=== IWLS script: src_rws (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; src_rws; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   579  edge =   2435  aig  =  2570  lev = 11
+
+================================================================================
+=== IWLS script: resyn2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; resyn2rs; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   574  edge =   2373  aig  =  2534  lev = 9
+
+================================================================================
+=== IWLS script: r2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; r2rs; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   574  edge =   2373  aig  =  2534  lev = 9
+
+================================================================================
+=== IWLS script: compress2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; compress2rs; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   565  edge =   2353  aig  =  2555  lev = 9
+
+================================================================================
+=== IWLS script: c2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; c2rs; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   565  edge =   2353  aig  =  2555  lev = 9
+
+================================================================================
+=== IWLS script: &resyn2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; &resyn2rs; if -K 6; print_stats".
+
+Error: Empty network.
+
+================================================================================
+=== IWLS script: &compress2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; &compress2rs; if -K 6; print_stats".
+
+Error: Empty network.
+
+================================================================================
+=== Lazy mans synthesis: recadd3 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; rec_start3; recadd3; if -K 6; print_stats".
+
+File name is not given on the command line. Starting a new record.
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   594  edge =   2491  aig  =  2684  lev = 8
+
+================================================================================
+=== Custom script: refactor -N 10 -l; orchestrate -K 15 -N 3; balance -d -s -x; logic; sop; fx -W 0 -M 11 -s -d -x; strash; refactor -N 4; balance -d -x; refactor -N 10; logic; sop; fx -W 2 -M 7 -d -z -c -x; fx -W 2 -M 8 -d -c -n; strash; rewrite -l; renode -K 4 -C 5 -F 0; strash; renode -K 6 -C 8 -F 0; strash; refactor -N 6 -l; extract -K 1; orchestrate -K 12 -N 3 -z -Z; extract -K 3; logic; sop; fx -W 2 -M 8 -d -c -n; strash; resub -K 15 -N 2 -M 2 -l; logic; sop; fx -W 0 -M 12 -d; fx -W 2 -M 8 -d -c -n; strash; renode -K 3 -C 6 -F 0; strash; rewrite -l; logic; strash -c -r; logic; sop; fx -W 2 -M 8 -d -c -n; strash; refactor -N 7 -l -z; logic; eliminate -V 5 -N 10 -I 3 -r -s; sop; fx -W 2 -M 8 -d -c -n; fx -W 2 -M 8 -d -c -n; fx -W 2 -M 8 -d -c -n; strash; extract -K 8; logic; eliminate -V 5 -N 12 -I 2; strash; refactor -N 12 -z; extract -K 8; extract -K 8 ===
+================================================================================
+ABC command line: "read resources/circuits/i10.aig; refactor -N 10 -l; orchestrate -K 15 -N 3; balance -d -s -x; logic; sop; fx -W 0 -M 11 -s -d -x; strash; refactor -N 4; balance -d -x; refactor -N 10; logic; sop; fx -W 2 -M 7 -d -z -c -x; fx -W 2 -M 8 -d -c -n; strash; rewrite -l; renode -K 4 -C 5 -F 0; strash; renode -K 6 -C 8 -F 0; strash; refactor -N 6 -l; extract -K 1; orchestrate -K 12 -N 3 -z -Z; extract -K 3; logic; sop; fx -W 2 -M 8 -d -c -n; strash; resub -K 15 -N 2 -M 2 -l; logic; sop; fx -W 0 -M 12 -d; fx -W 2 -M 8 -d -c -n; strash; renode -K 3 -C 6 -F 0; strash; rewrite -l; logic; strash -c -r; logic; sop; fx -W 2 -M 8 -d -c -n; strash; refactor -N 7 -l -z; logic; eliminate -V 5 -N 10 -I 3 -r -s; sop; fx -W 2 -M 8 -d -c -n; fx -W 2 -M 8 -d -c -n; fx -W 2 -M 8 -d -c -n; strash; extract -K 8; logic; eliminate -V 5 -N 12 -I 2; strash; refactor -N 12 -z; extract -K 8; extract -K 8; if -K 6; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Warning: The network has not been changed by "fx".
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Warning: The network has not been changed by "fx".
+Warning: The network has not been changed by "fx".
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Warning: The network has not been changed by "fx".
+Warning: The network has not been changed by "fx".
+Warning: The network has not been changed by "fx".
+Warning: The network has not been changed by "fx".
+resources/circuits/i10        : i/o =  257/  224  lat =    0  nd =   526  edge =   2247  aig  =  2456  lev = 8
+

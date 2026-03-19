@@ -1,0 +1,55 @@
+Generation: 0
+Individual: 
+	Length: 1
+	Chromosone: renode -K 6 -C 5 -F 4
+	Levels: 049	Gates: 006068
+Stage: 0
+Took:  594.026s
+--
+Generation: 1
+Individual: 
+	Length: 4
+	Chromosone: orchestrate -K 8 -N 2 -Z; resub -K 10 -N 3 -M 2; renode -K 6 -C 6 -F 2; strash; renode -K 6 -C 6 -F 2
+	Levels: 043	Gates: 006453
+Stage: 0
+Took:  805.758s
+--
+Generation: 2
+Individual: 
+	Length: 6
+	Chromosone: renode -K 2 -C 2 -F 0; strash; refactor -N 3 -l -z; logic; strash -a -r; renode -K 6 -C 6 -F 4; strash; renode -K 6 -C 6 -F 4; strash; renode -K 6 -C 6 -F 4
+	Levels: 041	Gates: 006482
+Stage: 0
+Took:  735.587s
+--
+Generation: 3
+Individual: 
+	Length: 7
+	Chromosone: renode -K 2 -C 2 -F 0; strash; refactor -N 3 -l -z; logic; strash -a -r; renode -K 6 -C 6 -F 4; strash; rewrite -l -z; renode -K 6 -C 6 -F 4; strash; renode -K 6 -C 6 -F 4
+	Levels: 040	Gates: 006354
+Stage: 0
+Took:  1190.34s
+--
+Generation: 4
+Individual: 
+	Length: 7
+	Chromosone: renode -K 2 -C 2 -F 0; strash; refactor -N 3 -l -z; logic; strash -a -r; renode -K 6 -C 6 -F 4; strash; rewrite -l -z; renode -K 6 -C 6 -F 4; strash; renode -K 6 -C 6 -F 4
+	Levels: 040	Gates: 006354
+Stage: 1
+Took:  2282.19s
+--
+Generation: 5
+Individual: 
+	Length: 6
+	Chromosone: renode -K 2 -C 8 -F 3; strash; renode -K 5 -C 5 -F 2; strash; renode -K 5 -C 5 -F 2; logicpush -K 5; logicpush -K 5; sop; fx -W 3 -M 4 -d -z -c -n -x
+	Levels: 040	Gates: 005884
+Stage: 1
+Took:  1072.19s
+--
+Generation: 6
+Individual: 
+	Length: 6
+	Chromosone: renode -K 2 -C 8 -F 3; strash; renode -K 5 -C 5 -F 2; strash; renode -K 5 -C 5 -F 2; logicpush -K 5; logicpush -K 5; sop; fx -W 3 -M 4 -d -z -c -n -x
+	Levels: 040	Gates: 005884
+Stage: 2
+Took:  1160.8s

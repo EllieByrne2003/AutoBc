@@ -1,0 +1,807 @@
+Generation: 0
+Individual: 
+	Length: 1
+	Chromosone: orchestrate -K 8 -N 3 -Z
+	Levels: 051	Gates: 000243
+Stage: 0
+Took:  10.0843s
+--
+Generation: 1
+Individual: 
+	Length: 1
+	Chromosone: orchestrate -K 4 -N 2 -Z
+	Levels: 051	Gates: 000243
+Stage: 0
+Took:  15.2033s
+--
+Generation: 2
+Individual: 
+	Length: 8
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; renode -K 5 -C 3 -F 2; strash; resub -K 11 -N 3 -M 1; logic; logicpush -K 2; logicpush -K 2; logicpush -K 2; logicpush -K 2
+	Levels: 051	Gates: 000242
+Stage: 0
+Took:  14.2259s
+--
+Generation: 3
+Individual: 
+	Length: 10
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; renode -K 5 -C 3 -F 2; strash; resub -K 11 -N 3 -M 1; logic; logicpush -K 2; logicpush -K 2; logicpush -K 2; logicpush -K 2; logicpush -K 5; logicpush -K 5
+	Levels: 051	Gates: 000241
+Stage: 0
+Took:  15.1405s
+--
+Generation: 4
+Individual: 
+	Length: 10
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; renode -K 5 -C 3 -F 2; strash; resub -K 11 -N 3 -M 1; logic; logicpush -K 2; logicpush -K 2; logicpush -K 2; logicpush -K 2; logicpush -K 5; logicpush -K 5
+	Levels: 051	Gates: 000241
+Stage: 1
+Took:  21.8734s
+--
+Generation: 5
+Individual: 
+	Length: 9
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; renode -K 5 -C 3 -F 2; strash; resub -K 11 -N 3 -M 1; logic; logicpush -K 2; logicpush -K 2; strash; extract -K 8 -a; logic; logicpush -K 3; logicpush -K 3
+	Levels: 051	Gates: 000241
+Stage: 1
+Took:  13.1502s
+--
+Generation: 6
+Individual: 
+	Length: 8
+	Chromosone: rewrite -l; extract -K 8 -a; orchestrate -K 16 -N 2 -l -z -Z; renode -K 5 -C 3 -F 2; strash; resub -K 11 -N 3 -M 1; logic; eliminate -V 18 -N 15 -I 1 -r -s; strash; resub -K 13 -N 1 -M 1 -l; resub -K 10 -N 1 -M 1 -z
+	Levels: 051	Gates: 000241
+Stage: 2
+Took:  10.776s
+--
+Generation: 7
+Individual: 
+	Length: 8
+	Chromosone: rewrite -l; extract -K 8 -a; orchestrate -K 16 -N 2 -l -z -Z; renode -K 5 -C 3 -F 2; strash; resub -K 11 -N 3 -M 1; logic; eliminate -V 18 -N 15 -I 1 -r -s; strash; resub -K 13 -N 1 -M 1 -l; resub -K 10 -N 1 -M 1 -z
+	Levels: 051	Gates: 000241
+Stage: 2
+Took:  10.205s
+--
+Generation: 8
+Individual: 
+	Length: 3
+	Chromosone: resub -K 8 -N 1 -M 4 -l; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 3
+Took:  17.4038s
+--
+Generation: 9
+Individual: 
+	Length: 3
+	Chromosone: resub -K 8 -N 1 -M 4 -l; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 3
+Took:  23.4728s
+--
+Generation: 10
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 0
+Took:  36.194s
+--
+Generation: 11
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 0
+Took:  95.8407s
+--
+Generation: 12
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 0
+Took:  103.342s
+--
+Generation: 13
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 0
+Took:  95.2988s
+--
+Generation: 14
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 1
+Took:  84.4719s
+--
+Generation: 15
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 1
+Took:  55.7731s
+--
+Generation: 16
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 2
+Took:  51.604s
+--
+Generation: 17
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 2
+Took:  46.1369s
+--
+Generation: 18
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 3
+Took:  24.9297s
+--
+Generation: 19
+Individual: 
+	Length: 2
+	Chromosone: logic; sop; fx -W 0 -M 6 -c -x; strash; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 3
+Took:  6.39943s
+--
+Generation: 20
+Individual: 
+	Length: 2
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z
+	Levels: 051	Gates: 000241
+Stage: 0
+Took:  7.41188s
+--
+Generation: 21
+Individual: 
+	Length: 5
+	Chromosone: rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; logic; sop; fx -W 0 -M 8 -s -z -n -x; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x
+	Levels: 050	Gates: 000295
+Stage: 0
+Took:  14.8609s
+--
+Generation: 22
+Individual: 
+	Length: 8
+	Chromosone: resub -K 8 -N 1 -M 4 -l; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -l -d -x; balance -l -d -x
+	Levels: 050	Gates: 000293
+Stage: 0
+Took:  37.3935s
+--
+Generation: 23
+Individual: 
+	Length: 8
+	Chromosone: resub -K 8 -N 1 -M 4 -l; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -l -d -x; balance -l -d -x
+	Levels: 050	Gates: 000293
+Stage: 0
+Took:  10.2063s
+--
+Generation: 24
+Individual: 
+	Length: 8
+	Chromosone: resub -K 8 -N 1 -M 4 -l; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -l -d -x; balance -l -d -x
+	Levels: 050	Gates: 000293
+Stage: 1
+Took:  8.3632s
+--
+Generation: 25
+Individual: 
+	Length: 8
+	Chromosone: resub -K 8 -N 1 -M 4 -l; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -l -d -x; balance -l -d -x
+	Levels: 050	Gates: 000293
+Stage: 1
+Took:  8.05324s
+--
+Generation: 26
+Individual: 
+	Length: 6
+	Chromosone: logic; eliminate -V 36 -N 14 -I 4 -r; strash; resub -K 8 -N 1 -M 4 -l; rewrite -l; logic; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x
+	Levels: 032	Gates: 000637
+Stage: 2
+Took:  6.72765s
+--
+Generation: 27
+Individual: 
+	Length: 5
+	Chromosone: logic; logicpush -K 2; strash; rewrite -l; logic; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x
+	Levels: 032	Gates: 000637
+Stage: 2
+Took:  6.10274s
+--
+Generation: 28
+Individual: 
+	Length: 5
+	Chromosone: logic; logicpush -K 2; strash; rewrite -l; resub -K 11 -N 3 -M 1; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x
+	Levels: 031	Gates: 000625
+Stage: 3
+Took:  8.56639s
+--
+Generation: 29
+Individual: 
+	Length: 6
+	Chromosone: logic; eliminate -V 25 -N 15 -I 1; strash; extract -K 0 -a; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x
+	Levels: 031	Gates: 000540
+Stage: 3
+Took:  22.1315s
+--
+Generation: 30
+Individual: 
+	Length: 6
+	Chromosone: logic; eliminate -V 25 -N 15 -I 1; strash; extract -K 0 -a; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x
+	Levels: 031	Gates: 000540
+Stage: 0
+Took:  23.2423s
+--
+Generation: 31
+Individual: 
+	Length: 7
+	Chromosone: rewrite -l; logic; eliminate -V 43 -N 2 -I 2 -s; eliminate -V 22 -N 2 -I 2 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 0 -M 8 -s -z -n -x; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x
+	Levels: 028	Gates: 000583
+Stage: 0
+Took:  64.8073s
+--
+Generation: 32
+Individual: 
+	Length: 9
+	Chromosone: rewrite -l; rewrite -l; logic; strash -a -c -r; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; rewrite; rewrite; renode -K 4 -C 7 -F 2
+	Levels: 027	Gates: 000604
+Stage: 0
+Took:  74.8739s
+--
+Generation: 33
+Individual: 
+	Length: 9
+	Chromosone: rewrite -l; rewrite -l; logic; strash -a -c -r; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; rewrite; rewrite; renode -K 4 -C 7 -F 2
+	Levels: 027	Gates: 000604
+Stage: 0
+Took:  53.4311s
+--
+Generation: 34
+Individual: 
+	Length: 15
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1
+	Levels: 018	Gates: 000573
+Stage: 1
+Took:  48.5575s
+--
+Generation: 35
+Individual: 
+	Length: 15
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1
+	Levels: 018	Gates: 000573
+Stage: 1
+Took:  24.8645s
+--
+Generation: 36
+Individual: 
+	Length: 15
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1
+	Levels: 018	Gates: 000573
+Stage: 2
+Took:  25.7474s
+--
+Generation: 37
+Individual: 
+	Length: 15
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1
+	Levels: 018	Gates: 000573
+Stage: 2
+Took:  23.2288s
+--
+Generation: 38
+Individual: 
+	Length: 15
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1
+	Levels: 018	Gates: 000573
+Stage: 3
+Took:  26.1947s
+--
+Generation: 39
+Individual: 
+	Length: 15
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1
+	Levels: 018	Gates: 000573
+Stage: 3
+Took:  21.4508s
+--
+Generation: 40
+Individual: 
+	Length: 15
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; orchestrate -K 16 -N 2 -l -z -Z; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1
+	Levels: 018	Gates: 000573
+Stage: 0
+Took:  30.8127s
+--
+Generation: 41
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  804.427s
+--
+Generation: 42
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  56.0522s
+--
+Generation: 43
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  55.9994s
+--
+Generation: 44
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 1
+Took:  55.3767s
+--
+Generation: 45
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 1
+Took:  34.1828s
+--
+Generation: 46
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 2
+Took:  36.0476s
+--
+Generation: 47
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 2
+Took:  30.9389s
+--
+Generation: 48
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 3
+Took:  25.5908s
+--
+Generation: 49
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 3
+Took:  15.4811s
+--
+Generation: 50
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  11.8868s
+--
+Generation: 51
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  48.8351s
+--
+Generation: 52
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  69.7353s
+--
+Generation: 53
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  84.4423s
+--
+Generation: 54
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 1
+Took:  83.3747s
+--
+Generation: 55
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 1
+Took:  48.3819s
+--
+Generation: 56
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 2
+Took:  39.8618s
+--
+Generation: 57
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 2
+Took:  26.6145s
+--
+Generation: 58
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 3
+Took:  26.2473s
+--
+Generation: 59
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 3
+Took:  13.9411s
+--
+Generation: 60
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  9.63254s
+--
+Generation: 61
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  54.2531s
+--
+Generation: 62
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  92.4432s
+--
+Generation: 63
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  76.3171s
+--
+Generation: 64
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 1
+Took:  75.0329s
+--
+Generation: 65
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 1
+Took:  32.9461s
+--
+Generation: 66
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 2
+Took:  24.9987s
+--
+Generation: 67
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 2
+Took:  19.1509s
+--
+Generation: 68
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 3
+Took:  32.6585s
+--
+Generation: 69
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 3
+Took:  13.1351s
+--
+Generation: 70
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  8.99081s
+--
+Generation: 71
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  68.1896s
+--
+Generation: 72
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  62.2715s
+--
+Generation: 73
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  89.3733s
+--
+Generation: 74
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 1
+Took:  98.8116s
+--
+Generation: 75
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 1
+Took:  37.2923s
+--
+Generation: 76
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 2
+Took:  40.7936s
+--
+Generation: 77
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 2
+Took:  22.2169s
+--
+Generation: 78
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 3
+Took:  19.0132s
+--
+Generation: 79
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 3
+Took:  11.4797s
+--
+Generation: 80
+Individual: 
+	Length: 17
+	Chromosone: logic; sop; fx -W 4 -M 8 -s -z -c -n -x; fx -W 0 -M 13 -s -d -x; eliminate -V 45 -N 16 -I 4 -r; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 1 -M 12 -s -d -z -n; strash; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -x; balance -l -d -s -x; balance -l -d -x; extract -K 1; balance -l -d -x; balance -l -d -x; balance -l -d -x; renode -K 4 -C 4 -F 4; strash; renode -K 4 -C 4 -F 4
+	Levels: 013	Gates: 000547
+Stage: 0
+Took:  22.7106s
+--
+Generation: 81
+Individual: 
+	Length: 49
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; renode -K 2 -C 7 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; renode -K 6 -C 2 -F 4; strash; rewrite; rewrite; rewrite; rewrite
+	Levels: 012	Gates: 000413
+Stage: 0
+Took:  75.5954s
+--
+Generation: 82
+Individual: 
+	Length: 47
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; orchestrate -K 13 -N 0 -Z; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; renode -K 2 -C 7 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 012	Gates: 000399
+Stage: 0
+Took:  69.5908s
+--
+Generation: 83
+Individual: 
+	Length: 56
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; orchestrate -K 16 -N 2 -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; logic; strash; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000411
+Stage: 0
+Took:  85.3074s
+--
+Generation: 84
+Individual: 
+	Length: 51
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; extract -K 3 -a; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; resub -K 9 -N 2 -M 3 -l; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; logic; sop; fx -W 2 -M 8 -s -n -x; strash; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000404
+Stage: 1
+Took:  84.2099s
+--
+Generation: 85
+Individual: 
+	Length: 51
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; extract -K 3 -a; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; resub -K 9 -N 2 -M 3 -l; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; logic; sop; fx -W 2 -M 8 -s -n -x; strash; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000404
+Stage: 1
+Took:  51.2518s
+--
+Generation: 86
+Individual: 
+	Length: 51
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; extract -K 3 -a; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; resub -K 9 -N 2 -M 3 -l; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; logic; sop; fx -W 2 -M 8 -s -n -x; strash; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000404
+Stage: 2
+Took:  52.8001s
+--
+Generation: 87
+Individual: 
+	Length: 54
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; logic; eliminate -V 35 -N 12 -I 2 -r -s; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash -r; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000401
+Stage: 2
+Took:  36.0195s
+--
+Generation: 88
+Individual: 
+	Length: 54
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; logic; eliminate -V 35 -N 12 -I 2 -r -s; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash -r; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000401
+Stage: 3
+Took:  33.2465s
+--
+Generation: 89
+Individual: 
+	Length: 54
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; logic; eliminate -V 35 -N 12 -I 2 -r -s; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash -r; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000401
+Stage: 3
+Took:  27.2815s
+--
+Generation: 90
+Individual: 
+	Length: 54
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; logic; eliminate -V 35 -N 12 -I 2 -r -s; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash -r; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000401
+Stage: 0
+Took:  33.0456s
+--
+Generation: 91
+Individual: 
+	Length: 54
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; balance -d -s -x; renode -K 3 -C 2 -F 0; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; logic; eliminate -V 35 -N 12 -I 2 -r -s; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash -r; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000401
+Stage: 0
+Took:  86.24s
+--
+Generation: 92
+Individual: 
+	Length: 59
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; rewrite -z; logic; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; balance; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; orchestrate -K 7 -N 3 -z -Z; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; resub -K 7 -N 1 -M 4 -l -z; rewrite; logic; strash; extract -K 3; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000397
+Stage: 0
+Took:  93.7711s
+--
+Generation: 93
+Individual: 
+	Length: 61
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; rewrite -z; logic; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; resub -K 15 -N 2 -M 1 -l -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; logic; strash; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; balance -d -s -x; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000381
+Stage: 0
+Took:  88.0113s
+--
+Generation: 94
+Individual: 
+	Length: 61
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; rewrite -z; logic; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; resub -K 15 -N 2 -M 1 -l -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; logic; strash; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; balance -d -s -x; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000381
+Stage: 1
+Took:  75.9669s
+--
+Generation: 95
+Individual: 
+	Length: 61
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; rewrite -z; logic; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; resub -K 15 -N 2 -M 1 -l -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; logic; strash; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; balance -d -s -x; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000381
+Stage: 1
+Took:  49.6194s
+--
+Generation: 96
+Individual: 
+	Length: 61
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; rewrite -z; logic; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; resub -K 15 -N 2 -M 1 -l -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; rewrite; rewrite; logic; strash; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; balance -d -s -x; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000381
+Stage: 2
+Took:  49.4512s
+--
+Generation: 97
+Individual: 
+	Length: 64
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; rewrite; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; rewrite -z; logic; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; orchestrate -K 7 -N 3 -z -Z; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; refactor -N 6 -l; rewrite; logic; logicpush -K 5; strash; rewrite; logic; strash; rewrite; rewrite; rewrite; balance -d -s -x; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000367
+Stage: 2
+Took:  43.4089s
+--
+Generation: 98
+Individual: 
+	Length: 64
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; rewrite; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; rewrite -z; logic; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; orchestrate -K 7 -N 3 -z -Z; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; refactor -N 6 -l; rewrite; logic; logicpush -K 5; strash; rewrite; logic; strash; rewrite; rewrite; rewrite; balance -d -s -x; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000367
+Stage: 3
+Took:  43.3531s
+--
+Generation: 99
+Individual: 
+	Length: 64
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; rewrite; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; rewrite -z; logic; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; orchestrate -K 7 -N 3 -z -Z; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; refactor -N 6 -l; rewrite; logic; logicpush -K 5; strash; rewrite; logic; strash; rewrite; rewrite; rewrite; balance -d -s -x; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000367
+Stage: 3
+Took:  34.6598s
+--
+Generation: 100
+Individual: 
+	Length: 64
+	Chromosone: resub -K 11 -N 0 -M 4 -l; extract -K 0 -a; rewrite -l; rewrite; balance -d -x; orchestrate -K 16 -N 2 -l -z -Z; refactor -N 4; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; renode -K 3 -C 7 -F 0; strash; balance -d -s -x; logic; eliminate -V 45 -N 16 -I 4 -r; sop; fx -W 3 -M 7 -x; strash; rewrite -z; logic; sop; fx -W 3 -M 7 -x; strash; resub -K 9 -N 1 -M 2 -l; resub -K 9 -N 1 -M 2 -l; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; refactor -N 4 -l -z; resub -K 5 -N 1 -M 1; logic; eliminate -V 58 -N 1 -I 2; eliminate -V 20 -N 13 -I 2 -s; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 5 -C 3 -F 2; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; renode -K 6 -C 7 -F 1; strash; orchestrate -K 7 -N 3 -z -Z; refactor -N 9 -z; refactor -N 9 -z; rewrite -z; refactor -N 9 -z; refactor -N 9 -z; refactor -N 9 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; orchestrate -K 16 -N 0 -z; renode -K 6 -C 6 -F 1; strash; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; orchestrate -K 16 -N 0 -z; rewrite; rewrite; rewrite; refactor -N 6 -l; rewrite; logic; logicpush -K 5; strash; rewrite; logic; strash; rewrite; rewrite; rewrite; balance -d -s -x; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite; rewrite
+	Levels: 011	Gates: 000367
+Stage: 0
+Took:  30.5275s

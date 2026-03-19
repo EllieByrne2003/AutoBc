@@ -1,0 +1,669 @@
+================================================================================
+=== Standard script: resyn (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; resyn; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  25200  lev =263
+
+================================================================================
+=== Standard script: resyn2 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; resyn2; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  24556  lev =262
+
+================================================================================
+=== Standard script: resyn2a (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; resyn2a; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  25199  lev =263
+
+================================================================================
+=== Standard script: resyn3 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; resyn3; strash; print_stats".
+
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  26936  lev =266
+
+================================================================================
+=== Standard script: compress (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; compress; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  25200  lev =263
+
+================================================================================
+=== Standard script: compress2 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; compress2; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  24556  lev =262
+
+================================================================================
+=== Standard script: choice (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; choice; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Fraiging part    1  (out of    1)  PI =   128. PO =   128. And =  71698. Lev =  262.                                                                                          Warning: The choice nodes in the original AIG are removed by strashing.
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  27045  lev =274
+
+================================================================================
+=== Standard script: choice2 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; choice2; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Fraiging part    1  (out of    1)  PI =   128. PO =   128. And = 108394. Lev =  262.                                                                                          Warning: The choice nodes in the original AIG are removed by strashing.
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  27045  lev =274
+
+================================================================================
+=== Standard script: rwsat (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; rwsat; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  26544  lev =266
+
+================================================================================
+=== Standard script: drwsat2 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; drwsat2; strash; print_stats".
+
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  24416  lev =264
+
+================================================================================
+=== Standard script: share (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; share; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  24647  lev =262
+
+================================================================================
+=== Standard script: addinit (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; addinit; strash; print_stats".
+
+Io_ReadBenchInit(): Failed to open file "resources/circuits/multiplier.init".
+Warning: The current network is combinational.
+Warning: The current network is combinational.
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  27062  lev =274
+
+================================================================================
+=== Standard script: blif2aig (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; blif2aig; strash; print_stats".
+
+Warning: The current network is combinational.
+Warning: The current network is combinational.
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  27062  lev =274
+
+================================================================================
+=== Standard script: v2p (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; v2p; strash; print_stats".
+
+Error: Abc_CommandAbc9Vta2Gla(): There is no AIG.
+Error: Abc_CommandAbc9Ps(): There is no AIG.
+
+================================================================================
+=== Standard script: g2p (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; g2p; strash; print_stats".
+
+Error: Abc_CommandAbc9Ps(): There is no AIG.
+
+================================================================================
+=== Standard script: &sw_ (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; &sw_; strash; print_stats".
+
+Error: Empty network.
+
+================================================================================
+=== Standard script: &fx_ (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; &fx_; strash; print_stats".
+
+Error: Empty network.
+
+================================================================================
+=== Standard script: &dc3 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; &dc3; strash; print_stats".
+
+Error: Abc_CommandAbc9Balance(): There is no AIG.
+
+================================================================================
+=== Standard script: &dc4 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; &dc4; strash; print_stats".
+
+Error: Abc_CommandAbc9Balance(): There is no AIG.
+
+================================================================================
+=== IWLS script: src_rw (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; src_rw; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  25231  lev =265
+
+================================================================================
+=== IWLS script: src_rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; src_rs; strash; print_stats".
+
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  26063  lev =272
+
+================================================================================
+=== IWLS script: src_rws (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; src_rws; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  24359  lev =267
+
+================================================================================
+=== IWLS script: resyn2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; resyn2rs; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  24338  lev =262
+
+================================================================================
+=== IWLS script: r2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; r2rs; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  24338  lev =262
+
+================================================================================
+=== IWLS script: compress2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; compress2rs; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  24337  lev =265
+
+================================================================================
+=== IWLS script: c2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; c2rs; strash; print_stats".
+
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+Bi-decomposition stats: Calls = 0.  Nodes = 0. Reuse = 0.
+ANDs = 0.  ORs = 0.  Weak = 0.  Muxes = 0.  Memory = 4.00 K
+Cache =     0.00 sec
+Check =     0.00 sec
+Muxes =     0.00 sec
+Supps =     0.00 sec
+TOTAL =     0.00 sec
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  24337  lev =265
+
+================================================================================
+=== IWLS script: &resyn2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; &resyn2rs; strash; print_stats".
+
+Error: Empty network.
+
+================================================================================
+=== IWLS script: &compress2rs (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; &compress2rs; strash; print_stats".
+
+Error: Empty network.
+
+================================================================================
+=== Lazy mans synthesis: recadd3 (with print_stats) ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; rec_start3; recadd3; strash; print_stats".
+
+File name is not given on the command line. Starting a new record.
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  49721  lev =130
+
+================================================================================
+=== Custom script: renode -K 2 -C 8 -F 3; strash; renode -K 5 -C 5 -F 2; strash; renode -K 5 -C 5 -F 2; logicpush -K 5; logicpush -K 5; sop; fx -W 3 -M 4 -d -z -c -n -x ===
+================================================================================
+ABC command line: "read resources/circuits/multiplier.aig; renode -K 2 -C 8 -F 3; strash; renode -K 5 -C 5 -F 2; strash; renode -K 5 -C 5 -F 2; logicpush -K 5; logicpush -K 5; sop; fx -W 3 -M 4 -d -z -c -n -x; strash; print_stats".
+
+Saved 10269 nodes after 10364 pushes.
+Saved 24 nodes after 25 pushes.
+resources/circuits/multiplier : i/o =  128/  128  lat =    0  and =  26962  lev =222
+

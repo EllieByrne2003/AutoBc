@@ -1,0 +1,807 @@
+Generation: 0
+Individual: 
+	Length: 1
+	Chromosone: logic; strash -r
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  63.6487s
+--
+Generation: 1
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  88.238s
+--
+Generation: 2
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  93.2714s
+--
+Generation: 3
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  79.8472s
+--
+Generation: 4
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  110.362s
+--
+Generation: 5
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  24.9102s
+--
+Generation: 6
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  1.88s
+--
+Generation: 7
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.482879s
+--
+Generation: 8
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.599848s
+--
+Generation: 9
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.491358s
+--
+Generation: 10
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  0.452231s
+--
+Generation: 11
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  72.0703s
+--
+Generation: 12
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  45.5177s
+--
+Generation: 13
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  65.1234s
+--
+Generation: 14
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  70.6112s
+--
+Generation: 15
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  2.87897s
+--
+Generation: 16
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.082676s
+--
+Generation: 17
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.537195s
+--
+Generation: 18
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  1.30159s
+--
+Generation: 19
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  2.83914s
+--
+Generation: 20
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  0.612531s
+--
+Generation: 21
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  78.541s
+--
+Generation: 22
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  38.551s
+--
+Generation: 23
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  59.3871s
+--
+Generation: 24
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  69.7093s
+--
+Generation: 25
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  0.549125s
+--
+Generation: 26
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  1.04063s
+--
+Generation: 27
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.531712s
+--
+Generation: 28
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  1.89134s
+--
+Generation: 29
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.695964s
+--
+Generation: 30
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  0.521923s
+--
+Generation: 31
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  44.208s
+--
+Generation: 32
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  41.5301s
+--
+Generation: 33
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  51.0215s
+--
+Generation: 34
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  83.5066s
+--
+Generation: 35
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  0.587426s
+--
+Generation: 36
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.584841s
+--
+Generation: 37
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  1.73213s
+--
+Generation: 38
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.436592s
+--
+Generation: 39
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.0842618s
+--
+Generation: 40
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  0.447312s
+--
+Generation: 41
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  85.0112s
+--
+Generation: 42
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  47.3433s
+--
+Generation: 43
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  28.2859s
+--
+Generation: 44
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  52.2762s
+--
+Generation: 45
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  0.538441s
+--
+Generation: 46
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.792989s
+--
+Generation: 47
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.530543s
+--
+Generation: 48
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.508452s
+--
+Generation: 49
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.438002s
+--
+Generation: 50
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  0.546926s
+--
+Generation: 51
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  45.5614s
+--
+Generation: 52
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  49.0817s
+--
+Generation: 53
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  36.097s
+--
+Generation: 54
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  45.5102s
+--
+Generation: 55
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  0.553865s
+--
+Generation: 56
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.0687676s
+--
+Generation: 57
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.531062s
+--
+Generation: 58
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.102907s
+--
+Generation: 59
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.632446s
+--
+Generation: 60
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  0.544452s
+--
+Generation: 61
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  39.3782s
+--
+Generation: 62
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  70.7209s
+--
+Generation: 63
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  36.2045s
+--
+Generation: 64
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  59.2777s
+--
+Generation: 65
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  1.9493s
+--
+Generation: 66
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  1.13793s
+--
+Generation: 67
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.536486s
+--
+Generation: 68
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.0682032s
+--
+Generation: 69
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.553396s
+--
+Generation: 70
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  0.444196s
+--
+Generation: 71
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  50.534s
+--
+Generation: 72
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  36.9052s
+--
+Generation: 73
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  63.6346s
+--
+Generation: 74
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  57.6882s
+--
+Generation: 75
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  0.48811s
+--
+Generation: 76
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.698587s
+--
+Generation: 77
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.734334s
+--
+Generation: 78
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.53828s
+--
+Generation: 79
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.557891s
+--
+Generation: 80
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  1.27531s
+--
+Generation: 81
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  62.48s
+--
+Generation: 82
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  45.6448s
+--
+Generation: 83
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  26.7799s
+--
+Generation: 84
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  34.5333s
+--
+Generation: 85
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  0.488968s
+--
+Generation: 86
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.0699513s
+--
+Generation: 87
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.675751s
+--
+Generation: 88
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.171837s
+--
+Generation: 89
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.0744042s
+--
+Generation: 90
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  0.0648578s
+--
+Generation: 91
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  55.9261s
+--
+Generation: 92
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  54.3851s
+--
+Generation: 93
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  50.8974s
+--
+Generation: 94
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  69.7483s
+--
+Generation: 95
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 1
+Took:  0.622156s
+--
+Generation: 96
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  1.90723s
+--
+Generation: 97
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 2
+Took:  0.535167s
+--
+Generation: 98
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.770764s
+--
+Generation: 99
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 3
+Took:  0.0720496s
+--
+Generation: 100
+Individual: 
+	Length: 0
+	Chromosone: 
+	Levels: 004	Gates: 000512
+Stage: 0
+Took:  0.0796769s
