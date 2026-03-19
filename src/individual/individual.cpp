@@ -386,6 +386,46 @@ bool operator>(const Individual &left, const Individual &right) {
     return false;        
 }
 
+bool Individual::prioritizeGates(const Individual &a, const Individual &b) {
+    if(a.error != b.error) {
+        return a.error < b.error;
+    }
+
+    if(a.equivalent != b.equivalent) {
+        return a.equivalent > b.equivalent;
+    }
+
+    if(a.nGates != b.nGates) {
+        return a.nGates < b.nGates;
+    }
+
+    if(a.nLevels != b.nLevels) {
+        return a.nLevels < b.nLevels;
+    }
+
+    return a.chromosone.size() < b.chromosone.size();
+}
+
+bool Individual::prioritizeLevels(const Individual &a, const Individual &b) {
+    if(a.error != b.error) {
+        return a.error < b.error;
+    }
+
+    if(a.equivalent != b.equivalent) {
+        return a.equivalent > b.equivalent;
+    }
+
+    if(a.nLevels != b.nLevels) {
+        return a.nLevels < b.nLevels;
+    }
+
+    if(a.nGates != b.nGates) {
+        return a.nGates < b.nGates;
+    }
+
+    return a.chromosone.size() < b.chromosone.size();
+}
+
 std::string Individual::getCommand() const {
     std::string ret;
 

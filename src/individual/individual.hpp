@@ -64,6 +64,9 @@ public:
     friend bool operator<(const Individual &left, const Individual &right);
     friend bool operator>(const Individual &left, const Individual &right);
 
+    static bool prioritizeGates(const Individual &a, const Individual &b);
+    static bool prioritizeLevels(const Individual &a, const Individual &b);
+
     std::string getCommand() const;
     int getLevels() const;
     int getGates() const;

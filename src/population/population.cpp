@@ -17,25 +17,25 @@
 #define REMOVE_CHANCE (1.0 / 3.0)
 #define ADD_CHANCE    (1.0 / 3.0)
 
-Population::Population(const int size, const int startingChromosoneLength) : size(size) {
-    for(int i = 0; i < size; i++) {
-        indivduals.push_back(Individual(startingChromosoneLength));
-    }
-}
+// Population::Population(const int size, const int startingChromosoneLength) : size(size) {
+//     for(int i = 0; i < size; i++) {
+//         indivduals.push_back(Individual(startingChromosoneLength));
+//     }
+// }
 
-Population::Population(std::vector<Individual> &seedExamples, const int size, const int startingChromosoneLength) :
-    size(size) {
-    for(const Individual &seedExample : seedExamples) {
-        indivduals.push_back(seedExample);
-    }
+// Population::Population(std::vector<Individual> &seedExamples, const int size, const int startingChromosoneLength) :
+//     size(size) {
+//     for(const Individual &seedExample : seedExamples) {
+//         indivduals.push_back(seedExample);
+//     }
 
-    while(indivduals.size() < size) {
-        indivduals.push_back(Individual(startingChromosoneLength));
-    }
-}
+//     while(indivduals.size() < size) {
+//         indivduals.push_back(Individual(startingChromosoneLength));
+//     }
+// }
 
-Population::Population(const int size, const int length, Abc_Ntk_t *base) :
-    size(size) {
+Population::Population(const std::string &finalFormat, const std::string &priority, const int size, const int length, Abc_Ntk_t *base) :
+    finalFormat(finalFormat), priority(priority), size(size) {
     while(indivduals.size() < size) {
         indivduals.push_back(Individual(length));
     }
@@ -204,17 +204,17 @@ void Population::createNewGeneration() {
             break;
         case REFINEMENT:
             // High cloning, high coarse mutation, high fine mutation, low rest
-            createClones(newGen, size * 0.4);
-            createMutants(newGen, size * 0.4, 0.5);
+            createClones(newGen, size * 0.3);
+            createMutants(newGen, size * 0.5, 0.5);
             createChildren(newGen, size * 0.2, 0.5);
 
             break;
         case REDUCTION:
             // High cloning 2 per, high removal, low rest
             createClones(newGen, size * 0.25);
-            createClones(newGen, size * 0.25);
-            createMutants(newGen, size * 0.4, 0.5);
-            createChildren(newGen, size * 0.1, 0.5);
+            // createClones(newGen, size * 0.2);
+            createMutants(newGen, size * 0.5, 0.5);
+            createChildren(newGen, size * 0.15, 0.5);
 
             break;
         default:
@@ -264,7 +264,7 @@ void Population::createMutants(std::vector<Individual> &newGen, const int num, c
             params.fineMutationAttempts = 1;
             params.fineMutationChance = 0.1;
 
-            params.additionAttempts = 2;
+            params.additionAttempts = 4;
             params.additionChance = 0.5;
 
             break;
@@ -339,7 +339,7 @@ void runIndividuals(std::vector<Individual> &indivduals, std::atomic_int &nextIn
     }
 }
 
-void runIndividuals2(std::shared_ptr<ResultCache> resultCache, std::vector<Individual> &indivduals, std::atomic_int &nextIndex, Abc_Frame_t *pAbc) {
+void runIndividuals2(std::shared_ptr<ResultCache> resultCache, std::vector<Individual> &indivduals, std::atomic_int &nextIndex, const std::string &finalFormat, Abc_Frame_t *pAbc) {
     while(true) {
         const int currentIndex = nextIndex.fetch_add(1, std::memory_order_relaxed);
 
@@ -350,7 +350,7 @@ void runIndividuals2(std::shared_ptr<ResultCache> resultCache, std::vector<Indiv
         Individual &indi = indivduals[currentIndex];
         std::string command(indi.getCommand());
         std::string_view commandView(command);
-        const Result &result = resultCache->getResult(pAbc, commandView, "logic 6");
+        const Result &result = resultCache->getResult(pAbc, commandView, finalFormat);
         // const Result &result = resultCache->getResult(pAbc, commandView, "aig");
 
         indi.calculateFitness(result);
@@ -434,10 +434,10 @@ Stage Population::runGeneration(Abc_Frame_t **pAbc, const int nThreads) {
     std::atomic_int nextIndividual = 0;
 
     for(int i = 0; i < nThreads - 1; i++) {
-        threads.emplace_back(runIndividuals2, resultCache, std::ref(indivduals), std::ref(nextIndividual), pAbc[i]);
+        threads.emplace_back(runIndividuals2, resultCache, std::ref(indivduals), std::ref(nextIndividual), std::ref(finalFormat), pAbc[i]);
     }
 
-    runIndividuals2(resultCache, indivduals, nextIndividual, pAbc[nThreads - 1]);
+    runIndividuals2(resultCache, indivduals, nextIndividual, finalFormat, pAbc[nThreads - 1]);
 
     for(std::thread &thread : threads) {
         thread.join();
@@ -448,8 +448,14 @@ Stage Population::runGeneration(Abc_Frame_t **pAbc, const int nThreads) {
 
     // Sort population
     // TODO fix this so reversing isn't required
-    std::sort(indivduals.begin(), indivduals.end());
-    std::reverse(indivduals.begin(), indivduals.end());
+
+    if(priority == "levels") {
+        std::sort(indivduals.begin(), indivduals.end(), Individual::prioritizeLevels);
+    } else if(priority == "gates") {
+        std::sort(indivduals.begin(), indivduals.end(), Individual::prioritizeGates);
+    }
+    // std::sort(indivduals.begin(), indivduals.end());
+    // std::reverse(indivduals.begin(), indivduals.end());
 
     // Show fittest
     std::cout << "Generation: " << generation << std::endl;

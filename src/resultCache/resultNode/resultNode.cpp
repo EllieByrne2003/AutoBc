@@ -62,6 +62,8 @@ Result ResultNode::makeResult(Abc_Frame_t *frame, const std::string &finalFormat
     // 1. Get copy of ntk
     Abc_Ntk_t *copy = cloneNtk();
 
+    std::cout << finalFormat << std::endl;
+
     // 2. Get the network type
 
     // 3. If type differs from final format, convert it
@@ -86,7 +88,7 @@ Result ResultNode::makeResult(Abc_Frame_t *frame, const std::string &finalFormat
     
         return Result(false, true, levels, gates);
     } else if(finalFormat.find("logic") == 0) { // Must be from start
-        const int numPos = finalFormat.find(" ") + 1;
+        const int numPos = finalFormat.find("-") + 1;
         std::string faninNum = finalFormat.substr(numPos);
 
         Abc_FrameSetCurrentNetwork(frame, copy);

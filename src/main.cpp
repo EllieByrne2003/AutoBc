@@ -29,6 +29,9 @@ int main(int argc, char** rawArgv ) {
     int generationLimit = DEFAULT_GENERATION_LIMIT;
     std::string inputFileName;
 
+    std::string priority = "levels";
+    std::string finalFormat = "logic 6";
+
     // Get input file
     if(argc < 2) {
         std::cout << "Too few arguments, please use format below" << std::endl;
@@ -118,6 +121,42 @@ int main(int argc, char** rawArgv ) {
 
                 return -1;
             }            
+        } else if(arg == "-p" || arg == "-priority") {
+            if(i > argv.size()) {
+                std::cout << "Arguement needed after: " << arg << std::endl;
+                show_usage(rawArgv[0]);
+
+                return -1;
+            }
+
+            priority = argv[i++];
+            if(priority != "gates" && priority != "levels") {
+                std::cout << "Priority must be either gates or levels. \"" << priority << "\" is not recognized." << std::endl;
+                show_usage(rawArgv[0]);
+
+                return -1;
+            }
+        } else if(arg == "-f" || arg == "-finalFormat") {
+            if(i > argv.size()) {
+                std::cout << "Arguement needed after: " << arg << std::endl;
+                show_usage(rawArgv[0]);
+
+                return -1;
+            }
+
+            finalFormat = argv[i++];
+            // TODO implement input checking for this
+            // if(finalFormat != "aig" || finalFormat != "logic 6") {
+            //     std::cout << "Priority muist be either gates or levels";
+            //     show_usage(rawArgv[0]);
+
+            //     return -1;
+            // }
+        } else {
+            std::cout << "Did not recognize: " << arg << std::endl;
+            show_usage(rawArgv[0]);
+
+            return -1;
         }
 
         // TODO implement input file, seed file, command file
@@ -152,10 +191,10 @@ int main(int argc, char** rawArgv ) {
     // Create population
     // Population population(256, 5);
     // Population population(seedExamples, size, length);
-    Population population(size, length, originalNtk);
+    Population population(finalFormat, priority, size, length, originalNtk);
 
     // Run x number of generations
-    for(int i = 0; i < generationLimit; i++) {
+    for(int i = 0; i < generationLimit + 1; i++) { // 0th gen is just random, don't count
         // Run generation
         const auto start = std::chrono::system_clock::now();
         // Stage stage = population.runGeneration(pAbcs, pNtks, nThreads); // 2 to get > 30s on i10.aig

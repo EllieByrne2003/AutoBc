@@ -25,6 +25,9 @@ private:
     std::vector<Individual> indivduals;
     std::shared_ptr<ResultCache> resultCache;
 
+    const std::string priority;
+    const std::string finalFormat;
+
     Stage currentStage = EXPANSION;
     int gensOnCurrentStage = 0;
     std::string lastBestCommand;
@@ -41,9 +44,9 @@ private:
     void createMutants(std::vector<Individual> &newGen, const int num, const float portion);
     
 public:
-    Population(const int size, const int startingChromosoneLength);
-    Population(std::vector<Individual> &seedExamples, const int size, const int startingChromosoneLength);
-    Population(const int size, const int length, Abc_Ntk_t *base);
+    // Population(const int size, const int startingChromosoneLength);
+    // Population(std::vector<Individual> &seedExamples, const int size, const int startingChromosoneLength);
+    Population(const std::string &finalFormat, const std::string &priority, const int size, const int length, Abc_Ntk_t *base);
     ~Population();
 
     // TODO should have it's own frames and just take the network
