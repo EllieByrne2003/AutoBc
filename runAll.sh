@@ -2,29 +2,34 @@
 
 formats=(
     "logic-6"
-    "aig"
+    # "aig"
 )
 
 priorities=(
-    "gates"
     "levels"
+    "gates"
 )
 
 circuits=(
-    "i10"
-    "adder"
-    "bar"
-    "max"
-    "multiplier"
-    "log2"
-    "div"
-    "sin"
-    "sqrt"
+    # "i10"
+    # "adder"
+    # "bar"
+    # "max"
+    # "sin"
+    # "multiplier"
+    # "log2"
+    # "div"
+    # "sqrt"
+    # "cavlc"
+    # "dec"
+    # "i2c"
+    "voter"
+    "arbiter"
 )
 
 for format in "${formats[@]}"; do
     for priority in "${priorities[@]}"; do
-        echo "=============================================="
+        echo "==============================================s"
         echo "Optimizing for $priority in $format format"
         echo "=============================================="
 

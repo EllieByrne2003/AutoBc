@@ -298,7 +298,7 @@ void Population::createMutants(std::vector<Individual> &newGen, const int num, c
             break;
         case REDUCTION:
             // High removal, low rest
-            params.removalAttempts = 2;
+            params.removalAttempts = 4;
             params.removalChance = 0.5;
 
             params.coarseMutationAttempts = 1;

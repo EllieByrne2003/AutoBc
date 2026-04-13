@@ -68,7 +68,9 @@ std::string Gene::execute(Abc_Frame_t *pAbc, const std::string &ntkType) const {
                     return "error";
                 }
             } else if(inputType == "logic") {
-                // Nothing, it's okay
+                // if(Cmd_CommandExecute(pAbc, "if")) {
+                //     return "error";
+                // }
             } else if(inputType == "logic-bdd") {
                 if(Cmd_CommandExecute(pAbc, "bdd")) {
                     return "error";
@@ -80,7 +82,9 @@ std::string Gene::execute(Abc_Frame_t *pAbc, const std::string &ntkType) const {
                     return "error";
                 }
             } else if(inputType == "logic") {
-                // Nothing, it's okay
+                // if(Cmd_CommandExecute(pAbc, "if")) {
+                //     return "error";
+                // }
             }else if(inputType == "logic-sop") {
                 if(Cmd_CommandExecute(pAbc, "sop")) {
                     return "error";
@@ -150,6 +154,7 @@ const std::string Gene::getCommand(const std::string &ntkType) const {
                 retValue += "strash; ";
             } else if(inputType == "logic") {
                 // Nothing, it's okay
+                // retValue += "if; ";
             }else if(inputType == "logic-bdd") {
                 retValue += "bdd;";
             }
@@ -158,6 +163,7 @@ const std::string Gene::getCommand(const std::string &ntkType) const {
                 retValue += "strash; ";
             } else if(inputType == "logic") {
                 // Nothing, it's okay
+                // retValue += "if; ";
             }else if(inputType == "logic-sop") {
                 retValue += "sop;";
             }

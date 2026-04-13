@@ -181,8 +181,8 @@
                     {
                         "name": "C",
                         "enabled": true,
-                        "min": 1,
-                        "max": 8
+                        "min": 7,
+                        "max": 16
                     },
                     {
                         "name": "F",
